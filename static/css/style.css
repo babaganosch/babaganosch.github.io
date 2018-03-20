@@ -1,10 +1,9 @@
 html {
-    background-color: #797e87;
 }
 
 body {
     font-family: Helvetica, Arial, sans-serif;
-    background-color: #797e87;
+    background-color: #eff3f9;
     color: #222;
     margin: 60px auto;
     font-size: 18px;
@@ -12,5 +11,4 @@ body {
 
 #content {
     font-family: Helvetica, Arial, sans-serif;
-    background-color: #eff3f9;
 }
