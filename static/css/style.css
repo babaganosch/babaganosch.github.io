@@ -4,18 +4,18 @@ html {
 body {
     font-family: Helvetica, Arial, sans-serif;
     background-color: #eff3f9;
-    color: #222;
-    margin: 0px;
-    padding: 0px;
-    /*margin: 60px auto;*/
-    font-size: 18px;
+    color:      #222;
+    margin:     0px;
+    padding:    0px;
+    font-size:  18px;
 }
 
 header {
-    background-color: #97b1d8;
-    height: 40px;
+    background-color:   #97b1d8;
+    height:             40px;
 }
 
 #content {
-    padding-left: 20px;
+    padding-left:   20px;
+    padding-top:    80px;
 }
