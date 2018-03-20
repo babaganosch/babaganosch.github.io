@@ -5,6 +5,8 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     background-color: #eff3f9;
     color: #222;
+    margin: 0px;
+    padding: 0px;
     /*margin: 60px auto;*/
     font-size: 18px;
 }
