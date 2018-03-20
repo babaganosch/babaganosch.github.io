@@ -9,7 +9,11 @@ body {
     font-size: 18px;
 }
 
+header {
+    background-color: #97b1d8;
+    height: 20px;
+}
+
 #content {
     font-family: Helvetica, Arial, sans-serif;
-    background-color: #000;
 }
