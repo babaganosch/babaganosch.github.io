@@ -18,11 +18,12 @@ header {
 }
 
 #content {
+    font-size:      15px;
     padding-left:   20px;
     padding-top:    60px;
 }
 
 a {
     color:      #e2e2e2;
-    text-decoration-style: none;
+    text-decoration: none;
 }
