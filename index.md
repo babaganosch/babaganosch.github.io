@@ -2,7 +2,7 @@
 layout: front
 ---
 
-## Lars Andersson
+# Lars Andersson
 Swede, currently studying computer engineering at Chalmers University of Technology, Gothenburg, while spending my freetime developing indie games.
 
 Public projects can be found at my [GitHub](https://github.com/babaganosch) page.
