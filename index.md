@@ -11,7 +11,7 @@ Public projects can be found at my [GitHub](https://github.com/babaganosch) page
 * [Illfated](https://github.com/babaganosch)
     Roguelike dungeon crawler with procedurally generated floors. (2016)
 * [Minecart Maniac](https://play.google.com/store/apps/details?id=com.LandalaStudios.MinecartManiac)
-    Android.. (2016)
+    Android game inspired by games such as Flappy Birds (2016)
 
 ## Older Projects
 * [Shape Arena](https://github.com/babaganosch/ShapeArena)
