@@ -33,11 +33,14 @@ header {
 #section {
     width:      80px;
     margin-bottom:      15px;
+    height:     100%;
 }
 
 #date {
     width:      80px;
+    height:     100%;
 }
 
 #text {
+    height:     100%;
 }
