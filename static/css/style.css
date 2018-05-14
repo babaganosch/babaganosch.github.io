@@ -29,6 +29,7 @@ header {
     padding-left:   80px;
     padding-right:  80px;
     color:          #636363;
+    float:          right;
 }
 
 #section {
@@ -36,10 +37,12 @@ header {
     height:     100%;
     margin-bottom:      15px;
     text-decoration:    bold;
+    float:      left;
 }
 
 #date {
     width:      80px;
+    float:      left;
 }
 
 #text {
