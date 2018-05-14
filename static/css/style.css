@@ -26,6 +26,7 @@ header {
 }
 
 #content {
+    height:         400px;
     padding-left:   80px;
     padding-right:  80px;
     color:          #636363;
@@ -34,7 +35,6 @@ header {
 
 #section {
     width:      80px;
-    height:     100%;
     margin-bottom:      15px;
     text-decoration:    bold;
     float:      left;
