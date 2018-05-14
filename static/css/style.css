@@ -22,7 +22,6 @@ header {
     padding-left:   180px;
     font-size:      1.00cm;
     color:          #333333;
-    text-decoration:    bold;
 }
 
 #content {
@@ -34,7 +33,6 @@ header {
 #section {
     width:      80px;
     margin-bottom:      15px;
-    text-decoration:    bold;
 }
 
 #date {
