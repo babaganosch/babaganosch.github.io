@@ -4,12 +4,13 @@ html {
 }
 
 body {
-    font-family: 'nowayregular', Helvetica, Arial, sans-serif;
+    font-family: Helvetica, 'nowayregular', Arial, sans-serif;
     background-color: #d1d1d1;
     color:      #e2e2e2;
     margin:     0px;
     padding:    0px;
     font-size:  18px;
+    width:      900px;
 }
 
 header {
@@ -17,11 +18,31 @@ header {
     height:             40px;
 }
 
+#toptext {
+    padding-left:   180px;
+    font-size:      20px;
+    color:          #333333;
+}
+
 #content {
-    font-size:      15px;
-    padding-left:   20px;
-    padding-top:    60px;
-    width:          800px;
+    padding-left:   80px;
+    padding-right:  80px;
+    color:          #636363;
+}
+
+#section {
+    width:      80px;
+    height:     100%;
+    margin-bottom:      15px;
+    text-decoration:    bold;
+}
+
+#date {
+    width:      80px;
+}
+
+#text {
+    width:      100%;
 }
 
 a {
