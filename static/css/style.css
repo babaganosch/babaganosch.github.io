@@ -36,7 +36,7 @@ header {
 
 #content {
     color:  #636363;
-    margin-bottom:  30px;
+    padding-bottom: 20px;
 }
 
 #theme {
@@ -45,5 +45,5 @@ header {
 }
 
 #text {
-    margin-bottom: 15px;
+    padding-bottom: 15px;
 }
