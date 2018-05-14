@@ -22,13 +22,13 @@ header {
     margin-top:  15px;
     margin-left: 15%;
     padding-top: 30px;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     width:       70%;
     background-color: #fff;
 }
 
 #toptext {
-    padding-left:   180px;
+    padding-left:   100px;
     margin-bottom:  30px;
     font-size:  1.00cm;
     color:      #333333;
@@ -36,7 +36,7 @@ header {
 
 #content {
     color:  #636363;
-    margin-bottom:  15px;
+    margin-bottom:  30px;
 }
 
 #theme {
