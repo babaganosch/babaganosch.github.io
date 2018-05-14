@@ -21,6 +21,8 @@ header {
     position:    absolute;
     margin-top:  15px;
     margin-left: 15%;
+    padding-top: 30px;
+    padding-bottom: 150px;
     width:       70%;
     background-color: #fff;
 }
@@ -33,8 +35,10 @@ header {
 
 #content {
     color:  #636363;
+    margin-bottom:  15px;
 }
 
 #theme {
-    color:  #e2e2e2;
+    padding-left:   20px;
+    color:  #adadad;
 }
