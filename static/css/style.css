@@ -18,6 +18,12 @@ header {
     height:             40px;
 }
 
+#pageholder {
+    vertical-align: center;
+    width:  100%;
+    background-color: #fff;
+}
+
 #toptext {
     padding-left:   180px;
     font-size:      1.00cm;
@@ -25,7 +31,5 @@ header {
 }
 
 #content {
-    padding-left:   80px;
-    padding-right:  80px;
     color:          #636363;
 }
