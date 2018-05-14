@@ -22,6 +22,7 @@ header {
     padding-left:   180px;
     font-size:      20px;
     color:          #333333;
+    text-decoration:    bold;
 }
 
 #content {
@@ -42,7 +43,7 @@ header {
 }
 
 #text {
-    width:      100%;
+    --width:      100%;
 }
 
 a {
