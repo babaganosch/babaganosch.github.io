@@ -13,23 +13,27 @@ body {
 }
 
 header {
-    background-color:   #282828;
-    height:             40px;
+    background-color:  #282828;
+    height:     40px;
 }
 
 #pageholder {
-    position: absolute;
-    margin-left:    15%;
-    width:  70%;
+    position:    absolute;
+    margin-left: 15%;
+    width:       70%;
     background-color: #fff;
 }
 
 #toptext {
     padding-left:   180px;
-    font-size:      1.00cm;
-    color:          #333333;
+    font-size:  1.00cm;
+    color:      #333333;
 }
 
 #content {
-    color:          #636363;
+    color:  #636363;
+}
+
+#theme {
+    color:  #e2e2e2;
 }
