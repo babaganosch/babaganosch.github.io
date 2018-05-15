@@ -48,7 +48,7 @@ header {
     padding-bottom: 7px;
 }
 
-a, a:visited {
+a:link, a:visited, a:hover, a:active {
     color: #0061ff;
     text-decoration: none;
 }
