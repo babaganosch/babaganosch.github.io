@@ -1,10 +1,11 @@
-@import url(/static/noway_regular/stylesheet.css);
+/*@import url(/static/noway_regular/stylesheet.css);*/
+@import url(/static/bariol/stylesheet.css);
 
 html {
 }
 
 body {
-    font-family: Helvetica, 'nowayregular', Arial, sans-serif;
+    font-family: 'bariol_regularregular', Helvetica, Arial, sans-serif;
     background-color: #e8e8e8;
     color:      #111;
     margin:     0px;
