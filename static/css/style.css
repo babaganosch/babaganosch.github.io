@@ -59,12 +59,11 @@ header {
     padding-bottom: 7px;
 }
 
-a:link, a:visited, a:hover, a:active {
-    color: #0061ff;
-    text-decoration: none;
+#black {
+    color: #111;
 }
 
-a2:link, a2:visited, a2:hover, a2:active {
-    color: #000;
+a:link, a:visited, a:hover, a:active {
+    color: #0061ff;
     text-decoration: none;
 }
