@@ -47,3 +47,8 @@ header {
 #text {
     padding-bottom: 7px;
 }
+
+a, a:visited {
+    color: #0061ff;
+    text-decoration: none;
+}
