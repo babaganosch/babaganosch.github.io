@@ -1,6 +1,8 @@
 /*@import url(/static/noway_regular/stylesheet.css);*/
 @import url(/static/bariol/stylesheet.css);
 
+strong { font-weight: normal; font-family: 'bariol_boldbold'; }
+
 html {
 }
 
