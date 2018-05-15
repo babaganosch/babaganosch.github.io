@@ -22,8 +22,8 @@ header {
 
 #pageholder {
     position:    absolute;
+    margin: 1cm auto;
     margin-top:  15px;
-    margin-left: 15%;
     padding-top: 30px;
     padding-bottom: 100px;
     /*width:       70%;*/
