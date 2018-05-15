@@ -21,6 +21,16 @@ header {
     height:           40px;
 }
 
+a.blue:link, a.blue:visited, a.blue:hover, a.blue:active {
+    color: #0061ff;
+    text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #111;
+    text-decoration: none;
+}
+
 #pageholder {
     margin:        auto;
     margin-top:    20px;
@@ -57,13 +67,4 @@ header {
 
 #text {
     padding-bottom: 7px;
-}
-
-#black {
-    color: #111;
-}
-
-a:link, a:visited, a:hover, a:active {
-    color: #0061ff;
-    text-decoration: none;
 }
