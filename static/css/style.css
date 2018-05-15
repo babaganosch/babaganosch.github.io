@@ -23,9 +23,10 @@ header {
 
 #pageholder {
     margin: auto;
-    margin-top:  15px;
+    margin-top:  20px;
+    margin-bottom:  20px;
     padding-top: 30px;
-    padding-bottom: 100px;
+    padding-bottom: 1cm;
     /*width:       70%;*/
     width:       21cm;
     background-color: #fff;
