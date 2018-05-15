@@ -30,6 +30,7 @@ header {
     /*width:       70%;*/
     width:       21cm;
     background-color: #fff;
+    border-radius: 3px;
 }
 
 #toptext {
