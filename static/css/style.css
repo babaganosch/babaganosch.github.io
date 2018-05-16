@@ -43,12 +43,6 @@ a:link, a:visited, a:hover, a:active {
     border-radius:    4px;
 }
 
-@media screen and (max-width: 480px) {
-    #pageholder {
-        width:       70%;
-    }
-}
-
 #toptext {
     padding-left:   100px;
     margin-bottom:  30px;
