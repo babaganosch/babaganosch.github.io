@@ -72,13 +72,17 @@ a:link, a:visited, a:hover, a:active {
 /* Phone adjustments */
 @media (max-width: 768px) {
 
+body {
+    font-size: 1em;
+}
+
 #pageholder {
     width: 96%;
 }
 
 #toptext {
     padding-left:   10%;
-    font-size:  1em;
+    font-size:  0.7cm;
 }
 
 }
