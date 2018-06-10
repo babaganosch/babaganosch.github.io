@@ -81,6 +81,8 @@ a:link, a:visited, a:hover, a:active {
 
     #pageholder {
         width: 96%;
+        margin-top:     3%;
+        margin-bottom:  3%
     }
 
     #toptext {
