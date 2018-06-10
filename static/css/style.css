@@ -73,14 +73,12 @@ a:link, a:visited, a:hover, a:active {
 @media (max-width: 768px) {
 
 #pageholder {
-    width: 88%;
+    width: 96%;
 }
 
 #toptext {
     padding-left:   10%;
-    margin-bottom:  30px;
     font-size:  0.7cm;
-    color:      #333333;
 }
 
 }
