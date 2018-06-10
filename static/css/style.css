@@ -85,25 +85,26 @@ a:link, a:visited, a:hover, a:active {
     }
 
     #pageholder {
-        width: 96%;
+        width:          96%;
         margin-top:     3%;
         margin-bottom:  3%
     }
 
     #toptext {
         padding-left:   10%;
-        font-size:  0.7cm;
+        font-size:      0.7cm;
     }
 
     #theme {
-        font-size: 1.2em;
-        padding-left: 50px;
-        margin-bottom: 10px;
+        font-size:      1.2em;
+        padding-left:   50px;
+        margin-bottom:  10px;
+        margin-top:     20px;
     }
 
     #date {
-        word-spacing: 2px;
-        padding-right: 5px;
+        word-spacing:   2px;
+        padding-right:  5px;
     }
 
     #text {
