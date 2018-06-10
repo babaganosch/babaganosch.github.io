@@ -98,6 +98,8 @@ a:link, a:visited, a:hover, a:active {
     }
 
     #date {
+        word-spacing: 2px;
+        padding-right: 5px;
     }
 
 }
