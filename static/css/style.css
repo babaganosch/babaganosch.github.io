@@ -65,7 +65,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #date {
-    text-align:    right;
+    /* text-align:    right; */
     padding-right: 30px;
 }
 
