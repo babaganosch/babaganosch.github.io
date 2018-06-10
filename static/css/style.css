@@ -12,7 +12,7 @@ body {
     color:      #111;
     margin:     0px;
     padding:    0px;
-    font-size:  0.36cm;
+    font-size:  1em; /* 0.36cm */
     -webkit-text-stroke: 0.6px;
 }
 
