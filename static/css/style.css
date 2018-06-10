@@ -106,4 +106,8 @@ a:link, a:visited, a:hover, a:active {
         padding-right: 5px;
     }
 
+    #text {
+        padding-bottom: 3px;
+    }
+
 }
