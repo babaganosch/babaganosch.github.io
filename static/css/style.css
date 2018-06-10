@@ -107,7 +107,7 @@ a:link, a:visited, a:hover, a:active {
     }
 
     #text {
-        padding-bottom: 3px;
+        padding-bottom: 0px;
     }
 
 }
