@@ -61,6 +61,7 @@ a:link, a:visited, a:hover, a:active {
 #theme {
     padding-left: 20px;
     color:        #666666;
+    letter-spacing: 1px;
 }
 
 #date {
@@ -92,14 +93,11 @@ a:link, a:visited, a:hover, a:active {
 
     #theme {
         font-size: 1.2em;
-        letter-spacing: 1px;
         padding-left: 50px;
         margin-bottom: 10px;
     }
 
     #date {
-        font-size: 0.8em;
-        word-spacing: 0.1em;
     }
 
 }
