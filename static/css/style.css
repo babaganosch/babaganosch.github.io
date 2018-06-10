@@ -92,6 +92,7 @@ a:link, a:visited, a:hover, a:active {
 
     #theme {
         font-size: 1.2em;
+        letter-spacing: 1px;
         padding-left: 50px;
     }
 
