@@ -94,6 +94,7 @@ a:link, a:visited, a:hover, a:active {
         font-size: 1.2em;
         letter-spacing: 1px;
         padding-left: 50px;
+        margin-bottom: 10px;
     }
 
     #date {
