@@ -1,7 +1,11 @@
 /*@import url(/static/noway_regular/stylesheet.css);*/
 @import url(/static/bariol/stylesheet.css);
 
-strong { font-weight: normal; font-family: 'bariol_boldbold'; }
+strong {
+    font-weight: normal;
+    font-family:
+    'bariol_boldbold';
+}
 
 html {
 }
@@ -37,7 +41,6 @@ a:link, a:visited, a:hover, a:active {
     margin-bottom: 20px;
     padding-top:   30px;
     padding-bottom: 1cm;
-    /*width:       70%;*/
     width:            21cm;
     background-color: #fff;
     border-radius:    6px;
@@ -72,17 +75,26 @@ a:link, a:visited, a:hover, a:active {
 /* Phone adjustments */
 @media (max-width: 768px) {
 
-body {
-    font-size: 1em;
-}
+    body {
+        font-size: 1em;
+    }
 
-#pageholder {
-    width: 96%;
-}
+    #pageholder {
+        width: 96%;
+    }
 
-#toptext {
-    padding-left:   10%;
-    font-size:  0.7cm;
-}
+    #toptext {
+        padding-left:   10%;
+        font-size:  0.7cm;
+    }
+
+    #theme {
+        font-size: 1.2em;
+    }
+
+    #date {
+        font-size: 0.8em;
+        word-spacing: 0.2em;
+    }
 
 }
