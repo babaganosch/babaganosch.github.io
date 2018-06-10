@@ -43,14 +43,6 @@ a:link, a:visited, a:hover, a:active {
     border-radius:    6px;
 }
 
-@media (max-width: 768px) {
-
-#pageholder {
-    width: 70%;
-}
-
-}
-
 #toptext {
     padding-left:   100px;
     margin-bottom:  30px;
@@ -75,4 +67,20 @@ a:link, a:visited, a:hover, a:active {
 
 #text {
     padding-bottom: 7px;
+}
+
+/* Phone adjustments */
+@media (max-width: 768px) {
+
+#pageholder {
+    width: 88%;
+}
+
+#toptext {
+    padding-left:   10%;
+    margin-bottom:  30px;
+    font-size:  0.7cm;
+    color:      #333333;
+}
+
 }
