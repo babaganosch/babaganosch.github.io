@@ -19,14 +19,6 @@
 
           gtag('config', 'UA-46921147-5');
         </script>
-        
-        <script>
-            var today = new Date();
-            var birthday = new Date(1992, 12, 16);
-            var differenceInMilisecond = today.valueOf() - birthday.valueOf();
-            var age = Math.floor(differenceInMilisecond / 31536000000);
-            document.getElementById("AGE").innerHTML = age
-        </script>
 
     </head>
     <body>
@@ -237,7 +229,13 @@
 
         </div>
         
-        
+        <script>
+            var today = new Date();
+            var birthday = new Date(1992, 12, 16);
+            var differenceInMilisecond = today.valueOf() - birthday.valueOf();
+            var age = Math.floor(differenceInMilisecond / 31536000000);
+            document.getElementById("AGE").innerHTML = age
+        </script>
         
     </body>
     
