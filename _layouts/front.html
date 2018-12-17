@@ -20,6 +20,13 @@
           gtag('config', 'UA-46921147-5');
         </script>
         
+        <script>
+            var today = new Date();
+            var birthday = new Date(1992, 12, 16);
+            var differenceInMilisecond = today.valueOf() - birthday.valueOf();
+            var age = Math.floor(differenceInMilisecond / 31536000000);
+            docunment.getElementById("AGE").innerHTML = age
+        </script>
 
     </head>
     <body>
@@ -32,14 +39,7 @@
                 <div class="row">
                     <div id="theme" class="col-xs-12 col-md-2"><b>bio</b></div>
                         <div id="text" class="col-xs-12 col-md-10">
-                            <script>
-            var today = new Date();
-            var birthday = new Date(1992, 10, 11);
-            var differenceInMilisecond = today.valueOf() - birthday.valueOf();
-            var age = Math.floor(differenceInMilisecond / 31536000000);
-            document.write(age);
-        </script>
-                            I am 26 years old and currently studying Computer Engineering at Chalmers University of
+                            I am <span id="AGE"></span> years old and currently studying Computer Engineering at Chalmers University of
                             Technology, in Gothenburg. I am interested in technology, software development and graphics
                             design. I spend a lot of my free time on one of my biggest passions; game development.
                         </div>
