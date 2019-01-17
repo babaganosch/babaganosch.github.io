@@ -12,11 +12,11 @@ b {
 }
 
 html {
+    background-color: #e8e8e8;
 }
 
 body {
     font-family: 'bariol_regularregular', Helvetica, Arial, sans-serif;
-    background-color: #e8e8e8;
     color:      #111;
     margin:     1cm auto;
     width:      21cm;
