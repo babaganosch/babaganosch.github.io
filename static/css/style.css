@@ -18,7 +18,8 @@ body {
     font-family: 'bariol_regularregular', Helvetica, Arial, sans-serif;
     background-color: #e8e8e8;
     color:      #111;
-    margin:     0px;
+    margin:     1cm auto;
+    width:      21cm;
     padding:    0px;
     font-size:  0.36cm;
     -webkit-text-stroke: 0.6px;
@@ -40,12 +41,12 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #pageholder {
-    margin:        auto;
+    /*margin:        auto;
     margin-top:    20px;
-    margin-bottom: 20px;
+    margin-bottom: 20px;*/
     padding-top:   30px;
     padding-bottom: 1cm;
-    width:            21cm;
+    /* width:            21cm; */
     background-color: #fff;
     border-radius:    6px;
 }
