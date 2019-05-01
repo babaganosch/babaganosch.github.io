@@ -39,8 +39,9 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
-.experienceText {
-    padding-left: 30px;
+.levelBlock {
+    width:   90px;
+    display: inline-block;
 }
 
 #pageholder {
