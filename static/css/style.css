@@ -44,6 +44,19 @@ a:link, a:visited, a:hover, a:active {
     display: inline-block;
 }
 
+.dateBlock {
+    width:   80px;
+    display: inline-block;
+}
+
+ul, ol {
+    list-style: circle;
+}
+
+.no-point {
+    list-style: none;
+}
+
 #pageholder {
     margin:        auto;
     margin-top:    20px;
