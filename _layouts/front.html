@@ -1,10 +1,251 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lars Andersson</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+
+        <!-- GOOGLE ANALYTICS -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46921147-5"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-46921147-5');
+        </script>
+
     </head>
     <body>
+        <div id="pageholder" class="px-lg-4">
 
-        sup!
+            <div id="toptext"><b>Lars Andersson</b></div>
+
+            <!-- BIO -->
+            <div id="content" class="container-fluid">
+                <div class="row">
+                    <div id="theme" class="col-xs-12 col-md-2"><b>bio</b></div>
+                        <div id="text" class="col-xs-12 col-md-10">
+                            I'm <span id="AGE"></span> years old and currently studying Computer Engineering at Chalmers University of
+                            Technology, in Gothenburg. I am interested in technology, software development and graphics
+                            design. I spend a lot of my free time on one of my biggest passions; game development.
+                        </div>
+                </div>
+
+                <!-- PHONE & EMAIL-->
+                <div class="row">
+                <div id="theme" class="col-md-2"></div>
+                <div class="col-xs-2 col-md-1">tel:<br>email:</div>
+                    <div id="text" class="col-xs-10 col-md-9">
+                        +46 (0)76 804 19 65<br>
+                        laranda@student.chalmers.se
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div id="content" class="container-fluid mt-4">
+
+                <!-- LEDARGRUPPEN -->
+                <div class="row">
+                <div id="theme" class="col-xs-12 col-md-2"><b>experience</b></div>
+                    <div id="date" class="col-xs-2 col-md-2">2018 - current</div>
+                    <div id="text" class="col-xs-10 col-md-8">
+                        <b>Consultant Developer</b> at <i>Svenska Ledargruppen</i> in Gothenburg city with a primary focus on redesigning
+                        applications for a more responsive design
+                    </div>
+                </div>
+
+                <!-- REAL-TIME SYSTEMS -->
+                <div class="row">
+                <div id="theme" class="col-md-2"></div>
+                    <div id="date" class="col-xs-2 col-md-2">2018 - current</div>
+                    <div id="text" class="col-xs-10 col-md-8">
+                        <b>TA</b> for the course <i>LET626 - Introduction to Real-Time
+                        Systems</i> at Chalmers University of Technology
+                    </div>
+                </div>
+
+                <!-- COMPUTER ENGINEERING -->
+                <div class="row">
+                <div id="theme" class="col-md-2"></div>
+                    <div id="date" class="col-xs-2 col-md-2">2017 - current</div>
+                    <div id="text" class="col-xs-10 col-md-8">
+                        <b>TA</b> for the course <i>LEU432 - Introduction to Computer
+                        Engineering</i> at Chalmers University of Technology
+                    </div>
+                </div>
+
+                <!-- ARLA -->
+                <div class="row">
+                <div id="theme" class="col-md-2"></div>
+                    <div id="date" class="col-xs-2 col-md-2">2016</div>
+                    <div id="text" class="col-xs-10 col-md-8">
+                        Machine Operator at Arla Foods Falkenberg
+                    </div>
+                </div>
+
+                <!-- ELDERLY CARE -->
+                <div class="row">
+                <div id="theme" class="col-md-2"></div>
+                    <div id="date" class="col-xs-2 col-md-2">2015</div>
+                    <div id="text" class="col-xs-10 col-md-8">
+                        Elderly care, with delegated medicine dispensation at Rolfstorps
+                        Hemtjänst
+                    </div>
+                </div>
+            </div>
+
+            <!-- EDUCATION -->
+            <div id="content" class="container-fluid mt-4">
+                <div class="row">
+                <div id="theme" class="col-xs-12 col-md-2"><b>education</b></div>
+                <!-- CHALMERS -->
+                <div id="date" class="col-xs-2 col-md-2">2016 - current</div>
+                    <div id="text" class="col-xs-10 col-md-8">
+                        Chalmers University of Technology, Gothenburg<br>
+                        <i>Computer Engineering</i>
+                    </div>
+                </div>
+
+                <!-- JU -->
+                <div class="row">
+                <div id="theme" class="col-md-2"></div>
+                <div id="date" class="col-xs-2 col-md-2">2013 - 2014</div>
+                    <div id="text" class="col-xs-10 col-md-8">
+                        Jönköping University<br>
+                        <i>Introductory year</i> – Mathematics, Physics and Chemistry
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECTS -->
+            <div id="content" class="container-fluid mt-4">
+                <div class="row">
+                <div id="theme" class="col-xs-12 col-md-2"><b>projects</b></div>
+
+                <!-- ROUTE RECORDER -->
+                <div id="date" class="col-xs-2 col-md-2">2018</div>
+                    <div id="text" class="col-xs-10 col-md-8">
+                        <b>Route Recorder</b><br>
+                        Android application made to be run on a Volvo car with the purpose to record driven routes and to visualize them as a heatmap on the in-car screen. Project in course <i>DAT256 - Software Engineering Project</i><br>
+                        <a class="blue" href="/static/content/RouteRecorderApp.pdf" >Preview</a>
+                    </div>
+                </div>
+
+                <!-- SHAPE ARENA -->
+                <div class="row">
+                <div id="theme" class="col-md-2"></div>
+                <div id="date" class="col-xs-2 col-md-2">2018</div>
+                    <div id="text" class="col-xs-10 col-md-8">
+                        <b>Shape Arena</b><br>
+                         Agar.io inspired Java multiplayer game developed in a team of five, as
+                        a project in the course <i>DAT055 - Object oriented applications</i><br>
+                        <a class="blue" href="https://github.com/babaganosch/ShapeArena" >GitHub Repository</a>
+                    </div>
+                </div>
+
+                <!-- ILLFATED -->
+                <div class="row">
+                <div id="theme" class="col-md-2"></div>
+                <div id="date" class="col-xs-2 col-md-2">2016 - ongoing</div>
+                    <div id="text" class="col-xs-10 col-md-8">
+                        <b>Illfated</b><br>
+                        Roguelike dungeon crawler game that takes inspiration from classic retro games as well as more modern roguelikes<br>
+                        <a class="blue" href="https://www.youtube.com/watch?v=r2gwL7vMXAw" >Trailer</a>
+                    </div>
+                </div>
+
+                <!-- MINECART MANIAC -->
+                <div class="row">
+                <div id="theme" class="col-md-2"></div>
+                <div id="date" class="col-xs-2 col-md-2">2017</div>
+                    <div id="text" class="col-xs-10 col-md-8">
+                        <b>Minecart Maniac</b><br>
+                        Android game, inspired by games such as Flappy Bird or Temple Run<br>
+                        <a class="blue" href="https://play.google.com/store/apps/details?id=com.LandalaStudios.MinecartManiac" >Minecart Maniac at GooglePlay Store</a>
+                    </div>
+                </div>
+
+                <!-- SAUSAGE CLOTHING -->
+                <div class="row">
+                <div id="theme" class="col-md-2"></div>
+                <div id="date" class="col-xs-2 col-md-2">2014</div>
+                    <div id="text" class="col-xs-10 col-md-8">
+                        <b>Sausage Clothing</b><br>
+                        Self-designed clothing and various other projects<br>
+                        <a class="blue" href="https://sausageclothing.se" >www.sausageclothing.se</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TECHNICAL & ENVIROMENTS -->
+            <div id="content" class="container-fluid mt-4">
+                <div class="row">
+                    <div id="theme" class="col-xs-12 col-md-2"><b>technical</b></div>
+
+                    <!-- LANGUAGES -->
+                    <div class="col-xs-3 col-md-2"><b>Languages</b></div>
+                    <div id="text" class="col-xs-9 col-md-8">
+                        GML, HTML + CSS, JavaScript, Java, C, Python
+                    </div>
+
+                    <!-- ENVIROMENTS -->
+                    <div class="col-md-2"></div>
+                    <div class="col-xs-3 col-md-2"><b>Enviroments</b></div>
+                    <div id="text" class="col-xs-9 col-md-8">
+                        Windows, Linux, OS X, PostgreSQL, MongoDB, Illustrator, Photoshop, Bootstrap, Eclipse, Git, Agile workflow (Scrum)
+                    </div>
+
+                    <!-- I ENJOY -->
+                    <div id="theme" class="col-md-2"></div>
+                    <div class="col-xs-12 col-md-10">I enjoy, and have ease of, learning new technologies.</div>
+                </div>
+            </div>
+
+            <!-- REFERENCES -->
+            <div id="content" class="container-fluid mt-4">
+                <div class="row">
+                    <div id="theme" class="col-xs-12 col-md-2"><b>references</b></div>
+                    <div class="col-xs-12 col-md-10"><b>References available upon request.</b></div>
+                </div>
+            </div>
+
+            <!-- SOCIAL -->
+            <div id="content" class="container-fluid mt-4">
+                <div class="row">
+
+                    <!-- TWITTER -->
+                    <div id="theme" class="col-xs-12 col-md-2"><b>social</b></div>
+                    <div class="col-xs-2 col-md-2"><b>Twitter</b></div>
+                    <div class="col-xs-10 col-md-8">
+                        <a href="https://twitter.com/babaganosch" >twitter.com/babaganosch</a>
+                    </div>
+
+                    <!-- GITHUB -->
+                    <div class="col-md-2"></div>
+                    <div class="col-xs-2 col-md-2"><b>GitHub</b></div>
+                    <div class="col-xs-10 col-md-8">
+                        <a href="https://github.com/babaganosch" >github.com/babaganosch</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            var today = new Date();
+            var birthday = new Date(1992, 9, 11);
+            var differenceInMilisecond = today.valueOf() - birthday.valueOf();
+            var age = Math.floor(differenceInMilisecond / 31536000000);
+            document.getElementById("AGE").innerHTML = age
+        </script>
 
     </body>
 
