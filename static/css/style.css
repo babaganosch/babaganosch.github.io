@@ -49,6 +49,11 @@ a:link, a:visited, a:hover, a:active {
     display: inline-block;
 }
 
+.dateBlockSmall {
+    width:   30px;
+    display: inline-block;
+}
+
 ul, ol {
     list-style: circle;
 }
