@@ -39,6 +39,10 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
+.experienceText {
+    padding-left: 10px;
+}
+
 #pageholder {
     margin:        auto;
     margin-top:    20px;
