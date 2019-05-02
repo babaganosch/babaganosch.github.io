@@ -117,6 +117,7 @@ ul, ol {
     .theme {
         font-size:      1.2em;
         /*padding-left:   50px;*/
+        text-align:     center;
         margin-bottom:  10px;
         margin-top:     20px;
     }
