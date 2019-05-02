@@ -40,17 +40,17 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .levelBlock {
-    width:   90px;
+    min-width:   90px;
     display: inline-block;
 }
 
 .dateBlock {
-    width:   82px;
+    min-width:   82px;
     display: inline-block;
 }
 
 .dateBlockSmall {
-    width:   37px;
+    min-width:   37px;
     display: inline-block;
 }
 
