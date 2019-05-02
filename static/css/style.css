@@ -39,6 +39,10 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
+button.navbar-toggler:focus {
+    outline: 1px none;
+}
+
 .levelBlock {
     min-width:   90px;
     display: inline-block;
