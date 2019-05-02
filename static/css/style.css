@@ -30,12 +30,12 @@ header {
 }
 
 a.blue:link, a.blue:visited, a.blue:hover, a.blue:active {
-    color: #0061ff;
+    /*color: #0061ff;*/
     text-decoration: none;
 }
 
 a:link, a:visited, a:hover, a:active {
-    color: #111;
+    /*color: #111;*/
     text-decoration: none;
 }
 
