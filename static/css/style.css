@@ -1,18 +1,7 @@
 /*@import url(/static/noway_regular/stylesheet.css);*/
 @import url(/static/bariol/stylesheet.css);
 
-strong {
-    font-weight: normal;
-    font-family: 'bariol_boldbold';
-    letter-spacing: 1px;
-}
-
-b {
-    letter-spacing: 0.5px;
-}
-
-html {
-}
+html {}
 
 body {
     font-family: 'bariol_regularregular', Helvetica, Arial, sans-serif;
@@ -29,6 +18,16 @@ header {
     height:           40px;
 }
 
+strong {
+    font-weight: normal;
+    font-family: 'bariol_boldbold';
+    letter-spacing: 1px;
+}
+
+b {
+    letter-spacing: 0.5px;
+}
+
 a.blue:link, a.blue:visited, a.blue:hover, a.blue:active {
     /*color: #0061ff;*/
     text-decoration: none;
@@ -41,6 +40,14 @@ a:link, a:visited, a:hover, a:active {
 
 button.navbar-toggler:focus {
     outline: 1px none;
+}
+
+ul, ol {
+    list-style: circle;
+}
+
+.no-point {
+    list-style: none;
 }
 
 .levelBlock {
@@ -56,14 +63,6 @@ button.navbar-toggler:focus {
 .dateBlockSmall {
     min-width:   37px;
     display: inline-block;
-}
-
-ul, ol {
-    list-style: circle;
-}
-
-.no-point {
-    list-style: none;
 }
 
 #pageholder {
@@ -89,11 +88,6 @@ ul, ol {
     padding-bottom: 15px;
 }
 
-#date {
-    /* text-align:    right; */
-    padding-right: 30px;
-}
-
 .theme {
     padding-left: 20px;
     color:        #666666;
@@ -102,10 +96,6 @@ ul, ol {
 
 /* Phone adjustments */
 @media (max-width: 768px) {
-
-    body {
-        font-size: 1em;
-    }
 
     #pageholder {
         width:          96%;
@@ -120,15 +110,9 @@ ul, ol {
 
     .theme {
         font-size:      1.2em;
-        /*padding-left:   50px;*/
         text-align:     center;
         margin-bottom:  10px;
         margin-top:     20px;
-    }
-
-    #date {
-        word-spacing:   2px;
-        padding-right:  5px;
     }
 
 }
