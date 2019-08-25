@@ -65,6 +65,16 @@ ul, ol {
     display: inline-block;
 }
 
+.theme {
+    padding-left: 20px;
+    color:        #666666;
+    letter-spacing: 1px;
+}
+
+.overflowDisable {
+    overflow: hidden;
+}
+
 #pageholder {
     margin:        auto;
     margin-top:    20px;
@@ -88,10 +98,25 @@ ul, ol {
     padding-bottom: 15px;
 }
 
-.theme {
-    padding-left: 20px;
-    color:        #666666;
-    letter-spacing: 1px;
+#Splash {
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    width:100%;
+    z-index: 99990;
+    background-color: #FFF;
+    overflow:
+    /*background-color: #0062ff;*/
+}
+
+#SplashSquare {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    z-index: 99991;
+    font-size: 2.5rem;
 }
 
 /* Phone adjustments */
