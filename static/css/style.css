@@ -79,7 +79,9 @@ ul, ol {
     margin-bottom: 20px;
     padding-top:   30px;
     padding-bottom: 1cm;
-    width:            21cm;
+    min-width:     21cm;
+    width:         65%;
+    max-width:     30cm;
     background-color: #fff;
     border-radius:    6px;
 }
