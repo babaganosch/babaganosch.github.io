@@ -25,7 +25,7 @@
     <body class="overflowDisable">
 
         <div id="Splash">
-            <div id="SplashSquare">Hi !</div>
+            <div id="SplashSquare" style="display: none;">Hi !</div>
         </div>
 
         <div id="Website" class="d-none">
@@ -376,15 +376,16 @@
         let splash = Cookies.get('Hi');
 
         if (!splash) {
+            $('#SplashSquare').fadeIn(1000);
             setTimeout(function() {
                 $('#Splash').fadeOut(2000);
                 $('#Website').removeClass('d-none');
-            }, 1000);
+            }, 1500);
 
             setTimeout(function() {
                 $('Body').removeClass('overflowDisable');
                 Cookies.set('Hi', true);
-            }, 2500);
+            }, 3000);
         } else {
             $('#Splash').addClass('d-none');
             $('#Website').removeClass('d-none');

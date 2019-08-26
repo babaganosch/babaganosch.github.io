@@ -19,8 +19,8 @@ header {
 }
 
 strong {
-    font-weight: normal;
-    font-family: 'bariol_boldbold';
+    font-weight:    normal;
+    font-family:    'bariol_boldbold';
     letter-spacing: 1px;
 }
 
@@ -29,50 +29,48 @@ b {
 }
 
 a.blue:link, a.blue:visited, a.blue:hover, a.blue:active {
-    /*color: #0061ff;*/
     text-decoration: none;
 }
 
 a:link, a:visited, a:hover, a:active {
-    /*color: #111;*/
     text-decoration: none;
 }
 
 button.navbar-toggler:focus {
-    outline: 1px none;
+    outline:        1px none;
 }
 
 ul, ol {
-    list-style: circle;
+    list-style:     circle;
 }
 
 .no-point {
-    list-style: none;
+    list-style:     none;
 }
 
 .levelBlock {
-    min-width:   95px;
-    display: inline-block;
+    min-width:      95px;
+    display:        inline-block;
 }
 
 .dateBlock {
-    min-width:   82px;
-    display: inline-block;
+    min-width:      82px;
+    display:        inline-block;
 }
 
 .dateBlockSmall {
-    min-width:   37px;
-    display: inline-block;
+    min-width:      37px;
+    display:        inline-block;
 }
 
 .theme {
-    padding-left: 20px;
-    color:        #666666;
+    padding-left:   20px;
+    color:          #666666;
     letter-spacing: 1px;
 }
 
 .overflowDisable {
-    overflow: hidden;
+    overflow:   hidden;
 }
 
 #pageholder {
@@ -99,23 +97,22 @@ ul, ol {
 }
 
 #Splash {
-    position: absolute;
-    top:0;
-    left:0;
-    bottom:0;
-    width:100%;
-    z-index: 99990;
+    position:   absolute;
+    top:        0;
+    left:       0;
+    bottom:     0;
+    width:      100%;
+    z-index:    99990;
     background-color: #FFF;
-    /*background-color: #0062ff;*/
 }
 
 #SplashSquare {
-    position: absolute;
-    top: 45%;
-    width: 100%;
+    position:   absolute;
+    top:        45%;
+    width:      100%;
     text-align: center;
-    z-index: 99991;
-    font-size: 2.5rem;
+    z-index:    99991;
+    font-size:  2.5rem;
 }
 
 /* Phone adjustments */
