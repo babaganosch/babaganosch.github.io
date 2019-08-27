@@ -99,7 +99,6 @@ ul, ol {
 }
 
 #Splash {
-    display:    none;
     position:   absolute;
     top:        0;
     left:       0;
@@ -110,7 +109,6 @@ ul, ol {
 }
 
 #SplashSquare {
-    display:    none;
     position:   absolute;
     top:        45%;
     width:      100%;

@@ -22,10 +22,10 @@
         </script>
 
     </head>
-    <body>
+    <body class="overflowDisable">
 
         <div id="Splash">
-            <div id="SplashSquare">Hi !</div>
+            <div id="SplashSquare" style="display: none;">Hi !</div>
         </div>
 
         <div id="Website" class="d-none">
@@ -375,8 +375,6 @@
         let splash = Cookies.get('Hi');
 
         if (!splash) {
-            $('#Splash').css('display', 'block');
-            $('Body').addClass('overflowDisable');
             $('#SplashSquare').fadeIn(1000);
             setTimeout(function() {
                 $('#Splash').fadeOut(2000);
@@ -388,6 +386,7 @@
                 Cookies.set('Hi', true);
             }, 3000);
         } else {
+            $('#Splash').addClass('d-none');
             $('#Website').removeClass('d-none');
             $('Body').removeClass('overflowDisable');
         }
