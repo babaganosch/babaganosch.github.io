@@ -383,7 +383,7 @@
 
             setTimeout(function() {
                 $('Body').removeClass('overflowDisable');
-                Cookies.set('Hi', true);
+                Cookies.set('Hi', true, { expires: 1 });
             }, 3000);
         } else {
             $('#Splash').addClass('d-none');
