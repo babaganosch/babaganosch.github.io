@@ -48,7 +48,8 @@ ul, ol {
 /* NEW */
 
 .hero {
-    min-height: 85vh;
+    height: 100vh;
+    transition: 1s height ease-in-out;
 }
 
 .gradient-bg {

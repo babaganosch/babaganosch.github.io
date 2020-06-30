@@ -278,11 +278,13 @@
             setTimeout(function() {
                 $('Body').removeClass('overflowDisable');
                 Cookies.set('Hi', true, { expires: 1 });
+                $( '.hero' ).animate({height:"85vh"});
             }, 3000);
         } else {
-            $('#Splash').addClass('d-none');
-            $('#Website').removeClass('d-none');
-            $('Body').removeClass('overflowDisable');
+            $( '#Splash' ).addClass('d-none');
+            $( '#Website' ).removeClass('d-none');
+            $( 'Body' ).removeClass('overflowDisable');
+            $( '.hero' ).delay(1500).animate({height:"85vh"});
         }
 
         $( "#button0" ).delay(500).animate({opacity: '1'}, 'slow');
