@@ -80,7 +80,7 @@
                         <div class="col-md-4 mb-5">
                             <div class="card card-link h-100" onclick="location.href='/illfated.html';">
 
-                                <figure style="background-image: url('/static/content/illfated.gif');" class="card-figure-img-top">
+                                <figure id="Illfated" style="background-image: url('/static/content/loading.jpg');" class="card-figure-img-top">
                                     <div class="tags is-right">
                                         <h6><span class="badge badge-light">GML</span></h6>
                                     </div>
@@ -102,7 +102,7 @@
                         <div class="col-md-4 mb-5">
                             <div class="card card-link h-100" onclick="location.href='https://play.google.com/store/apps/details?id=info.larsandersson.minecartmaniac';">
 
-                                <figure style="background-image: url('/static/content/minecart.gif');" class="card-figure-img-top">
+                                <figure id="Minecart" style="background-image: url('/static/content/loading.jpg');" class="card-figure-img-top">
                                     <div class="tags is-right">
                                         <h6><span class="badge badge-light">mobile</span></h6>
                                         <h6><span class="badge badge-light">GML</span></h6>
@@ -125,7 +125,7 @@
                         <div class="col-md-4 mb-5">
                             <div class="card card-link h-100" onclick="location.href='https://github.com/babaganosch/Frogger';">
 
-                                <figure style="background-image: url('/static/content/frogger.gif');" class="card-figure-img-top">
+                                <figure id="Frogger" style="background-image: url('/static/content/loading.jpg');" class="card-figure-img-top">
                                     <div class="tags is-right">
                                         <h6><span class="badge badge-light">SDL</span></h6>
                                         <h6><span class="badge badge-light">C++</span></h6>
@@ -150,7 +150,7 @@
                         <div class="col-md-4 mb-5">
                             <div class="card card-link h-100" onclick="location.href='https://github.com/babaganosch/OpenGL_Sandbox';">
 
-                                <figure style="background-image: url('/static/content/cargame.gif');" class="card-figure-img-top">
+                                <figure id="CarGame" style="background-image: url('/static/content/loading.jpg');" class="card-figure-img-top">
                                     <div class="tags is-right">
                                         <h6><span class="badge badge-light">OpenGL</span></h6>
                                         <h6><span class="badge badge-light">C++</span></h6>
@@ -200,7 +200,7 @@
                         <div class="col-md-4 mb-5">
                             <div class="card card-link h-100" onclick="location.href='/static/content/Projektkurs_Rapport.pdf';">
 
-                                <figure style="background-image: url('/static/content/monitor.gif');" class="card-figure-img-top">
+                                <figure id="TrafficMonitor" style="background-image: url('/static/content/loading.jpg');" class="card-figure-img-top">
                                     <div class="tags is-right">
                                         <h6><span class="badge badge-light">ML</span></h6>
                                         <h6><span class="badge badge-light">MongoDB</span></h6>
@@ -224,7 +224,7 @@
                         <div class="col-md-4 mb-5">
                             <div class="card card-link h-100" onclick="location.href='https://github.com/babaganosch/ShapeArena';">
 
-                                <figure style="background-image: url('/static/content/shapearena.gif');" class="card-figure-img-top">
+                                <figure id="ShapeArena" style="background-image: url('/static/content/loading.jpg');" class="card-figure-img-top">
                                     <div class="tags is-right">
                                         <h6><span class="badge badge-light">multiplayer</span></h6>
                                         <h6><span class="badge badge-light">Java</span></h6>
@@ -288,6 +288,14 @@
         $( "#button0" ).delay(500).animate({opacity: '1'}, 'slow');
         $( "#button1" ).delay(750).animate({opacity: '1'}, 'slow');
         $( "#button2" ).delay(1000).animate({opacity: '1'}, 'slow');
+
+        /* Load GIFS */
+        $( '#Illfated' ).css('background-image', "url('/static/content/illfated.gif')");
+        $( '#Minecart' ).css('background-image', "url('/static/content/minecart.gif')");
+        $( '#Frogger' ).css('background-image', "url('/static/content/frogger.gif')");
+        $( '#CarGame' ).css('background-image', "url('/static/content/cargame.gif')");
+        $( '#TrafficMonitor' ).css('background-image', "url('/static/content/monitor.gif')");
+        $( '#ShapeArena' ).css('background-image', "url('/static/content/shapearena.gif')");
 
     </script>
 
