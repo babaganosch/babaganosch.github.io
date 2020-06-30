@@ -66,6 +66,10 @@ ul, ol {
     border: none;
 }
 
+.card-link {
+    cursor: pointer;
+}
+
 .card-figure-img-top {
     padding-top: 75%;
     transition: 0.2s opacity ease-in-out;
