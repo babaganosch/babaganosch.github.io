@@ -6,20 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Lars Andersson</title>
         <style type="text/css">@import url(https://fonts.googleapis.com/css?family=Poppins:400,700);</style>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!-- Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!-- Custom -->
         <link rel="stylesheet" href="/static/css/style.css">
 
         <!-- GOOGLE ANALYTICS -->
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46921147-5"></script>
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-          gtag('config', 'UA-46921147-5');
+            gtag('config', 'UA-46921147-5');
         </script>
 
     </head>
@@ -80,11 +83,13 @@
                         <div class="col-md-4 mb-5">
                             <div class="card card-link h-100" onclick="location.href='/illfated.html';">
 
-                                <figure id="Illfated" style="background-image: url('/static/content/loading.jpg');" class="card-figure-img-top">
-                                    <div class="tags is-right">
-                                        <h6><span class="badge badge-light">GML</span></h6>
-                                    </div>
-                                </figure>
+                                <div class="tags is-right">
+                                    <h6><span class="badge badge-light" title="Gamemaker language">GML</span></h6>
+                                    <h6><span class="badge badge-info" title="Work in progress">WIP</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/illfated.mp4" type="video/mp4">
+                                </video>
 
                                 <div class="card-body">
                                     <h5 class="card-title">Illfated</h5>
@@ -102,13 +107,14 @@
                         <div class="col-md-4 mb-5">
                             <div class="card card-link h-100" onclick="location.href='https://play.google.com/store/apps/details?id=info.larsandersson.minecartmaniac';">
 
-                                <figure id="Minecart" style="background-image: url('/static/content/loading.jpg');" class="card-figure-img-top">
-                                    <div class="tags is-right">
-                                        <h6><span class="badge badge-light">Android</span></h6>
-                                        <h6><span class="badge badge-light">iOS</span></h6>
-                                        <h6><span class="badge badge-light">GML</span></h6>
-                                    </div>
-                                </figure>
+                                <div class="tags is-right">
+                                    <h6><span class="badge badge-light" title="Android">Android</span></h6>
+                                    <h6><span class="badge badge-light" title="Apple">iOS</span></h6>
+                                    <h6><span class="badge badge-light" title="Gamemaker language">GML</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/minecart.mp4" type="video/mp4">
+                                </video>
 
                                 <div class="card-body">
                                     <h5 class="card-title">Minecart Maniac</h5>
@@ -126,12 +132,13 @@
                         <div class="col-md-4 mb-5">
                             <div class="card card-link h-100" onclick="location.href='https://github.com/babaganosch/Frogger';">
 
-                                <figure id="Frogger" style="background-image: url('/static/content/loading.jpg');" class="card-figure-img-top">
-                                    <div class="tags is-right">
-                                        <h6><span class="badge badge-light">SDL</span></h6>
-                                        <h6><span class="badge badge-light">C++</span></h6>
-                                    </div>
-                                </figure>
+                                <div class="tags is-right">
+                                    <h6><span class="badge badge-light" title="SDL">SDL</span></h6>
+                                    <h6><span class="badge badge-light" title="C++">C++</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/frogger.mp4" type="video/mp4">
+                                </video>
 
                                 <div class="card-body">
                                     <h5 class="card-title">Frogger</h5>
@@ -151,11 +158,13 @@
                         <div class="col-md-4 mb-5">
                             <div class="card card-link h-100" onclick="location.href='/polepos.html';">
 
-                                <figure id="PolePos" style="background-image: url('/static/content/loading.jpg');" class="card-figure-img-top">
-                                    <div class="tags is-right">
-                                        <h6><span class="badge badge-light">GML</span></h6>
-                                    </div>
-                                </figure>
+                                <div class="tags is-right">
+                                    <h6><span class="badge badge-light" title="Gamemaker language">GML</span></h6>
+                                    <h6><span class="badge badge-info" title="Work in progress">WIP</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/poleposition.mp4" type="video/mp4">
+                                </video>
 
                                 <div class="card-body">
                                     <h5 class="card-title">PolePosition clone</h5>
@@ -163,7 +172,7 @@
                                 </div>
 
                                 <div class="card-footer py-1">
-                                    <small class="text-muted">2020</small>
+                                    <small class="text-muted">now - 2020</small>
                                 </div>
 
                             </div>
@@ -174,13 +183,14 @@
                         <div class="col-md-4 mb-5">
                             <div class="card card-link h-100" onclick="location.href='https://github.com/babaganosch/NotificationSystem';">
 
-                                <figure id="NotSystem" style="background-image: url('/static/content/loading.jpg');" class="card-figure-img-top">
-                                    <div class="tags is-right">
-                                        <h6><span class="badge badge-light">Open Source</span></h6>
-                                        <h6><span class="badge badge-light">Tool</span></h6>
-                                        <h6><span class="badge badge-light">GML</span></h6>
-                                    </div>
-                                </figure>
+                                <div class="tags is-right">
+                                    <h6><span class="badge badge-light" title="Open source">Open Source</span></h6>
+                                    <h6><span class="badge badge-light" title="Tool">Tool</span></h6>
+                                    <h6><span class="badge badge-light" title="Gamemaker language">GML</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/notifications.mp4" type="video/mp4">
+                                </video>
 
                                 <div class="card-body">
                                     <h5 class="card-title">Notification System</h5>
@@ -198,12 +208,13 @@
                         <div class="col-md-4 mb-5">
                             <div class="card card-link h-100" onclick="location.href='https://github.com/babaganosch/OpenGL_Sandbox';">
 
-                                <figure id="CarGame" style="background-image: url('/static/content/loading.jpg');" class="card-figure-img-top">
-                                    <div class="tags is-right">
-                                        <h6><span class="badge badge-light">OpenGL</span></h6>
-                                        <h6><span class="badge badge-light">C++</span></h6>
-                                    </div>
-                                </figure>
+                                <div class="tags is-right">
+                                    <h6><span class="badge badge-light" title="OpenGL">OpenGL</span></h6>
+                                    <h6><span class="badge badge-light" title="C++">C++</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/cargame.mp4" type="video/mp4">
+                                </video>
 
                                 <div class="card-body">
                                     <h5 class="card-title">ACG Project</h5>
@@ -223,9 +234,9 @@
 
                                 <figure style="background-image: url('/static/content/bthesis.jpg');" class="card-figure-img-top">
                                     <div class="tags is-right">
-                                        <h6><span class="badge badge-light">flex</span></h6>
-                                        <h6><span class="badge badge-light">bison</span></h6>
-                                        <h6><span class="badge badge-light">C</span></h6>
+                                        <h6><span class="badge badge-light" title="Flex">flex</span></h6>
+                                        <h6><span class="badge badge-light" title="Bison">bison</span></h6>
+                                        <h6><span class="badge badge-light" title="C">C</span></h6>
                                     </div>
                                 </figure>
 
@@ -248,13 +259,14 @@
                         <div class="col-md-4 mb-5">
                             <div class="card card-link h-100" onclick="location.href='/static/content/Projektkurs_Rapport.pdf';">
 
-                                <figure id="TrafficMonitor" style="background-image: url('/static/content/loading.jpg');" class="card-figure-img-top">
-                                    <div class="tags is-right">
-                                        <h6><span class="badge badge-light">ML</span></h6>
-                                        <h6><span class="badge badge-light">MongoDB</span></h6>
-                                        <h6><span class="badge badge-light">Python</span></h6>
-                                    </div>
-                                </figure>
+                                <div class="tags is-right">
+                                    <h6><span class="badge badge-light" title="Machine learning">ML</span></h6>
+                                    <h6><span class="badge badge-light" title="Database">MongoDB</span></h6>
+                                    <h6><span class="badge badge-light" title="Python">Python</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/monitor.mp4" type="video/mp4">
+                                </video>
 
                                 <div class="card-body">
                                     <h5 class="card-title">Traffic Monitoring and Visualization</h5>
@@ -272,12 +284,13 @@
                         <div class="col-md-4 mb-5">
                             <div class="card card-link h-100" onclick="location.href='https://github.com/babaganosch/ShapeArena';">
 
-                                <figure id="ShapeArena" style="background-image: url('/static/content/loading.jpg');" class="card-figure-img-top">
-                                    <div class="tags is-right">
-                                        <h6><span class="badge badge-light">multiplayer</span></h6>
-                                        <h6><span class="badge badge-light">Java</span></h6>
-                                    </div>
-                                </figure>
+                                <div class="tags is-right">
+                                    <h6><span class="badge badge-light" title="Network">multiplayer</span></h6>
+                                    <h6><span class="badge badge-light" title="Java">Java</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/shapearena.mp4" type="video/mp4">
+                                </video>
 
                                 <div class="card-body">
                                     <h5 class="card-title">Shape Arena</h5>
@@ -312,8 +325,8 @@
 
     <script>
 
+        // Hi!
         let splash = Cookies.get('Hi');
-
         if (!splash) {
             $('#SplashSquare').fadeIn(1000);
             setTimeout(function() {
@@ -333,19 +346,10 @@
             $( '.hero' ).delay(1500).animate({height:"85vh"});
         }
 
+        // Animate buttons
         $( "#button0" ).delay(500).animate({opacity: '1'}, 'slow');
         $( "#button1" ).delay(750).animate({opacity: '1'}, 'slow');
         $( "#button2" ).delay(1000).animate({opacity: '1'}, 'slow');
-
-        /* Load GIFS */
-        $( '#Illfated' ).css('background-image', "url('/static/content/illfated.gif')");
-        $( '#Minecart' ).css('background-image', "url('/static/content/minecart.gif')");
-        $( '#Frogger' ).css('background-image', "url('/static/content/frogger.gif')");
-        $( '#PolePos' ).css('background-image', "url('/static/content/polepos.gif')");
-        $( '#NotSystem' ).css('background-image', "url('/static/content/notifications.gif')");
-        $( '#CarGame' ).css('background-image', "url('/static/content/cargame.gif')");
-        $( '#TrafficMonitor' ).css('background-image', "url('/static/content/monitor.gif')");
-        $( '#ShapeArena' ).css('background-image', "url('/static/content/shapearena.gif')");
 
     </script>
 

@@ -70,6 +70,10 @@ ul, ol {
     cursor: pointer;
 }
 
+.card-video {
+    max-width: 100%;
+}
+
 .card-figure-img-top {
     padding-top: 75%;
     transition: 0.2s opacity ease-in-out;
