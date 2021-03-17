@@ -187,6 +187,17 @@ ul, ol {
     top: 0px;
 }
 
+.card.grayscale {
+    filter: url("filters.svg#grayscale");   /* Firefox 3.5+ */
+    filter: gray;                           /* IE6-9 */
+    -webkit-filter: grayscale(80%);         /* Chrome 19+ & Safari 6+ */
+}
+
+.card.grayscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+
 /* Phone adjustments */
 @media (min-width: 768px) {
     .card:hover {
