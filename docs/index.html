@@ -400,7 +400,14 @@
             $( '#Splash' ).addClass('d-none');
             $( '#Website' ).removeClass('d-none');
             $( 'Body' ).removeClass('overflowDisable');
-            $( '.hero' ).delay(1500).animate({height:"85vh"});
+            revealPortfolio(1500);
+        }
+
+        function revealPortfolio(time) {
+            setTimeout(function(){
+                if ( window.scrollY == 0 )
+                    $( '.hero' ).animate({height:"85vh"});
+            }, time);
         }
 
         // Animate buttons
