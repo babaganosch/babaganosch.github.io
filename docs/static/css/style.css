@@ -72,6 +72,7 @@ ul, ol {
 
 .card-video {
     max-width: 100%;
+    margin-top: -1px;
 }
 
 .card-figure-img-top {
@@ -187,24 +188,29 @@ ul, ol {
     top: 0px;
 }
 
-.card.grayscale {
+.grayscale {
     filter: url("filters.svg#grayscale");   /* Firefox 3.5+ */
     filter: gray;                           /* IE6-9 */
     -webkit-filter: grayscale(80%);         /* Chrome 19+ & Safari 6+ */
 }
 
-.card.grayscale:hover {
+.grayscale:hover {
     filter: none;
     -webkit-filter: grayscale(0%);
 }
 
+/*                   */
 /* Phone adjustments */
+/*                   */
+
+/* Desktop */
 @media (min-width: 768px) {
     .card:hover {
         top: -20px;
     }
 }
 
+/* Phone */
 @media (max-width: 768px) {
 
     #pageholder {

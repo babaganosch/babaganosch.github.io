@@ -118,6 +118,7 @@
                                     <h6><span class="badge badge-light" title="Gamemaker language">GML</span></h6>
                                     <h6><span class="badge badge-info" title="Work in progress">WIP</span></h6>
                                 </div>
+
                                 <video autoplay muted loop playsinline class="card-video">
                                     <source src="/static/content/minecart.mp4" type="video/mp4">
                                 </video>
@@ -388,6 +389,7 @@
         let splash = Cookies.get('Hi'), platform = window['platform-detect'];
         // Hi!
         if (!splash) {
+            if (platform.ie) $('#SplashSquare').html('Get a real browser ?');
             $('#SplashSquare').fadeIn(1000);
             setTimeout(function() {
                 $('#Splash').fadeOut(2000);
