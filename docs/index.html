@@ -29,6 +29,7 @@
 
     <body class="overflowDisable gradient-bg">
 
+    <!-- Hi ! -->
         <div id="Splash">
             <div id="SplashSquare" style="display: none;">Hi !</div>
         </div>
@@ -405,6 +406,7 @@
             revealPortfolio(1500);
         }
 
+        // Only reveal the portfolio if user hasn't scrolled
         function revealPortfolio(time) {
             setTimeout(function(){
                 if ( window.scrollY == 0 )
@@ -413,18 +415,19 @@
         }
 
         // Animate buttons
-        $( "#button0" ).delay(500).animate({opacity: '1'}, 'slow');
-        $( "#button1" ).delay(750).animate({opacity: '1'}, 'slow');
+        $( "#button0" ).delay(500).animate({opacity: '1'},  'slow');
+        $( "#button1" ).delay(750).animate({opacity: '1'},  'slow');
         $( "#button2" ).delay(1000).animate({opacity: '1'}, 'slow');
 
-        // On desktop, apply grayscale to cards and only color and play videos on hover
+        // On desktop, apply grayscale to cards
+        // additionally, only color and play videos on hover
         if (platform.formfactor == "desktop") {
             $('.card').each(function() {
                 $(this).addClass('grayscale');
                 let elem = $('video', this).get(0);
                 if (elem) {
-                    $(this).mouseenter(function() { $('video', this).get(0).play(); });
-                    $(this).mouseleave(function() { $('video', this).get(0).pause(); });
+                    $(this).mouseenter(function() { elem.play();  });
+                    $(this).mouseleave(function() { elem.pause(); });
                     elem.autoplay = false;
                 }
             });
