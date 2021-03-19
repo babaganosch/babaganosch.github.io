@@ -64,14 +64,14 @@
 
                     <!-- Button on mobile -->
                     <div class="col-12 text-center pb-3 pb-md-0 align-self-end">
-                        <a role="button" onclick="smoothScroll(document.querySelector('#portfolio'));" class="text-dark d-inline d-md-none" title="Porftolio"><i class="fas fa-chevron-down fa-2x"></i></a>
+                        <a role="button" onclick="scrollToPortfolio()" class="text-dark d-inline d-md-none" title="Porftolio"><i class="fas fa-chevron-down fa-2x"></i></a>
                     </div>
 
                     <div class="col-12 align-self-end"></div>
 
                     <!-- Button on PC -->
                     <div class="col-12 text-center pb-0 pb-md-3 align-self-end">
-                        <a role="button" onclick="smoothScroll(document.querySelector('#portfolio'));" class="text-dark d-none d-md-inline" title="Porftolio"><i class="fas fa-chevron-down fa-2x"></i></a>
+                        <a role="button" onclick="scrollToPortfolio()" class="text-dark d-none d-md-inline" title="Porftolio"><i class="fas fa-chevron-down fa-2x"></i></a>
                     </div>
 
                 </div>
@@ -430,6 +430,13 @@
                     elem.autoplay = false;
                 }
             });
+        }
+
+        function scrollToPortfolio() {
+            if (platform.phone)
+                smoothScroll(document.querySelector('#portfolio'));
+            else
+                document.querySelector('#portfolio').scrollIntoView({ behavior: "smooth" });
         }
 
         // Let Minecart Maniac point to correct OS store
