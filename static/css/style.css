@@ -209,7 +209,7 @@ ul, ol {
 /* Desktop */
 @media (min-width: 768px) {
     .card:hover {
-        transform: scale(1.02);
+        /*transform: scale(1.02);*/
         top: -20px;
     }
 }
