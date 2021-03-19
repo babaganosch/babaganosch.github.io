@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lars Andersson</title>
+        <style type="text/css">@import url(https://fonts.googleapis.com/css?family=Poppins:400,700);</style>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+        <!-- Custom -->
+        <link rel="stylesheet" href="/static/css/style.css">
+
+        <!-- GOOGLE ANALYTICS -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46921147-5"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-46921147-5');
+        </script>
+
+    </head>
+
+    <body class="overflowDisable gradient-bg">
+
+    <!-- Hi ! -->
+        <div id="Splash">
+            <div id="SplashSquare" style="display: none;">Hi !</div>
+        </div>
+
+        <div id="Website" class="d-none">
+
+    <!-- HEADER -->
+            <div class="container d-flex hero">
+                <div class="row align-items-center justify-content-center w-100 mx-auto">
+
+                    <div class="col-12 align-self-start"></div>
+                    <div class="col-12 align-self-start"></div>
+                    <div class="col-12 align-self-start"></div>
+
+                    <div class="col-12 text-center mb-5 align-self-center">
+                        <h1 id="title">Lars Andersson</h1><br>
+
+                        <div class="row justify-content-center">
+                            <div class="col-md-3 col-4 text-right">
+                                <a id="button0" href="https://github.com/babaganosch" class="text-dark" title="GitHub" style="opacity: 0;"><i class="fab fa-github-square fa-lg"></i> Github</a>
+                            </div>
+
+                            <div class="col-md-3 col-4 text-center">
+                                <a id="button1" href="https://twitter.com/Babaganosch" class="text-dark" title="Twitter" style="opacity: 0;"><i class="fab fa-twitter-square fa-lg"></i> Twitter</a>
+                            </div>
+
+                            <div class="col-md-3 col-4 text-left">
+                                <a id="button2" href="/resume.html" class="text-dark" title="CV" style="opacity: 0;"><i class="fas fa-address-card fa-lg"></i> <span class="d-none d-md-inline">Curriculum Vitae</span><span class="d-inline d-md-none">CV</span></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Button on mobile -->
+                    <div class="col-12 text-center pb-3 pb-md-0 align-self-end">
+                        <a role="button" onclick="smoothScroll(document.querySelector('#portfolio'));" class="text-dark d-inline d-md-none" title="Porftolio"><i class="fas fa-chevron-down fa-2x"></i></a>
+                    </div>
+
+                    <div class="col-12 align-self-end"></div>
+
+                    <!-- Button on PC -->
+                    <div class="col-12 text-center pb-0 pb-md-3 align-self-end">
+                        <a role="button" onclick="smoothScroll(document.querySelector('#portfolio'));" class="text-dark d-none d-md-inline" title="Porftolio"><i class="fas fa-chevron-down fa-2x"></i></a>
+                    </div>
+
+                </div>
+            </div>
+
+    <!-- PORTFOLIO -->
+            <div id="portfolio" class="portfolio" style="background-color: #2B2B2B;">
+                <div class="container py-5 d-flex">
+
+                    <div class="row">
+
+                        <!-- ILLFATED -->
+                        <div class="col-md-4 mb-5">
+                            <div class="card card-link h-100" onclick="location.href='/illfated.html';">
+
+                                <div class="tags is-right">
+                                    <h6><span class="badge bg-light text-dark" title="Gamemaker language">GML</span></h6>
+                                    <h6><span class="badge bg-info text-dark" title="Work in progress">WIP</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/illfated.mp4" type="video/mp4">
+                                </video>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Illfated</h5>
+                                    <p class="card-text">Roguelike dungeon crawler that takes inspiration from classic retro games as well as more modern roguelikes</p>
+                                </div>
+
+                                <div class="card-footer py-1">
+                                    <small class="text-muted">2016 - now</small>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- MINECART MANIAC -->
+                        <div class="col-md-4 mb-5">
+                            <div class="card card-link h-100" onclick="visitMinecartManiac();">
+
+                                <div class="tags is-right">
+                                    <h6><span class="badge bg-light text-dark" title="Android">Android</span></h6>
+                                    <h6><span class="badge bg-light text-dark" title="Apple">iOS</span></h6>
+                                    <h6><span class="badge bg-light text-dark" title="Gamemaker language">GML</span></h6>
+                                    <h6><span class="badge bg-info text-dark" title="Work in progress">WIP</span></h6>
+                                </div>
+
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/minecart.mp4" type="video/mp4">
+                                </video>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Minecart Maniac</h5>
+                                    <p class="card-text">Mobile game, inspired by games such as Flappy Bird and Temple Run, available at Google Play Store (Android) and App Store (iOS)</p>
+                                </div>
+
+                                <div class="card-footer py-1">
+                                    <small class="text-muted">2017 - now</small>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- FROGGER -->
+                        <div class="col-md-4 mb-5">
+                            <div class="card card-link h-100" onclick="location.href='https://github.com/babaganosch/Frogger';">
+
+                                <div class="tags is-right">
+                                    <h6><span class="badge bg-light text-dark" title="SDL">SDL</span></h6>
+                                    <h6><span class="badge bg-light text-dark" title="C++">C++</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/frogger.mp4" type="video/mp4">
+                                </video>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Frogger</h5>
+                                    <p class="card-text">
+                                        Project in the course <span class="text-muted">TDA572 - Game Engine Architecture</span> at Chalmers. Purpose was to create our own primitive game engine in C++, and recreate an old classic arcade game with slight modifications
+                                    </p>
+                                </div>
+
+                                <div class="card-footer py-1">
+                                    <small class="text-muted">2020</small>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Particles -->
+                        <div class="col-md-4 mb-5">
+                            <div class="card card-link h-100" onclick="location.href='https://larsandersson.info/DATX05/';">
+
+                                <div class="tags is-right">
+                                    <h6><span class="badge bg-light text-dark" title="WebGL">WebGL</span></h6>
+                                    <h6><span class="badge bg-light text-dark" title="GLSL">GLSL</span></h6>
+                                    <h6><span class="badge bg-light text-dark" title="JavaScript">JavaScript</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/particles.mp4" type="video/mp4">
+                                </video>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">GPU-accelerated particles</h5>
+                                    <p class="card-text">Master's Thesis</p>
+                                    <p class="card-text">Exploring the advantages of WebGL extensions within the context of GPU-accelerated particle systems, as a part of my master thesis at Chalmers</p>
+                                </div>
+
+                                <div class="card-footer py-1">
+                                    <small class="text-muted">2021</small>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- POLE POSITION -->
+                        <div class="col-md-4 mb-5">
+                            <div class="card card-link h-100" onclick="location.href='/polepos.html';">
+
+                                <div class="tags is-right">
+                                    <h6><span class="badge bg-light text-dark" title="Gamemaker language">GML</span></h6>
+                                    <h6><span class="badge bg-info text-dark" title="Work in progress">WIP</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/poleposition.mp4" type="video/mp4">
+                                </video>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">PolePosition clone</h5>
+                                    <p class="card-text">Retro racing game in pseudo-3D, heavily inspired by old arcade classics such as Pole Position</p>
+                                </div>
+
+                                <div class="card-footer py-1">
+                                    <small class="text-muted">2020 - now</small>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- NOTIFICATION SYSTEM -->
+                        <div class="col-md-4 mb-5">
+                            <div class="card card-link h-100" onclick="location.href='https://github.com/babaganosch/NotificationSystem';">
+
+                                <div class="tags is-right">
+                                    <h6><span class="badge bg-light text-dark" title="Open source">Open Source</span></h6>
+                                    <h6><span class="badge bg-light text-dark" title="Tool">Tool</span></h6>
+                                    <h6><span class="badge bg-light text-dark" title="Gamemaker language">GML</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/notifications.mp4" type="video/mp4">
+                                </video>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Notification System</h5>
+                                    <p class="card-text">Lightweight framework for signals in GMS 2.3+ with features such as callbacks and channels.</p>
+                                </div>
+
+                                <div class="card-footer py-1">
+                                    <small class="text-muted">2020</small>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- GRAPHICS CAR GAME -->
+                        <div class="col-md-4 mb-5">
+                            <div class="card card-link h-100" onclick="location.href='https://github.com/babaganosch/OpenGL_Sandbox';">
+
+                                <div class="tags is-right">
+                                    <h6><span class="badge bg-light text-dark" title="OpenGL">OpenGL</span></h6>
+                                    <h6><span class="badge bg-light text-dark" title="C++">C++</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/cargame.mp4" type="video/mp4">
+                                </video>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">ACG Project</h5>
+                                    <p class="card-text">Project to implement advanced graphical concepts from reasearch papers in the course <span class="text-muted">DAT205 - Advanced Computer Graphics</span> at Chalmers</p>
+                                </div>
+
+                                <div class="card-footer py-1">
+                                    <small class="text-muted">2020</small>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- OTTO -->
+                        <div class="col-md-4 mb-5">
+                            <div class="card card-link h-100" onclick="location.href='https://hdl.handle.net/20.500.12380/300029';">
+
+                                <figure style="background-image: url('/static/content/bthesis.jpg');" class="card-figure-img-top">
+                                    <div class="tags is-right">
+                                        <h6><span class="badge bg-light text-dark" title="Flex">flex</span></h6>
+                                        <h6><span class="badge bg-light text-dark" title="Bison">bison</span></h6>
+                                        <h6><span class="badge bg-light text-dark" title="C">C</span></h6>
+                                    </div>
+                                </figure>
+
+                                <div class="card-body">
+                                    <h5 class="card-title"><span class="d-none d-lg-inline">Objective Tiny-Timber : </span>OTTO</h5>
+                                    <p class="card-text">Bachelor's Thesis<span class="d-inline d-lg-none">, Objective Tiny-Timber : OTTO</span></p>
+                                    <p class="card-text">
+                                        Creation of an object-oriented language and a precompiler, as an alternative to real-time C, with the purpose to improve and facilitate laboratory assignments within the course <span class="text-muted">EDA223 - Real-Time Systems</span> at Chalmers and the University of Gothenburg.
+                                    </p>
+                                </div>
+
+                                <div class="card-footer py-1">
+                                    <small class="text-muted">2019</small>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- TRAFFIC MONITOR -->
+                        <div class="col-md-4 mb-5">
+                            <div class="card card-link h-100" onclick="location.href='/static/content/Projektkurs_Rapport.pdf';">
+
+                                <div class="tags is-right">
+                                    <h6><span class="badge bg-light text-dark" title="Machine learning">ML</span></h6>
+                                    <h6><span class="badge bg-light text-dark" title="Database">MongoDB</span></h6>
+                                    <h6><span class="badge bg-light text-dark" title="Python">Python</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/monitor.mp4" type="video/mp4">
+                                </video>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Traffic Monitoring and Visualization</h5>
+                                    <p class="card-text">Collection of real-time data over Gothenburg, visualized on a webapplication with AI-based predictions of future traffic situations, as a project in the course <span class="text-muted">DAT066 - Project</span> at Chalmers, in collaboration with Cybercom</p>
+                                </div>
+
+                                <div class="card-footer py-1">
+                                    <small class="text-muted">2018</small>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- SHAPE ARENA -->
+                        <div class="col-md-4 mb-5">
+                            <div id="test" class="card card-link h-100" onclick="location.href='https://github.com/babaganosch/ShapeArena';">
+
+                                <div class="tags is-right">
+                                    <h6><span class="badge bg-light text-dark" title="Network">multiplayer</span></h6>
+                                    <h6><span class="badge bg-light text-dark" title="Java">Java</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/shapearena.mp4" type="video/mp4">
+                                </video>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Shape Arena</h5>
+                                    <p class="card-text">Agar.io inspired Java multiplayer game developed in a team of five, as a project in the course <span class="text-muted">DAT055 - Object Oriented Applications</span> at Chalmers</p>
+                                </div>
+
+                                <div class="card-footer py-1">
+                                    <small class="text-muted">2018</small>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- SAUSAGE CLOTHING -->
+                        <div class="col-md-4 mb-5">
+                            <div class="card card-link h-100" onclick="location.href='https://sausageclothing.se/';">
+
+                                <figure style="background-image: url('/static/content/sausage.jpg');" class="card-figure-img-top">
+                                    <div class="tags is-right">
+                                        <h6><span class="badge bg-light text-dark" title="Portfolio">Portfolio</span></h6>
+                                        <h6><span class="badge bg-light text-dark" title="Apparel">Apparel</span></h6>
+                                    </div>
+                                </figure>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Sausage Clothing</h5>
+                                    <p class="card-text">
+                                        Homemade sweaters and prints.
+                                    </p>
+                                </div>
+
+                                <div class="card-footer py-1">
+                                    <small class="text-muted">2014</small>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SmoothScroll -->
+        <script type="text/javascript" src="/static/js/smoothscroll.js"></script>
+        <!-- Platform Detect -->
+        <script type="text/javascript" src="/node_modules/platform-detect/index.js"></script>
+        <!-- JQuery -->
+        <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+        <!-- Popper.js -->
+        <script type="text/javascript" src="/node_modules/popper.js/dist/UMD/popper.min.js"></script>
+        <!-- Bootstrap -->
+        <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Cookies -->
+        <script type="text/javascript" src="/node_modules/js-cookie/src/js.cookie.js"></script>
+
+    </body>
+
+    <script>
+
+        let splash = Cookies.get('Hi'), platform = window['platform-detect'];
+        // Hi!
+        if (!splash) {
+            if (platform.ie) $('#SplashSquare').html('Get a real browser ?');
+            $('#SplashSquare').fadeIn(1000);
+            setTimeout(function() {
+                $('#Splash').fadeOut(2000);
+                $('#Website').removeClass('d-none');
+            }, 1500);
+
+            setTimeout(function() {
+                $('Body').removeClass('overflowDisable');
+                Cookies.set('Hi', true, { expires: 1 });
+                $( '.hero' ).animate({height:"85vh"});
+            }, 3000);
+        } else {
+            $( '#Splash' ).addClass('d-none');
+            $( '#Website' ).removeClass('d-none');
+            $( 'Body' ).removeClass('overflowDisable');
+            revealPortfolio(1500);
+        }
+
+        // Only reveal the portfolio if user hasn't scrolled
+        function revealPortfolio(time) {
+            setTimeout(function(){
+                if ( window.scrollY == 0 )
+                    $( '.hero' ).animate({height:"85vh"});
+            }, time);
+        }
+
+        // Animate buttons
+        $( "#button0" ).delay(500).animate({opacity: '1'},  'slow');
+        $( "#button1" ).delay(750).animate({opacity: '1'},  'slow');
+        $( "#button2" ).delay(1000).animate({opacity: '1'}, 'slow');
+
+        // On desktop, apply grayscale to cards
+        // additionally, only color and play videos on hover
+        if (platform.formfactor == "desktop") {
+            $('.card').each(function() {
+                $(this).addClass('grayscale');
+                let elem = $('video', this).get(0);
+                if (elem) {
+                    $(this).mouseenter(function() { elem.play();  });
+                    $(this).mouseleave(function() { elem.pause(); });
+                    elem.autoplay = false;
+                }
+            });
+        }
+
+        // Let Minecart Maniac point to correct OS store
+        function visitMinecartManiac() {
+            if (platform.macos || platform.ios)
+                // Need to renew my Apple Developer License
+                // https://apps.apple.com/us/app/minecart-maniac/id1489146698
+                location.href='https://play.google.com/store/apps/details?id=info.larsandersson.minecartmaniac';
+            else
+                location.href='https://play.google.com/store/apps/details?id=info.larsandersson.minecartmaniac';
+        }
+
+    </script>
+
+</html>
