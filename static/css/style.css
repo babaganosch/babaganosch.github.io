@@ -46,6 +46,9 @@ ul, ol {
 
 
 /* NEW */
+.bariol-bold {
+    font-family: 'bariol_boldbold', Helvetica, Arial, sans-serif;
+}
 
 .hero {
     height: 100vh;
