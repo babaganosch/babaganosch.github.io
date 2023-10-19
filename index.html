@@ -83,6 +83,30 @@
 
                     <div class="row">
 
+                        <!-- NES-SCAPE -->
+                        <div class="col-md-4 mb-5">
+                            <div class="card card-link h-100" onclick="location.href='https://github.com/babaganosch/nes_emulator';">
+
+                                <div class="tags is-right">
+                                    <h6><span class="badge bg-light text-dark" title="C++">C++</span></h6>
+                                    <h6><span class="badge bg-info text-dark" title="Work in progress">WIP</span></h6>
+                                </div>
+                                <video autoplay muted loop playsinline class="card-video">
+                                    <source src="/static/content/NesScape.mp4" type="video/mp4">
+                                </video>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">NesScape</h5>
+                                    <p class="card-text">NES emulator written in C++. Currently the CPU and PPU is implemented, with some minor bugs.</p>
+                                </div>
+
+                                <div class="card-footer py-1">
+                                    <small class="text-muted">2023 - now</small>
+                                </div>
+
+                            </div>
+                        </div>
+
                         <!-- ABADDON -->
                         <div class="col-md-4 mb-5">
                             <div class="card card-link h-100" onclick="location.href='/abaddon.html';">
@@ -435,8 +459,8 @@
         }
 
         // Animate buttons
-        $( "#button0" ).delay(500).animate({opacity: '1'},  'slow');
-        $( "#button1" ).delay(750).animate({opacity: '1'},  'slow');
+        $( "#button0" ).delay(500 ).animate({opacity: '1'}, 'slow');
+        $( "#button1" ).delay(750 ).animate({opacity: '1'}, 'slow');
         $( "#button2" ).delay(1000).animate({opacity: '1'}, 'slow');
 
         // On desktop, apply grayscale to cards
