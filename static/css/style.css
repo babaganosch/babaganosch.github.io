@@ -1,7 +1,9 @@
 /*@import url(/static/noway_regular/stylesheet.css);*/
 @import url(/static/bariol/stylesheet.css);
 
-html {}
+html {
+    overflow-y: scroll;
+}
 
 body {
     font-family: 'bariol_regularregular', Helvetica, Arial, sans-serif;
