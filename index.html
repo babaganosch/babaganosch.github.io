@@ -15,13 +15,16 @@
         <!-- Windows fixes -->
         <script>
             window.onload = () => {
-                var headTag = document.getElementsByTagName('head')[0]
-                const linkforCSSfile = document.createElement("link");
-                linkforCSSfile.href = 'windows_mods.css'
-                linkforCSSfile.type = 'text/css'
-                linkforCSSfile.rel = 'stylesheet'
-                headTag.appendChild(linkforCSSfile);
-                document.body.appendChild(headTag);
+                if (platform.windows)
+                {
+                    var headTag = document.getElementsByTagName('head')[0]
+                    const linkforCSSfile = document.createElement("link");
+                    linkforCSSfile.href = 'windows_mods.css'
+                    linkforCSSfile.type = 'text/css'
+                    linkforCSSfile.rel = 'stylesheet'
+                    headTag.appendChild(linkforCSSfile);
+                    document.body.appendChild(headTag);
+                }
             };
         </script>
 
