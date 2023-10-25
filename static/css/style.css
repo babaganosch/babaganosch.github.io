@@ -69,6 +69,7 @@ ul, ol {
 
 .card {
     border: none;
+    overflow: hidden;
 }
 
 .card-link {
@@ -80,6 +81,8 @@ ul, ol {
     margin-right: -1px;
     margin-left: -1px;
     margin-top: -2px;
+    scale: 101%; /* Ugly fix for videos with wrong size */
+    z-index: 0;
 }
 
 .card-figure-img-top {
@@ -104,6 +107,7 @@ ul, ol {
     top: 1em;
     left: 1em;
     right: 1em;
+    z-index: 1;
 }
 
 .tags .badge {
