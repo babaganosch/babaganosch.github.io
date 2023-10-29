@@ -20,20 +20,24 @@
         <link rel="stylesheet" href="/static/css/style.css">
         <!-- Windows fixes -->
         <script>
-            addEventListener("readystatechange", (event) => {
-                console.log("hello");
-                if (platform.windows)
-                {
-                    console.log("world");
-                    var headTag = document.getElementsByTagName('head')[0]
-                    const linkforCSSfile = document.createElement("link");
-                    linkforCSSfile.href = '/static/css/windows_mods.css'
-                    linkforCSSfile.type = 'text/css'
-                    linkforCSSfile.rel = 'stylesheet'
-                    headTag.appendChild(linkforCSSfile);
-                    document.body.appendChild(headTag);
+
+            document.onreadystatechange = () => {
+                console.log("state change!");
+                if (document.readyState === "interactive") {
+                    console.log("hello");
+                    if (platform.windows)
+                    {
+                        console.log("world");
+                        var headTag = document.getElementsByTagName('head')[0]
+                        const linkforCSSfile = document.createElement("link");
+                        linkforCSSfile.href = '/static/css/windows_mods.css'
+                        linkforCSSfile.type = 'text/css'
+                        linkforCSSfile.rel = 'stylesheet'
+                        headTag.appendChild(linkforCSSfile);
+                        document.body.appendChild(headTag);
+                    }
                 }
-            });
+            };
         </script>
         <!-- GOOGLE ANALYTICS -->
         <!-- Global site tag (gtag.js) - Google Analytics -->
