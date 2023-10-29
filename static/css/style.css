@@ -172,6 +172,10 @@ ul, ol {
     padding-bottom: 15px;
 }
 
+#title {
+
+}
+
 #Splash {
     position:   absolute;
     top:        0;
@@ -217,6 +221,11 @@ ul, ol {
 
 /* Desktop */
 @media (min-width: 768px) {
+
+    #title {
+        font-size: 4em;
+    }
+
     .card:hover {
         /*transform: scale(1.02);*/
         top: -20px;

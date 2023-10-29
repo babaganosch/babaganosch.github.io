@@ -22,12 +22,9 @@
         <script>
 
             document.onreadystatechange = () => {
-                console.log("state change!");
                 if (document.readyState === "interactive") {
-                    console.log("hello");
                     if (platform.windows)
                     {
-                        console.log("world");
                         var headTag = document.getElementsByTagName('head')[0]
                         const linkforCSSfile = document.createElement("link");
                         linkforCSSfile.href = '/static/css/windows_mods.css'
