@@ -219,6 +219,10 @@ ul, ol {
     -webkit-filter: grayscale(0%);
 }
 
+.scroll-down-button {
+    opacity: 0;
+}
+
 /*                   */
 /* Phone adjustments */
 /*                   */
@@ -251,7 +255,7 @@ ul, ol {
     }
 
     .card:hover {
-        /*transform: scale(1.02);*/
+        transform: scale(1.03);
         top: -20px;
     }
 }

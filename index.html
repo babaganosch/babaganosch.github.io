@@ -10,16 +10,17 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
         <link rel="manifest" href="/static/favicon/site.webmanifest">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/a551570b4b.js" crossorigin="anonymous"></script>
         <!-- Poppins -->
         <style type="text/css">@import url(https://fonts.googleapis.com/css?family=Poppins:400,700);</style>
         <!-- Bootstrap -->
         <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <!-- Font Awesome -->
-        <script src="https://kit.fontawesome.com/a551570b4b.js" crossorigin="anonymous"></script>
         <!-- Custom -->
         <link rel="stylesheet" href="/static/css/style.css">
         <!-- Windows fixes -->
         <script>
+            /*
             window.onload = (event) => {
                 if (platform.windows)
                 {
@@ -32,6 +33,7 @@
                     document.body.appendChild(headTag);
                 }
             };
+            */
         </script>
         <!-- GOOGLE ANALYTICS -->
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -482,6 +484,8 @@
         $( "#button0" ).delay(500 ).animate({opacity: '1'}, 'slow');
         $( "#button1" ).delay(750 ).animate({opacity: '1'}, 'slow');
         $( "#button2" ).delay(1000).animate({opacity: '1'}, 'slow');
+
+        $( ".scroll-down-button" ).delay(1250).animate({opacity: '1'}, 'slow');
 
         // On desktop, apply grayscale to cards
         // additionally, only color and play videos on hover
