@@ -46,8 +46,60 @@ ul, ol {
     list-style:     circle;
 }
 
+#header a {
+    color: #212529;
+}
 
-/* NEW */
+#header a:hover {
+    color: #21252990;
+}
+
+#pageholder {
+    margin:        auto;
+    margin-top:    20px;
+    margin-bottom: 20px;
+    padding-top:   30px;
+    padding-bottom: 1cm;
+    min-width:     21cm;
+    width:         65%;
+    max-width:     30cm;
+    background-color: #fff;
+    border-radius:    6px;
+}
+
+#toptext {
+    padding-left:   100px;
+    margin-bottom:  30px;
+    font-size:  0.90cm;
+    color:      #333333;
+}
+
+#content {
+    color:          #111;
+    padding-bottom: 15px;
+}
+
+#Splash {
+    position:   absolute;
+    top:        0;
+    left:       0;
+    bottom:     0;
+    width:      100%;
+    z-index:    99990;
+    background-color: #FFF;
+}
+
+#SplashSquare {
+    position:   absolute;
+    top:        45%;
+    width:      100%;
+    text-align: center;
+    z-index:    99991;
+    font-size:  2.5rem;
+}
+
+/****  CLASSES ****/
+
 .bariol-bold {
     font-family: 'bariol_boldbold', Helvetica, Arial, sans-serif;
 }
@@ -145,50 +197,6 @@ ul, ol {
 
 .overflowDisable {
     overflow:   hidden;
-}
-
-#pageholder {
-    margin:        auto;
-    margin-top:    20px;
-    margin-bottom: 20px;
-    padding-top:   30px;
-    padding-bottom: 1cm;
-    min-width:     21cm;
-    width:         65%;
-    max-width:     30cm;
-    background-color: #fff;
-    border-radius:    6px;
-}
-
-#toptext {
-    padding-left:   100px;
-    margin-bottom:  30px;
-    font-size:  0.90cm;
-    color:      #333333;
-}
-
-#content {
-    color:          #111;
-    padding-bottom: 15px;
-}
-
-#Splash {
-    position:   absolute;
-    top:        0;
-    left:       0;
-    bottom:     0;
-    width:      100%;
-    z-index:    99990;
-    background-color: #FFF;
-}
-
-#SplashSquare {
-    position:   absolute;
-    top:        45%;
-    width:      100%;
-    text-align: center;
-    z-index:    99991;
-    font-size:  2.5rem;
 }
 
 /* Card hover */
