@@ -240,7 +240,7 @@ ul, ol {
     }
 
     .header-links {
-        line-height: 2.1em;
+        height: 4em;
     }
 
     .header-links a {
