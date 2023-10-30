@@ -451,6 +451,7 @@
     <script>
 
         let splash = Cookies.get('Hi'), platform = window['platform-detect'];
+        let extra_time = 0;
         // Hi!
         if (!splash) {
             if (platform.ie) $('#SplashSquare').html('Get a real browser ?');
@@ -458,6 +459,7 @@
             setTimeout(function() {
                 $('#Splash').fadeOut(2000);
                 $('#Website').removeClass('d-none');
+                extra_time = 2200;
             }, 1500);
 
             setTimeout(function() {
@@ -481,11 +483,11 @@
         }
 
         // Animate buttons
-        $( "#button0" ).delay(500 ).animate({opacity: '1'}, 'slow');
-        $( "#button1" ).delay(750 ).animate({opacity: '1'}, 'slow');
-        $( "#button2" ).delay(1000).animate({opacity: '1'}, 'slow');
+        $( "#button0" ).delay(500  + extra_time).animate({opacity: '1'}, 'slow');
+        $( "#button1" ).delay(750  + extra_time).animate({opacity: '1'}, 'slow');
+        $( "#button2" ).delay(1000 + extra_time).animate({opacity: '1'}, 'slow');
 
-        $( ".scroll-down-button" ).delay(1250).animate({opacity: '1'}, 'slow');
+        $( ".scroll-down-button" ).delay(1250 + extra_time).animate({opacity: '1'}, 'slow');
 
         // On desktop, apply grayscale to cards
         // additionally, only color and play videos on hover
