@@ -230,6 +230,22 @@ ul, ol {
         font-size: 4em;
     }
 
+    #header {
+        line-height: 0.55cm;
+    }
+
+    #header a {
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        font-size: inherit;
+    }
+    
+    #header a:hover {
+        font-size: 0.4cm;
+    }
+
     .card:hover {
         /*transform: scale(1.02);*/
         top: -20px;
