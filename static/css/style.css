@@ -220,11 +220,11 @@ ul, ol {
     opacity: 0;
 }
 
-.scroll-down-button a {
+.header-links a {
     color: #212529;
 }
 
-.scroll-down-button a:hover {
+.header-links a:hover {
     color: #212529e0;
 }
 
@@ -243,12 +243,12 @@ ul, ol {
         line-height: 2.1em;
     }
 
-    .scroll-down-button a {
+    .header-links a {
         transition: all ease 0.3s;
         font-size: inherit;
     }
     
-    .scroll-down-button a:hover {
+    .header-links a:hover {
         font-size: 1.1em;
     }
 
