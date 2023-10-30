@@ -5,6 +5,11 @@ html {
     overflow-y: scroll;
 }
 
+/* Remove scrollbar (it's ugly on Windows) */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
 body {
     font-family: 'bariol_regularregular', Helvetica, Arial, sans-serif;
     background-color: #e8e8e8;
