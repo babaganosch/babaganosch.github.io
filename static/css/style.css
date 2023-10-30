@@ -244,7 +244,7 @@ ul, ol {
     }
 
     .header-links a {
-        transition: all ease 0.3s;
+        transition: all ease 0.1s;
         font-size: inherit;
     }
     
