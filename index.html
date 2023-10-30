@@ -454,7 +454,7 @@
         let extra_time = 0;
         // Hi!
         if (!splash) {
-            extra_time = 2800;
+            extra_time = 1500;
 
             if (platform.ie) $('#SplashSquare').html('Get a real browser ?');
             $('#SplashSquare').fadeIn(1000);
@@ -487,8 +487,7 @@
         $( "#button0" ).delay(500  + extra_time).animate({opacity: '1'}, 'slow');
         $( "#button1" ).delay(750  + extra_time).animate({opacity: '1'}, 'slow');
         $( "#button2" ).delay(1000 + extra_time).animate({opacity: '1'}, 'slow');
-
-        $( ".scroll-down-button" ).delay(1750 + extra_time).animate({opacity: '1'}, 'slow');
+        $( ".scroll-down-button" ).delay(2000 + extra_time).animate({opacity: '1'}, 'slow');
 
         // On desktop, apply grayscale to cards
         // additionally, only color and play videos on hover
