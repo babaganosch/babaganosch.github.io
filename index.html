@@ -454,12 +454,13 @@
         let extra_time = 0;
         // Hi!
         if (!splash) {
+            extra_time = 4000;
+
             if (platform.ie) $('#SplashSquare').html('Get a real browser ?');
             $('#SplashSquare').fadeIn(1000);
             setTimeout(function() {
                 $('#Splash').fadeOut(2000);
                 $('#Website').removeClass('d-none');
-                extra_time = 2200;
             }, 1500);
 
             setTimeout(function() {
