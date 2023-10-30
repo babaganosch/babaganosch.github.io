@@ -51,14 +51,6 @@ ul, ol {
     list-style:     circle;
 }
 
-#header a {
-    color: #212529;
-}
-
-#header a:hover {
-    color: #212529e0;
-}
-
 #pageholder {
     margin:        auto;
     margin-top:    20px;
@@ -228,6 +220,14 @@ ul, ol {
     opacity: 0;
 }
 
+.scroll-down-button a {
+    color: #212529;
+}
+
+.scroll-down-button a:hover {
+    color: #212529e0;
+}
+
 /*                   */
 /* Phone adjustments */
 /*                   */
@@ -239,24 +239,17 @@ ul, ol {
         font-size: 4em;
     }
 
-    #header {
+    .header-links {
         line-height: 2.1em;
     }
 
-    #header a {
-        -webkit-transition: all 0.5s ease-in-out;
-        -moz-transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out;
-        transition: all 0.5s ease-in-out;
+    .scroll-down-button a {
+        transition: all ease 0.3s;
         font-size: inherit;
     }
     
-    #header a:hover {
+    .scroll-down-button a:hover {
         font-size: 1.1em;
-    }
-
-    .scroll-down-button {
-        line-height: 4em;
     }
 
     .card:hover {
