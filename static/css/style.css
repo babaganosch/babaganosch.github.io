@@ -231,7 +231,7 @@ ul, ol {
     }
 
     #header {
-        line-height: 0.55cm;
+        line-height: 2.1em;
     }
 
     #header a {
@@ -243,7 +243,11 @@ ul, ol {
     }
     
     #header a:hover {
-        font-size: 0.4cm;
+        font-size: 1.1em;
+    }
+
+    .scroll-down-button {
+        line-height: 4em;
     }
 
     .card:hover {
