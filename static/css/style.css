@@ -76,6 +76,14 @@ ul, ol {
     padding-bottom: 15px;
 }
 
+#header a {
+    color: #212529;
+}
+
+#header a:hover {
+    color: #212529e0;
+}
+
 #Splash {
     position:   absolute;
     top:        0;
@@ -218,15 +226,8 @@ ul, ol {
 
 .scroll-down-button {
     opacity: 0;
+    height: 4em;
     line-height: 4em;
-}
-
-.header-links a {
-    color: #212529;
-}
-
-.header-links a:hover {
-    color: #212529e0;
 }
 
 /*                   */
@@ -242,6 +243,7 @@ ul, ol {
 
     .header-links {
         height: 4em;
+        line-height: 4em;
     }
 
     .header-links a {
@@ -250,7 +252,7 @@ ul, ol {
     }
     
     .header-links a:hover {
-        font-size: 1.1em;
+        font-size: 1.3em;
     }
 
     .card:hover {

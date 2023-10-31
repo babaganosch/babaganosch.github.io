@@ -53,37 +53,29 @@
 
                         <div class="row justify-content-center bariol-bold">
                             <div class="col-md-3 col-4 header-links">
-                                <span class="align-middle">
-                                    <a id="button0" href="https://github.com/babaganosch" title="GitHub" style="opacity: 0;"><i class="fa-brands fa-github-square fa-xl"></i> Github</a>
-                                </span>
+                                <a id="button0" href="https://github.com/babaganosch" title="GitHub" style="opacity: 0;"><i class="fa-brands fa-github-square fa-xl"></i> Github</a>
                             </div>
 
                             <div class="col-md-3 col-4 header-links">
-                                <span class="align-middle">
-                                    <a id="button1" href="https://twitter.com/Babaganosch" title="X" style="opacity: 0;"><i class="fa-brands fa-square-x-twitter fa-xl"></i> Twitter</a>
-                                </span>
+                                <a id="button1" href="https://twitter.com/Babaganosch" title="X" style="opacity: 0;"><i class="fa-brands fa-square-x-twitter fa-xl"></i> Twitter</a>
                             </div>
 
                             <div class="col-md-3 col-4 align-items-center header-links">
-                                <span class="align-middle">
-                                    <a id="button2" href="/resume.html" title="CV" style="opacity: 0;"><i class="fa-solid fa-address-card fa-xl"></i> <span class="d-none d-md-inline">Curriculum Vitae</span><span class="d-inline d-md-none">CV</span></a>
-                                </span>
+                                <a id="button2" href="/resume.html" title="CV" style="opacity: 0;"><i class="fa-solid fa-address-card fa-xl"></i> <span class="d-none d-md-inline">Curriculum Vitae</span><span class="d-inline d-md-none">CV</span></a>
                             </div>
                         </div>
 
                     </div>
 
                     <!-- Button on mobile -->
-                    <div class="col-12 text-center pb-3 pb-md-0 align-self-end header-links scroll-down-button">
-                        <span class="align-middle">
-                            <a role="button" onclick="scrollToPortfolio()" class="d-inline d-md-none" title="Porftolio"><i class="fa-solid fa-circle-down fa-2x fa-beat"></i></a>
-                        </span>
+                    <div class="col-12 text-center pb-3 pb-md-0 align-self-end scroll-down-button">
+                        <a role="button" onclick="scrollToPortfolio()" class="d-inline d-md-none" title="Porftolio"><i class="fa-solid fa-circle-down fa-2x fa-beat"></i></a>
                     </div>
 
                     <!-- Button on PC -->
-                    <div class="col-12 text-center pb-0 pb-md-3 align-self-end header-links scroll-down-button">
-                        <span class="align-middle">
-                            <a role="button" onclick="scrollToPortfolio()" class="d-none d-md-inline" title="Porftolio"><i class="fa-solid fa-circle-down fa-2x my-auto"></i></a>
+                    <div class="col-12 text-center align-self-end scroll-down-button">
+                        <span id="ScrollButtonFinder" >
+                            <a role="button" onclick="scrollToPortfolio()" class="d-none d-md-inline" title="Porftolio"><i id="ScrollButtonPC" class="fa-solid fa-circle-down fa-2x"></i></a>
                         </span>
                     </div>
 
@@ -448,14 +440,14 @@
         let extra_time = 0;
         // Hi!
         if (!splash) {
-            extra_time = 2500;
+            extra_time = 3500;
 
             if (platform.ie) $('#SplashSquare').html('Get a real browser ?');
-            $('#SplashSquare').fadeIn(1000);
+            $('#SplashSquare').fadeIn(2000);
             setTimeout(function() {
-                $('#Splash').fadeOut(2000);
+                $('#Splash').fadeOut(3000);
                 $('#Website').removeClass('d-none');
-            }, 2500);
+            }, 3500);
 
             setTimeout(function() {
                 $('Body').removeClass('overflowDisable');
@@ -478,10 +470,19 @@
         }
 
         // Animate buttons
-        $( "#button0" ).delay(500  + extra_time).animate({opacity: '1'}, 'slow');
-        $( "#button1" ).delay(750  + extra_time).animate({opacity: '1'}, 'slow');
-        $( "#button2" ).delay(1000 + extra_time).animate({opacity: '1'}, 'slow');
-        $( ".scroll-down-button" ).delay(2000 + extra_time).animate({opacity: '1'}, 'slow');
+        $( "#button0" ).delay(500  + extra_time).animate({opacity: '1'}, 1500);
+        $( "#button1" ).delay(750  + extra_time).animate({opacity: '1'}, 1500);
+        $( "#button2" ).delay(1000 + extra_time).animate({opacity: '1'}, 1500);
+        $( ".scroll-down-button" ).delay(1500 + extra_time).animate({opacity: '1'}, 2000);
+
+        // Add effect to scroll down button (beat)
+        $( "#ScrollButtonFinder" ).hover(
+            function() {
+                $("#ScrollButtonPC").addClass('fa-bounce');
+            }, function() {
+                $("#ScrollButtonPC").removeClass('fa-bounce')
+            }
+        );
 
         // On desktop, apply grayscale to cards
         // additionally, only color and play videos on hover
