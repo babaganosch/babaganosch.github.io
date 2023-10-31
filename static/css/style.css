@@ -218,6 +218,7 @@ ul, ol {
 
 .scroll-down-button {
     opacity: 0;
+    line-height: 4em;
 }
 
 .header-links a {
