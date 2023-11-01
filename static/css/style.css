@@ -226,8 +226,8 @@ ul, ol {
 
 .scroll-down-button {
     opacity: 0;
-    height: 4em;
-    line-height: 4em;
+    height: 8em;
+    line-height: 8em;
 }
 
 /*                   */
@@ -240,6 +240,16 @@ ul, ol {
     #title {
         font-size: 4em;
     }
+
+    .scroll-down-button a {
+        transition: all ease 0.1s;
+        font-size: 2em;
+    }
+    
+    .scroll-down-button a:hover {
+        font-size: 3em;
+    }
+
 
     .header-links {
         height: 4em;

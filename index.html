@@ -75,7 +75,7 @@
                     <!-- Button on PC -->
                     <div class="col-12 text-center align-self-end scroll-down-button">
                         <span id="ScrollButtonFinder" >
-                            <a role="button" onclick="scrollToPortfolio()" class="d-none d-md-inline" title="Porftolio"><i id="ScrollButtonPC" class="fa-solid fa-circle-down fa-2x"></i></a>
+                            <a role="button" onclick="scrollToPortfolio()" class="d-none d-md-inline" title="Porftolio"><i id="ScrollButtonPC" class="fa-solid fa-circle-down"></i></a>
                         </span>
                     </div>
 
@@ -474,15 +474,6 @@
         $( "#button1" ).delay(750  + extra_time).animate({opacity: '1'}, 1500);
         $( "#button2" ).delay(1000 + extra_time).animate({opacity: '1'}, 1500);
         $( ".scroll-down-button" ).delay(1500 + extra_time).animate({opacity: '1'}, 2000);
-
-        // Add effect to scroll down button (beat)
-        $( "#ScrollButtonFinder" ).hover(
-            function() {
-                $("#ScrollButtonPC").addClass('fa-bounce');
-            }, function() {
-                $("#ScrollButtonPC").removeClass('fa-bounce')
-            }
-        );
 
         // On desktop, apply grayscale to cards
         // additionally, only color and play videos on hover
