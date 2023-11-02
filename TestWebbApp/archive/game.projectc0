@@ -155,13 +155,14 @@ custom_heap_size = 0
 heap_size = 256
 htmlfile = /builtins/manifests/web/engine_template.html
 cssfile = /builtins/manifests/web/light_theme.css
+splash_image = /builtins/graphics/particle_blob.png
 archive_location_prefix = archive
 archive_location_suffix = 
 engine_arguments = --verify-graphics-calls=false
 wasm_streaming = 0
-show_fullscreen_button = 1
-show_made_with_defold = 1
-show_console_banner = 1
+show_fullscreen_button = 0
+show_made_with_defold = 0
+show_console_banner = 0
 scale_mode = downscale_fit
 
 [particle_fx]
