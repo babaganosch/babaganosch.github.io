@@ -41,13 +41,15 @@
         <div id="Website" class="d-none">
 
     <!-- HEADER -->
-            <div id="header" class="hero">
-                <canvas id="webgl_canvas" style="width: 600px; height: 500px;"></canvas>
+            <div id="header" class="hero" style="overflow: hidden; height: 85vh;">
+                <canvas id="webgl_canvas" style="width: 100%; height: 100%;"></canvas>
             </div>
 
+    <!-- BUFFER? -->
+            <div style="height: 5vh; background-image: linear-gradient(0deg, #2B2B2B 5%, #000 100%);"></div>
     <!-- PORTFOLIO -->
             <div id="portfolio" class="portfolio" style="background-color: #2B2B2B;">
-                <div class="container py-5 d-flex">
+                <div class="container d-flex">
 
                     <div class="row">
 
@@ -412,28 +414,12 @@
             setTimeout(function() {
                 $('Body').removeClass('overflowDisable');
                 Cookies.set('Hi', true, { expires: 1 });
-                $( '.hero' ).animate({height:"85vh"});
             }, 3000 + extra_time);
         } else {
             $( '#Splash' ).addClass('d-none');
             $( '#Website' ).removeClass('d-none');
             $( 'Body' ).removeClass('overflowDisable');
-            revealPortfolio(1750);
         }
-
-        // Only reveal the portfolio if user hasn't scrolled
-        function revealPortfolio(time) {
-            setTimeout(function(){
-                if ( window.scrollY == 0 )
-                    $( '.hero' ).animate({height:"85vh"});
-            }, time);
-        }
-
-        // Animate buttons
-        $( "#button0" ).delay(500  + extra_time).animate({opacity: '1'}, 1500);
-        $( "#button1" ).delay(750  + extra_time).animate({opacity: '1'}, 1500);
-        $( "#button2" ).delay(1000 + extra_time).animate({opacity: '1'}, 1500);
-        $( ".scroll-down-button" ).delay(1500 + extra_time).animate({opacity: '1'}, 2000);
 
         // On desktop, apply grayscale to cards
         // additionally, only color and play videos on hover
@@ -465,7 +451,8 @@
         }
 
     </script>
-
-    <script type="module" src="/v2/tv_screen.js"></script>
+    
+    <script src="/v2/igloo.js"></script>
+    <script src="/v2/tv_screen.js"></script>
 
 </html>
