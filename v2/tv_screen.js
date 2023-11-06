@@ -23,7 +23,7 @@ function main() {
         powerPreference: "high-performance"
     };
 
-    const igloo = new Igloo(canvas, {});
+    const igloo = new Igloo(canvas, options);
     const gl = igloo.gl;
     gl.disable(gl.DEPTH_TEST);
 
@@ -40,11 +40,13 @@ function main() {
     };
 
     const textures = {
-        tmp: texture()
+        t_ping: texture(),
+        t_pong: texture()
     };
 
     const framebuffers = {
-        tmp: igloo.framebuffer().attach(textures.tmp)
+        ping: igloo.framebuffer().attach(textures.t_ping),
+        pong: igloo.framebuffer()
     };
 
     /* 2  3
@@ -52,21 +54,22 @@ function main() {
     */
     const buffers = {
         quad: igloo.array(Igloo.QUAD2),
-        menu: igloo.array(new Float32Array([-.5, -.5,
-                                             .5, -.5, 
-                                            -.5,  .75, 
-                                             .5,  .75])),
-        box: igloo.array(new Float32Array( [-.25,  .60,
-                                             .25,  .60, 
-                                            -.25,  .65, 
-                                             .25,  .65]))
+        menu: igloo.array(new Float32Array([-.5,  -.5,
+                                             .5,  -.5, 
+                                            -.5,   .75, 
+                                             .5,   .75])),
+
+        box:  igloo.array(new Float32Array([-.25,  .25,
+                                             .25,  .25, 
+                                            -.25,  .35, 
+                                             .25,  .35]))
     };
 
     function draw() {
         resizeCanvasToDisplaySize(gl.canvas);
         
-        textures.tmp.blank(gl.canvas.width, gl.canvas.height);
-        framebuffers.tmp.bind();
+        textures.t_ping.blank(gl.canvas.width, gl.canvas.height);
+        framebuffers.ping.bind();
 
         gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
         gl.clearColor(0, 0, 0, 1);
@@ -76,24 +79,24 @@ function main() {
         programs.tv_noise.use()
             .attrib('a_position', buffers.quad, 2)
             .uniform('u_time', Math.random())
-            .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);
+            .draw(gl.TRIANGLE_STRIP, 4 );
 
         // Draw Menu
         programs.menu.use()
             .attrib('a_position', buffers.menu, 2)
             .uniform('u_tint', [0.0, 0.0, 1.0])
-            .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);
+            .draw(gl.TRIANGLE_STRIP, 4 );
 
         programs.menu.use()
             .attrib('a_position', buffers.box, 2)
             .uniform('u_tint', [1.0, 1.0, 1.0])
-            .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);
+            .draw(gl.TRIANGLE_STRIP, 4 );
 
         // Draw Chromatic
         igloo.defaultFramebuffer.bind();
         gl.clearColor(0, 0, 0, 1);
         gl.clear(gl.COLOR_BUFFER_BIT);
-        textures.tmp.bind(0);
+        textures.t_ping.bind(0);
         programs.chromatic.use()
             .attrib('a_position', buffers.quad, 2)
             .uniform('u_resolution', [gl.canvas.width, gl.canvas.height])

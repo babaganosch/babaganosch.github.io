@@ -28,7 +28,8 @@ void main() {
     vec2 uv = vec2(v_coords.x / 2.0, v_coords.y / 2.0) + 0.5;
     uv = curveRemapUV(uv);
 
-    vec2 strength =  (uv - 0.5) * 2.0 * (1.0 / u_resolution) * aberration;
+    //vec2 strength =  (uv - 0.5) * 2.0 * (1.0 / u_resolution) * aberration;
+    vec2 strength = vec2( 1.0 / u_resolution.x, 1.0 / u_resolution.y );
 
     vec4 base_col   = texture2D( u_image, uv );
 	base_col.rgb	= texture2D( u_image, uv + strength ).rgb * vec3(1.0, 0.0, 0.5) +
