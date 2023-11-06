@@ -5,6 +5,10 @@
     "express": "^4.17.1",
     "jquery": "^3.6.0",
     "js-cookie": "^2.2.1",
-    "platform-detect": "^3.0.1"
+    "platform-detect": "^3.0.1",
+    "three": "^0.158.0"
+  },
+  "devDependencies": {
+    "vite": "^4.5.0"
   }
 }
