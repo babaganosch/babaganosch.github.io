@@ -1,6 +1,21 @@
 /*@import url(/static/noway_regular/stylesheet.css);*/
 @import url(/static/bariol/stylesheet.css);
 
+@font-face {
+    font-family: "PressStart2P";
+    src: url('/static/fonts/PressStart2P-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "JosefinSans";
+    src: url('/static/fonts/JosefinSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "VCR_OSD_MONO_1";
+    src: url('/static/fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+}
+
 html {
     overflow-y: scroll;
 }
