@@ -360,7 +360,6 @@ function main() {
     const igloo = new Igloo(canvas, options);
     const gl = igloo.gl;
     gl.disable(gl.DEPTH_TEST);
-    var tick = 0;
 
     resizeCanvasToDisplaySize(gl.canvas);
 
@@ -447,7 +446,19 @@ function main() {
         })
     };
 
-    function draw() {
+    var noise_constant = Math.random();
+    var noise_timer = 0.0;
+    var last_frame = 0;
+
+    function draw(time) {
+        var dt = time - last_frame;
+        last_frame = time;
+        noise_timer = noise_timer + dt;
+        if ( noise_timer >= 16 ) {
+            noise_timer = 0;
+            noise_constant = Math.random();
+        }
+
         resizeCanvasToDisplaySize(gl.canvas);
         strings.lars_andersson.update();
         strings.linkedin.update();
@@ -471,7 +482,7 @@ function main() {
         programs.tv_noise.use()
             .attrib('a_position', buffers.quad, 2)
             .uniform('u_resolution', resolution)
-            .uniform('u_time', Math.random())
+            .uniform('u_time', noise_constant)
             .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);
 
         // Draw blue quad
@@ -492,7 +503,7 @@ function main() {
         strings.resume.draw(programs.text_program);
         strings.portfolio.draw(programs.text_program);
 
-        if ((tick % 90) < 45) {
+        if ((time % 2000) < 1000) {
             strings.paused.draw(programs.text_program);
         }
 
@@ -504,16 +515,16 @@ function main() {
         programs.chromatic.use()
             .attrib('a_position', buffers.quad, 2)
             .uniform('u_resolution', resolution)
+            .uniform('u_random', Math.random())
+            .uniform('u_time', time)
             .uniformi('u_image', 0)
             .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);
 
         gl.disable(gl.BLEND);
         requestAnimationFrame(draw);
-
-        tick++;
     };
 
-    draw();
+    draw(0.0);
 }
 
 main();

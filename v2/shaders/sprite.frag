@@ -3,7 +3,7 @@ precision mediump float;
 varying highp vec2 v_texcoords;
 
 //uniform mediump vec3 u_tint;
-uniform vec2 u_resolution;
+//uniform vec2 u_resolution;
 uniform sampler2D u_sprite;
 
 void main() {
