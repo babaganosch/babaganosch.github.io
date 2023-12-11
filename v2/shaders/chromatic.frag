@@ -35,12 +35,12 @@ void main() {
     //vec2 strength =  (uv - 0.5) * 2.0 * (1.0 / u_resolution) * aberration;
     vec2 strength =  vec2(p_size.x * aberration, 0.0);
 
-    float dist_y = (mod(u_time / 5.0, u_resolution.y) / u_resolution.y) + (u_random / 50.0);
-    float dist_w = p_size.y * 30.0;
+    float dist_y = (mod(u_time * 20.0, u_resolution.y) / u_resolution.y) + (u_random / 50.0);
+    float dist_w = p_size.y * 120.0;
     vec2 distortion = vec2(0.0, 0.0);
-    bool distortion_line = uv.y >= dist_y - dist_w && uv.y <= dist_y + dist_w ;
+    //bool distortion_line = uv.y >= dist_y - dist_w && uv.y <= dist_y + dist_w ;
 
-    if ( distortion_line ) distortion.x = p_size.x * 100.0;
+    //if ( distortion_line ) distortion.x = p_size.x * 5.0;
 
     vec4 base_col   = texture2D( u_image, uv + distortion );
 	base_col.rgb	= texture2D( u_image, uv + strength + distortion ).rgb * vec3(1.0, 0.0, 0.5) +
@@ -51,9 +51,10 @@ void main() {
         base_col = black;
     }
 
+    /*
     if ( distortion_line ) {
         base_col /= 2.0;
-    }
+    }*/
 
     base_col *= vignetteIntensity(uv, u_resolution * 22.0, 1.5);
 
