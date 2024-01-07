@@ -11,40 +11,41 @@ function resizeCanvasToDisplaySize(canvas, multiplier) {
     }
     return false;
 }
-
+/*
 var fontInfo = {
-    letterHeight: 8,
-    spaceWidth: 8,
-    spacing: -1,
-    textureWidth: 64,
-    textureHeight: 40,
+    letterHeight: 18,
+    spaceWidth: 10,
+    spacing: 1,
+    textureWidth: 311, //64
+    textureHeight: 18, //40
     glyphInfos: {
-        'a': { x:  0, y:  0, width: 8, },
-        'b': { x:  8, y:  0, width: 8, },
-        'c': { x: 16, y:  0, width: 8, },
-        'd': { x: 24, y:  0, width: 8, },
-        'e': { x: 32, y:  0, width: 8, },
-        'f': { x: 40, y:  0, width: 8, },
-        'g': { x: 48, y:  0, width: 8, },
-        'h': { x: 56, y:  0, width: 8, },
-        'i': { x:  0, y:  8, width: 8, },
-        'j': { x:  8, y:  8, width: 8, },
-        'k': { x: 16, y:  8, width: 8, },
-        'l': { x: 24, y:  8, width: 8, },
-        'm': { x: 32, y:  8, width: 8, },
-        'n': { x: 40, y:  8, width: 8, },
-        'o': { x: 48, y:  8, width: 8, },
-        'p': { x: 56, y:  8, width: 8, },
-        'q': { x:  0, y: 16, width: 8, },
-        'r': { x:  8, y: 16, width: 8, },
-        's': { x: 16, y: 16, width: 8, },
-        't': { x: 24, y: 16, width: 8, },
-        'u': { x: 32, y: 16, width: 8, },
-        'v': { x: 40, y: 16, width: 8, },
-        'w': { x: 48, y: 16, width: 8, },
-        'x': { x: 56, y: 16, width: 8, },
-        'y': { x:  0, y: 24, width: 8, },
-        'z': { x:  8, y: 24, width: 8, },
+        'a': { x:   1, y:  0, width: 13, },
+        'b': { x:  13, y:  0, width: 13, },
+        'c': { x:  25, y:  0, width: 13, },
+        'd': { x:  37, y:  0, width: 13, },
+        'e': { x:  49, y:  0, width: 13, },
+        'f': { x:  61, y:  0, width: 13, },
+        'g': { x:  73, y:  0, width: 13, },
+        'h': { x:  85, y:  0, width: 13, },
+        'i': { x:  97, y:  0, width: 12, },
+        'j': { x: 108, y:  0, width: 12, },
+        'k': { x: 119, y:  0, width: 13, },
+        'l': { x: 131, y:  0, width: 13, },
+        'm': { x: 143, y:  0, width: 13, },
+        'n': { x: 156, y:  0, width: 13, },
+        'o': { x: 169, y:  0, width: 13, },
+        'p': { x: 181, y:  0, width: 13, },
+        'q': { x: 193, y:  0, width: 13, },
+        'r': { x: 205, y:  0, width: 13, },
+        's': { x: 217, y:  0, width: 13, },
+        't': { x: 229, y:  0, width: 12, },
+        'u': { x: 240, y:  0, width: 13, },
+        'v': { x: 252, y:  0, width: 13, },
+        'w': { x: 264, y:  0, width: 13, },
+        'x': { x: 276, y:  0, width: 13, },
+        'y': { x: 288, y:  0, width: 12, },
+        'z': { x: 299, y:  0, width: 13, },
+        /*
         '0': { x: 16, y: 24, width: 8, },
         '1': { x: 24, y: 24, width: 8, },
         '2': { x: 32, y: 24, width: 8, },
@@ -58,7 +59,63 @@ var fontInfo = {
         '-': { x: 32, y: 32, width: 8, },
         '*': { x: 40, y: 32, width: 8, },
         '!': { x: 48, y: 32, width: 8, },
-        '?': { x: 56, y: 32, width: 8, },
+        '?': { x: 56, y: 32, width: 8, },*/
+//    },
+//};
+
+var fontInfo = {
+    letterHeight: 60,
+    spaceWidth: 43,
+    spacing: 5,
+    textureWidth: 387,
+    textureHeight: 299,
+    glyphInfos: {
+        'a': { x:   0, y:   0, width: 43, },
+        'b': { x:  43, y:   0, width: 43, },
+        'c': { x:  86, y:   0, width: 43, },
+        'd': { x: 129, y:   0, width: 43, },
+        'e': { x: 172, y:   0, width: 43, },
+        'f': { x: 215, y:   0, width: 43, },
+        'g': { x: 258, y:   0, width: 43, },
+        'h': { x: 301, y:   0, width: 43, },
+        'i': { x: 344, y:   0, width: 23, },
+
+        'j': { x:   0, y:  60, width: 43, },
+        'k': { x:  43, y:  60, width: 43, },
+        'l': { x:  86, y:  60, width: 43, },
+        'm': { x: 129, y:  60, width: 43, },
+        'n': { x: 172, y:  60, width: 43, },
+        'o': { x: 216, y:  60, width: 43, },
+        'p': { x: 258, y:  60, width: 43, },
+        'q': { x: 301, y:  60, width: 43, },
+        'r': { x: 344, y:  60, width: 43, },
+
+        's': { x:   0, y: 120, width: 43, },
+        't': { x:  43, y: 120, width: 43, },
+        'u': { x:  86, y: 120, width: 43, },
+        'v': { x: 129, y: 120, width: 43, },
+        'w': { x: 172, y: 120, width: 43, },
+        'x': { x: 215, y: 120, width: 43, },
+        'y': { x: 258, y: 120, width: 43, },
+        'z': { x: 301, y: 120, width: 43, },
+        '0': { x: 344, y: 120, width: 43, },
+
+        '1': { x:   0, y: 180, width: 43, },
+        '2': { x:  43, y: 180, width: 43, },
+        '3': { x:  86, y: 180, width: 43, },
+        '4': { x: 129, y: 180, width: 43, },
+        '5': { x: 172, y: 180, width: 43, },
+        '6': { x: 215, y: 180, width: 43, },
+        '7': { x: 258, y: 180, width: 43, },
+        '8': { x: 301, y: 180, width: 43, },
+        '9': { x: 344, y: 180, width: 43, },
+
+        '!': { x:   0, y: 240, width: 43, },
+        '?': { x:  43, y: 240, width: 43, },
+        '#': { x:  86, y: 240, width: 43, },
+        '.': { x: 129, y: 240, width: 43, },
+        ',': { x: 172, y: 240, width: 43, },
+        '-': { x: 215, y: 240, width: 43, },
     },
 };
 
@@ -364,7 +421,7 @@ function main() {
     resizeCanvasToDisplaySize(gl.canvas);
 
     function texture() {
-        return igloo.texture(null, gl.RGBA, gl.CLAMP_TO_EDGE, gl.NEAREST);
+        return igloo.texture(null, gl.RGBA, gl.CLAMP_TO_EDGE, gl.LINEAR);
     }
 
     const programs = {
@@ -396,49 +453,49 @@ function main() {
 
     var strings = {
         lars_andersson: new StringGlyphs(igloo, "----- lars andersson -----", { 
-            scale: 5, 
+            scale: 0.5, 
             halign: SG_HALIGN_CENTER,
             valign: SG_VALIGN_TOP,
             x: 0.5,
             y: 0.15 
         }),
         linkedin: new StringGlyphs(igloo, "linkedin", { 
-            scale: 5, 
+            scale: 0.5, 
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: 0.425,
             y: 0.25
         }),
         github: new StringGlyphs(igloo, "github", { 
-            scale: 5, 
+            scale: 0.5, 
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: 0.425,
             y: 0.30
         }),
         twitter: new StringGlyphs(igloo, "twitter", { 
-            scale: 5, 
+            scale: 0.5, 
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: 0.425,
             y: 0.35
         }),
         resume: new StringGlyphs(igloo, "resume", { 
-            scale: 5, 
+            scale: 0.5, 
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: 0.425,
             y: 0.40
         }),
         portfolio: new StringGlyphs(igloo, "portfolio", { 
-            scale: 5, 
+            scale: 0.5, 
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: 0.425,
             y: 0.50
         }),
         paused: new StringGlyphs(igloo, "paused", { 
-            scale: 5, 
+            scale: 0.5, 
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: .05,

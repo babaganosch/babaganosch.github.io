@@ -7,7 +7,7 @@ uniform float u_time;
 uniform float u_random;
 
 const float aberration = 1.0;
-const vec2 curvature = vec2(6.0);
+const vec2 curvature = vec2(5.0);
 const vec4 black = vec4(0.0, 0.0, 0.0, 1.0);
 
 vec2 curveRemapUV(vec2 uv)
@@ -42,9 +42,13 @@ void main() {
 
     //if ( distortion_line ) distortion.x = p_size.x * 5.0;
 
-    vec4 base_col   = texture2D( u_image, uv + distortion );
-	base_col.rgb	= texture2D( u_image, uv + strength + distortion ).rgb * vec3(1.0, 0.0, 0.5) +
-					  texture2D( u_image, uv - strength + distortion ).rgb * vec3(0.0, 1.0, 0.5);
+    vec4 base_col = vec4(1.0);
+    base_col.r = texture2D( u_image, uv + strength + distortion ).r;
+    base_col.g = texture2D( u_image, uv + distortion ).g;
+    base_col.b = texture2D( u_image, uv - strength + distortion ).b;
+    //vec4 base_col   = texture2D( u_image, uv + distortion );
+	//base_col.rgb	= texture2D( u_image, uv + strength + distortion ).rgb * vec3(1.0, 0.0, 0.5) +
+	//				  texture2D( u_image, uv - strength + distortion ).rgb * vec3(0.0, 1.0, 0.5);
 
     if (uv.x < 0.0 || uv.y < 0.0 || uv.x > 1.0 || uv.y > 1.0)
     {
