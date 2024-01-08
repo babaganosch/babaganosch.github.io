@@ -651,7 +651,7 @@ function main() {
             .attrib('a_position', buffers.quad, 2)
             .matrix('u_matrix', IDENTITY_MATRIX)
             .uniform('u_resolution', resolution)
-            .uniform('u_random', Math.random())
+            .uniform('u_curv', gl.canvas.width < 768 ? 7.0 : 4.0)
             .uniform('u_time', time)
             .uniformi('u_image', 0)
             .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);

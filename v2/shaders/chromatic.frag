@@ -4,10 +4,9 @@ varying highp vec2 v_texcoords;
 uniform sampler2D u_image;
 uniform vec2 u_resolution;
 uniform float u_time;
-uniform float u_random;
+uniform float u_curv;
 
 const float strength = 180.0;
-const vec2 curvature = vec2(4.0);
 const vec4 black = vec4(0.0, 0.0, 0.0, 1.0);
 
 //Contrast amount
@@ -18,7 +17,7 @@ const vec4 black = vec4(0.0, 0.0, 0.0, 1.0);
 vec2 curveRemapUV(vec2 uv)
 {
     uv = uv * 2.0 - 1.0;
-    vec2 offset = abs(uv.yx) / vec2(curvature.x, curvature.y);
+    vec2 offset = abs(uv.yx) / vec2(u_curv, u_curv);
     uv = uv + uv * offset * offset;
     uv = uv * 0.5 + 0.5;
     return uv;
