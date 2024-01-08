@@ -124,7 +124,7 @@ var fontInfo = {
         '?': { x:  23, y: 121, width: 21, },
         '#': { x:  45, y: 121, width: 21, },
         '.': { x:  67, y: 121, width: 21, },
-        ',': { x:  89, y: 121, width: 21, },
+        '<': { x:  89, y: 121, width: 21, },
         '-': { x: 111, y: 121, width: 21, },
         '>': { x: 133, y: 121, width: 21, },
         ':': { x: 155, y: 121, width: 21, },
@@ -378,14 +378,16 @@ class StringGlyphs {
 
     }
 
-    update = function() {
+    update = function(xx) {
         const gl = this.gl;
 
+        xx = xx || this.info.x;
+
         this.scale = Math.min(this.info.scale * (this.gl.canvas.width / SG_SCALE_MAGIC), 6.0);
-        if (this.gl.canvas.width < 768) this.scale *= 2.0;
+        if (this.gl.canvas.width < 768) this.scale *= 3.0;
         this.w = this.vertices.arrays.position[(this.vertices.numVertices * 2) - 2] * this.scale;
         this.h = fontInfo.letterHeight * this.scale;
-        this.x = (gl.canvas.width * this.info.x);
+        this.x = (gl.canvas.width * xx);
         this.y = (gl.canvas.height * this.info.y);
 
         switch (this.info.halign) {
@@ -478,7 +480,7 @@ function main() {
     };
 
     var strings = {
-        lars_andersson: new StringGlyphs(igloo, "----- lars andersson -----", { 
+        lars_andersson: new StringGlyphs(igloo, "x", { 
             scale: 1.5, 
             color: [1.0, 1.0, 1.0, 1.0],
             halign: SG_HALIGN_CENTER,
@@ -558,21 +560,23 @@ function main() {
         }
 
         resizeCanvasToDisplaySize(gl.canvas);
+        var small_screen = gl.canvas.width < 768;
 
-        if (true)
-        {
-            var today = new Date();
-            var date =  months[today.getMonth()] + "-" + String(today.getDate()).padStart(2, "0") + "-" + today.getFullYear();
-            var now = String(today.getHours()).padStart(2, "0") + ":" + String(today.getMinutes()).padStart(2, "0") + ":" + String(today.getSeconds()).padStart(2, "0");
-            strings.date.vertices = makeVerticesForString(fontInfo, date + "  " + now);
-        }
+        var today = new Date();
+        var date =  months[today.getMonth()] + "-" + String(today.getDate()).padStart(2, "0") + "-" + today.getFullYear();
+        var now = String(today.getHours()).padStart(2, "0") + ":" + String(today.getMinutes()).padStart(2, "0") + ":" + String(today.getSeconds()).padStart(2, "0");
+        strings.date.vertices = makeVerticesForString(fontInfo, date + "  " + now);
 
+        var header_string = small_screen ? "> lars andersson <" : "----- lars andersson -----"
+        strings.lars_andersson.vertices = makeVerticesForString(fontInfo, header_string);
+
+        var menu_item_x = small_screen ? 0.3 : 0.425;
         strings.lars_andersson.update();
-        strings.linkedin.update();
-        strings.github.update();
-        strings.twitter.update();
-        strings.resume.update();
-        strings.portfolio.update();
+        strings.linkedin.update(menu_item_x);
+        strings.github.update(menu_item_x);
+        strings.twitter.update(menu_item_x);
+        strings.resume.update(menu_item_x);
+        strings.portfolio.update(menu_item_x);
 
         strings.menu.update();
         strings.date.update();
@@ -588,13 +592,13 @@ function main() {
 
         var menu_matrix = IDENTITY_MATRIX;
         menu_matrix = m4.translate(menu_matrix, 0, 0.15, 0);
-        menu_matrix = m4.scale(menu_matrix, gl.canvas.width < 768 ? 1.0 : 0.5, 0.6, 1);
+        menu_matrix = m4.scale(menu_matrix, small_screen ? 1.0 : 0.5, 0.6, 1);
 
         var item_bg_matrix = m4.projection(gl.canvas.width, gl.canvas.height, 400);
-        item_bg_matrix = m4.translate(item_bg_matrix, (gl.canvas.width * 0.11) + (gl.canvas.width * strings.github.info.x), (strings.github.info.y * gl.canvas.height) + (strings.github.h / 2), 0);
-        item_bg_matrix = m4.scale(item_bg_matrix, gl.canvas.width * 0.12, (strings.github.h / 2) * 1.25, 1);
+        var sc_const = small_screen ? 2.0 : 1.0;
+        item_bg_matrix = m4.translate(item_bg_matrix, (gl.canvas.width * 0.11 * sc_const) + strings.github.x, (strings.github.info.y * gl.canvas.height) + (strings.github.h / 2), 0);
+        item_bg_matrix = m4.scale(item_bg_matrix, gl.canvas.width * 0.12 * sc_const, (strings.github.h / 2) * 1.25, 1);
         
-
         /*
         var item_bg_matrix = IDENTITY_MATRIX;
         item_bg_matrix = m4.translate(item_bg_matrix, 0, strings.github.info.y, 0);
@@ -651,8 +655,9 @@ function main() {
             .attrib('a_position', buffers.quad, 2)
             .matrix('u_matrix', IDENTITY_MATRIX)
             .uniform('u_resolution', resolution)
-            .uniform('u_curv', gl.canvas.width < 768 ? 7.0 : 4.0)
+            .uniform('u_curv', small_screen ? 7.0 : 4.0)
             .uniform('u_time', time)
+            .uniform('u_strength', small_screen ? 100.0 : 180.0)
             .uniformi('u_image', 0)
             .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);
 

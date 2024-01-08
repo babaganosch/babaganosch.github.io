@@ -5,8 +5,8 @@ uniform sampler2D u_image;
 uniform vec2 u_resolution;
 uniform float u_time;
 uniform float u_curv;
+uniform float u_strength;
 
-const float strength = 180.0;
 const vec4 black = vec4(0.0, 0.0, 0.0, 1.0);
 
 //Contrast amount
@@ -34,7 +34,7 @@ void main() {
     vec2 uv = (vec2(v_texcoords.x, v_texcoords.y) + 1.0) / 2.0;
     uv = curveRemapUV(uv);
 
-    vec2 v = vec2( 1.0 / u_resolution.x * strength, 0.0);
+    vec2 v = vec2( 1.0 / u_resolution.x * u_strength, 0.0);
 	vec4 color_sum = vec4(0);
     vec4 weight_sum = vec4(0);
 
