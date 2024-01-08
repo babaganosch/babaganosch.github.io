@@ -12,67 +12,6 @@ function resizeCanvasToDisplaySize(canvas, multiplier) {
     return false;
 }
 
-/*
-var fontInfo = {
-    letterHeight: 60,
-    spaceWidth: 43,
-    spacing: 5,
-    textureWidth: 387,
-    textureHeight: 299,
-    glyphInfos: {
-        'a': { x:   0, y:   0, width: 43, },
-        'b': { x:  43, y:   0, width: 43, },
-        'c': { x:  86, y:   0, width: 43, },
-        'd': { x: 129, y:   0, width: 43, },
-        'e': { x: 172, y:   0, width: 43, },
-        'f': { x: 215, y:   0, width: 43, },
-        'g': { x: 258, y:   0, width: 43, },
-        'h': { x: 301, y:   0, width: 43, },
-        'i': { x: 344, y:   0, width: 23, },
-
-        'j': { x:   0, y:  60, width: 43, },
-        'k': { x:  43, y:  60, width: 43, },
-        'l': { x:  86, y:  60, width: 43, },
-        'm': { x: 129, y:  60, width: 43, },
-        'n': { x: 172, y:  60, width: 43, },
-        'o': { x: 216, y:  60, width: 43, },
-        'p': { x: 258, y:  60, width: 43, },
-        'q': { x: 301, y:  60, width: 43, },
-        'r': { x: 344, y:  60, width: 43, },
-
-        's': { x:   0, y: 120, width: 43, },
-        't': { x:  43, y: 120, width: 43, },
-        'u': { x:  86, y: 120, width: 43, },
-        'v': { x: 129, y: 120, width: 43, },
-        'w': { x: 172, y: 120, width: 43, },
-        'x': { x: 215, y: 120, width: 43, },
-        'y': { x: 258, y: 120, width: 43, },
-        'z': { x: 301, y: 120, width: 43, },
-        '0': { x: 344, y: 120, width: 43, },
-
-        '1': { x:   0, y: 180, width: 43, },
-        '2': { x:  43, y: 180, width: 43, },
-        '3': { x:  86, y: 180, width: 43, },
-        '4': { x: 129, y: 180, width: 43, },
-        '5': { x: 172, y: 180, width: 43, },
-        '6': { x: 215, y: 180, width: 43, },
-        '7': { x: 258, y: 180, width: 43, },
-        '8': { x: 301, y: 180, width: 43, },
-        '9': { x: 344, y: 180, width: 43, },
-
-        '!': { x:   0, y: 240, width: 43, },
-        '?': { x:  43, y: 240, width: 43, },
-        '#': { x:  86, y: 240, width: 43, },
-        '.': { x: 129, y: 240, width: 43, },
-        ',': { x: 172, y: 240, width: 43, },
-        '-': { x: 215, y: 240, width: 43, },
-        '>': { x: 258, y: 240, width: 43, },
-        ':': { x: 301, y: 240, width: 43, },
-        '/': { x: 344, y: 240, width: 43, },
-    },
-};
-*/
-
 var fontInfo = {
     letterHeight: 29,
     spaceWidth: 20,
@@ -494,7 +433,7 @@ function main() {
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: 0.425,
-            y: 0.25
+            y: 0.30
         }),
         github: new StringGlyphs(igloo, "> github", { 
             scale: 1,
@@ -502,7 +441,7 @@ function main() {
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: 0.425,
-            y: 0.30
+            y: 0.35
         }),
         twitter: new StringGlyphs(igloo, "twitter", { 
             scale: 1,
@@ -510,7 +449,7 @@ function main() {
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: 0.425,
-            y: 0.35
+            y: 0.40
         }),
         resume: new StringGlyphs(igloo, "resume", { 
             scale: 1,
@@ -518,7 +457,7 @@ function main() {
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: 0.425,
-            y: 0.40
+            y: 0.45
         }),
         portfolio: new StringGlyphs(igloo, "portfolio", { 
             scale: 1,
@@ -526,7 +465,7 @@ function main() {
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: 0.425,
-            y: 0.50
+            y: 0.55
         }),
         menu: new StringGlyphs(igloo, "menu", { 
             scale: 1.75,
@@ -570,8 +509,9 @@ function main() {
         var header_string = small_screen ? "> lars andersson <" : "----- lars andersson -----"
         strings.lars_andersson.vertices = makeVerticesForString(fontInfo, header_string);
 
-        var menu_item_x = small_screen ? 0.3 : 0.425;
         strings.lars_andersson.update();
+        
+        var menu_item_x = small_screen ? 0.3 : 0.425;
         strings.linkedin.update(menu_item_x);
         strings.github.update(menu_item_x);
         strings.twitter.update(menu_item_x);
@@ -598,13 +538,6 @@ function main() {
         var sc_const = small_screen ? 2.0 : 1.0;
         item_bg_matrix = m4.translate(item_bg_matrix, (gl.canvas.width * 0.11 * sc_const) + strings.github.x, (strings.github.info.y * gl.canvas.height) + (strings.github.h / 2), 0);
         item_bg_matrix = m4.scale(item_bg_matrix, gl.canvas.width * 0.12 * sc_const, (strings.github.h / 2) * 1.25, 1);
-        
-        /*
-        var item_bg_matrix = IDENTITY_MATRIX;
-        item_bg_matrix = m4.translate(item_bg_matrix, 0, strings.github.info.y, 0);
-        item_bg_matrix = m4.scale(item_bg_matrix, 0.25, 0.05, 1);
-        */
-        
 
         // Draw TV noise background
         programs.tv_noise.use()
@@ -657,7 +590,7 @@ function main() {
             .uniform('u_resolution', resolution)
             .uniform('u_curv', small_screen ? 7.0 : 4.0)
             .uniform('u_time', time)
-            .uniform('u_strength', 180.0)
+            .uniform('u_strength', 100.0)
             .uniformi('u_image', 0)
             .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);
 

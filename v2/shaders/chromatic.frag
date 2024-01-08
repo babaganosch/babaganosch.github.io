@@ -37,8 +37,6 @@ void main() {
     vec2 v = vec2( 1.0 / u_resolution.x * u_strength, 0.0);
 	vec4 color_sum = vec4(0);
     vec4 weight_sum = vec4(0);
-
-    float invert = mod(u_time, 10000.0) < 500.0 ? -1.0 : 0.0;
     
     //Iterate 20 times from 0 to 1
 	for(float i = 0.0; i<=1.0; i+=1.0/SAMPLES)
@@ -48,16 +46,11 @@ void main() {
         vec4 weight = vec4(i,1.-abs(i+i-1.),1.-i,.5);
         weight = mix(vec4(.5), weight,  CONTRAST);
         
-        vec4 color = texture2D(u_image, coord) + invert;
+        vec4 color = texture2D(u_image, coord);
 		color_sum += color * color * weight;
         weight_sum += weight;
     }
     vec4 base_col = sqrt(color_sum / weight_sum);
-
-    if (true)//u_random <= 0.05)
-    {
-        //base_col.rgb = 1.0 - base_col.rgb;
-    }
 
     if (uv.x < 0.0 || uv.y < 0.0 || uv.x > 1.0 || uv.y > 1.0)
     {
