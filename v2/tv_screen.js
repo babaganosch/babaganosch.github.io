@@ -11,58 +11,8 @@ function resizeCanvasToDisplaySize(canvas, multiplier) {
     }
     return false;
 }
-/*
-var fontInfo = {
-    letterHeight: 18,
-    spaceWidth: 10,
-    spacing: 1,
-    textureWidth: 311, //64
-    textureHeight: 18, //40
-    glyphInfos: {
-        'a': { x:   1, y:  0, width: 13, },
-        'b': { x:  13, y:  0, width: 13, },
-        'c': { x:  25, y:  0, width: 13, },
-        'd': { x:  37, y:  0, width: 13, },
-        'e': { x:  49, y:  0, width: 13, },
-        'f': { x:  61, y:  0, width: 13, },
-        'g': { x:  73, y:  0, width: 13, },
-        'h': { x:  85, y:  0, width: 13, },
-        'i': { x:  97, y:  0, width: 12, },
-        'j': { x: 108, y:  0, width: 12, },
-        'k': { x: 119, y:  0, width: 13, },
-        'l': { x: 131, y:  0, width: 13, },
-        'm': { x: 143, y:  0, width: 13, },
-        'n': { x: 156, y:  0, width: 13, },
-        'o': { x: 169, y:  0, width: 13, },
-        'p': { x: 181, y:  0, width: 13, },
-        'q': { x: 193, y:  0, width: 13, },
-        'r': { x: 205, y:  0, width: 13, },
-        's': { x: 217, y:  0, width: 13, },
-        't': { x: 229, y:  0, width: 12, },
-        'u': { x: 240, y:  0, width: 13, },
-        'v': { x: 252, y:  0, width: 13, },
-        'w': { x: 264, y:  0, width: 13, },
-        'x': { x: 276, y:  0, width: 13, },
-        'y': { x: 288, y:  0, width: 12, },
-        'z': { x: 299, y:  0, width: 13, },
-        /*
-        '0': { x: 16, y: 24, width: 8, },
-        '1': { x: 24, y: 24, width: 8, },
-        '2': { x: 32, y: 24, width: 8, },
-        '3': { x: 40, y: 24, width: 8, },
-        '4': { x: 48, y: 24, width: 8, },
-        '5': { x: 56, y: 24, width: 8, },
-        '6': { x:  0, y: 32, width: 8, },
-        '7': { x:  8, y: 32, width: 8, },
-        '8': { x: 16, y: 32, width: 8, },
-        '9': { x: 24, y: 32, width: 8, },
-        '-': { x: 32, y: 32, width: 8, },
-        '*': { x: 40, y: 32, width: 8, },
-        '!': { x: 48, y: 32, width: 8, },
-        '?': { x: 56, y: 32, width: 8, },*/
-//    },
-//};
 
+/*
 var fontInfo = {
     letterHeight: 60,
     spaceWidth: 43,
@@ -116,6 +66,69 @@ var fontInfo = {
         '.': { x: 129, y: 240, width: 43, },
         ',': { x: 172, y: 240, width: 43, },
         '-': { x: 215, y: 240, width: 43, },
+        '>': { x: 258, y: 240, width: 43, },
+        ':': { x: 301, y: 240, width: 43, },
+        '/': { x: 344, y: 240, width: 43, },
+    },
+};
+*/
+
+var fontInfo = {
+    letterHeight: 29,
+    spaceWidth: 20,
+    spacing: 4,
+    textureWidth: 198,
+    textureHeight: 150,
+    glyphInfos: {
+        'a': { x:   1, y:   1, width: 21, },
+        'b': { x:  23, y:   1, width: 21, },
+        'c': { x:  45, y:   1, width: 21, },
+        'd': { x:  67, y:   1, width: 21, },
+        'e': { x:  89, y:   1, width: 21, },
+        'f': { x: 111, y:   1, width: 21, },
+        'g': { x: 133, y:   1, width: 21, },
+        'h': { x: 155, y:   1, width: 21, },
+        'i': { x: 177, y:   1, width: 12 },
+
+        'j': { x:   1, y:  31, width: 21, },
+        'k': { x:  23, y:  31, width: 21, },
+        'l': { x:  45, y:  31, width: 21, },
+        'm': { x:  67, y:  31, width: 21, },
+        'n': { x:  89, y:  31, width: 21, },
+        'o': { x: 111, y:  31, width: 21, },
+        'p': { x: 133, y:  31, width: 21, },
+        'q': { x: 155, y:  31, width: 21, },
+        'r': { x: 177, y:  31, width: 21, },
+
+        's': { x:   1, y:  61, width: 21, },
+        't': { x:  23, y:  61, width: 21, },
+        'u': { x:  45, y:  61, width: 21, },
+        'v': { x:  67, y:  61, width: 21, },
+        'w': { x:  89, y:  61, width: 21, },
+        'x': { x: 111, y:  61, width: 21, },
+        'y': { x: 133, y:  61, width: 21, },
+        'z': { x: 155, y:  61, width: 21, },
+        '0': { x: 177, y:  61, width: 21, },
+
+        '1': { x:   1, y:  91, width: 21, },
+        '2': { x:  23, y:  91, width: 21, },
+        '3': { x:  45, y:  91, width: 21, },
+        '4': { x:  67, y:  91, width: 21, },
+        '5': { x:  89, y:  91, width: 21, },
+        '6': { x: 111, y:  91, width: 21, },
+        '7': { x: 133, y:  91, width: 21, },
+        '8': { x: 155, y:  91, width: 21, },
+        '9': { x: 177, y:  91, width: 21, },
+
+        '!': { x:   1, y: 121, width: 21, },
+        '?': { x:  23, y: 121, width: 21, },
+        '#': { x:  45, y: 121, width: 21, },
+        '.': { x:  67, y: 121, width: 21, },
+        ',': { x:  89, y: 121, width: 21, },
+        '-': { x: 111, y: 121, width: 21, },
+        '>': { x: 133, y: 121, width: 21, },
+        ':': { x: 155, y: 121, width: 21, },
+        '/': { x: 177, y: 121, width: 21, },
     },
 };
 
@@ -197,6 +210,15 @@ var m4 = {
              0, -2 / height, 0, 0,
              0, 0, 2 / depth, 0,
             -1, 1, 0, 1,
+        ];
+    },
+
+    identity: function() {
+        return [
+            1,  0,  0,  0,
+            0,  1,  0,  0,
+            0,  0,  1,  0,
+            0,  0,  0,  1,
         ];
     },
   
@@ -340,6 +362,8 @@ const SG_HALIGN_CENTER = 2;
 const SG_VALIGN_TOP = 0;
 const SG_VALIGN_BOT = 1;
 
+const IDENTITY_MATRIX = m4.identity();
+
 class StringGlyphs {
     constructor(context, str, info) {
         this.gl = context.gl;
@@ -348,7 +372,7 @@ class StringGlyphs {
 
         this.a_position = context.array();
         this.a_texcoord = context.array();
-        this.u_matrix = m4.projection(this.gl.canvas.clientWidth, this.gl.canvas.clientHeight, 400);
+        this.u_matrix;
 
         this.update();
 
@@ -358,6 +382,7 @@ class StringGlyphs {
         const gl = this.gl;
 
         this.scale = Math.min(this.info.scale * (this.gl.canvas.width / SG_SCALE_MAGIC), 6.0);
+        if (this.gl.canvas.width < 768) this.scale *= 2.0;
         this.w = this.vertices.arrays.position[(this.vertices.numVertices * 2) - 2] * this.scale;
         this.h = fontInfo.letterHeight * this.scale;
         this.x = (gl.canvas.width * this.info.x);
@@ -396,12 +421,17 @@ class StringGlyphs {
             .attrib('a_position', this.a_position, 2)
             .attrib('a_texcoord', this.a_texcoord, 2)
             .matrix('u_matrix', this.u_matrix)
+            .uniform('u_color', this.info.color)
             .uniformi('u_sprite', 1)
             .draw(this.gl.TRIANGLES, this.vertices.numVertices );
 
         return this;
     }
 }
+
+const months = ["jan", "feb", "mar", "apr", "may", "jun",
+  "jul", "aug", "sep", "oct", "nov", "dec"
+];
 
 function main() {
     const canvas = document.querySelector("#webgl_canvas");
@@ -426,7 +456,7 @@ function main() {
 
     const programs = {
         tv_noise:  igloo.program('/v2/shaders/quad.vert', '/v2/shaders/noise.frag'),
-        menu:      igloo.program('/v2/shaders/quad.vert', '/v2/shaders/menu.frag'),
+        color:     igloo.program('/v2/shaders/quad.vert', '/v2/shaders/color.frag'),
         chromatic: igloo.program('/v2/shaders/quad.vert', '/v2/shaders/chromatic.frag'),
         text_program:    igloo.program('/v2/shaders/sprite.vert', '/v2/shaders/sprite.frag')
     };
@@ -444,62 +474,73 @@ function main() {
     *  0  1
     */
     const buffers = {
-        quad: igloo.array(Igloo.QUAD2),
-        menu: igloo.array(new Float32Array([-.5, -.5,
-                                             .5, -.5, 
-                                            -.5,  .75, 
-                                             .5,  .75]))
+        quad: igloo.array(Igloo.QUAD2)
     };
 
     var strings = {
         lars_andersson: new StringGlyphs(igloo, "----- lars andersson -----", { 
-            scale: 0.5, 
+            scale: 1.5, 
+            color: [1.0, 1.0, 1.0, 1.0],
             halign: SG_HALIGN_CENTER,
             valign: SG_VALIGN_TOP,
             x: 0.5,
-            y: 0.15 
+            y: 0.15
         }),
         linkedin: new StringGlyphs(igloo, "linkedin", { 
-            scale: 0.5, 
+            scale: 1, 
+            color: [1.0, 1.0, 1.0, 1.0],
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: 0.425,
             y: 0.25
         }),
-        github: new StringGlyphs(igloo, "github", { 
-            scale: 0.5, 
+        github: new StringGlyphs(igloo, "> github", { 
+            scale: 1,
+            color: [0.0, 0.0, 230/255, 1.0],
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: 0.425,
             y: 0.30
         }),
         twitter: new StringGlyphs(igloo, "twitter", { 
-            scale: 0.5, 
+            scale: 1,
+            color: [1.0, 1.0, 1.0, 1.0],
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: 0.425,
             y: 0.35
         }),
         resume: new StringGlyphs(igloo, "resume", { 
-            scale: 0.5, 
+            scale: 1,
+            color: [1.0, 1.0, 1.0, 1.0],
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: 0.425,
             y: 0.40
         }),
         portfolio: new StringGlyphs(igloo, "portfolio", { 
-            scale: 0.5, 
+            scale: 1,
+            color: [1.0, 1.0, 1.0, 1.0],
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: 0.425,
             y: 0.50
         }),
-        paused: new StringGlyphs(igloo, "paused", { 
-            scale: 0.5, 
+        menu: new StringGlyphs(igloo, "menu", { 
+            scale: 1.75,
+            color: [0.0, 1.0, 0.0, 1.0],
             halign: SG_HALIGN_LEFT,
             valign: SG_VALIGN_TOP,
             x: .05,
             y: .05
+        }),
+        date: new StringGlyphs(igloo, "x", { 
+            scale: 1.2,
+            color: [0.0, 1.0, 0.0, 1.0],
+            halign: SG_HALIGN_LEFT,
+            valign: SG_VALIGN_BOT,
+            x: .05,
+            y: .95
         })
     };
 
@@ -517,6 +558,15 @@ function main() {
         }
 
         resizeCanvasToDisplaySize(gl.canvas);
+
+        if (true)
+        {
+            var today = new Date();
+            var date =  months[today.getMonth()] + "-" + String(today.getDate()).padStart(2, "0") + "-" + today.getFullYear();
+            var now = String(today.getHours()).padStart(2, "0") + ":" + String(today.getMinutes()).padStart(2, "0") + ":" + String(today.getSeconds()).padStart(2, "0");
+            strings.date.vertices = makeVerticesForString(fontInfo, date + "  " + now);
+        }
+
         strings.lars_andersson.update();
         strings.linkedin.update();
         strings.github.update();
@@ -524,7 +574,8 @@ function main() {
         strings.resume.update();
         strings.portfolio.update();
 
-        strings.paused.update();
+        strings.menu.update();
+        strings.date.update();
 
         textures.tmp.blank(gl.canvas.width, gl.canvas.height);
         framebuffers.tmp.bind();
@@ -535,18 +586,44 @@ function main() {
 
         var resolution = [gl.canvas.width, gl.canvas.height];
 
+        var menu_matrix = IDENTITY_MATRIX;
+        menu_matrix = m4.translate(menu_matrix, 0, 0.15, 0);
+        menu_matrix = m4.scale(menu_matrix, gl.canvas.width < 768 ? 1.0 : 0.5, 0.6, 1);
+
+        var item_bg_matrix = m4.projection(gl.canvas.width, gl.canvas.height, 400);
+        item_bg_matrix = m4.translate(item_bg_matrix, (gl.canvas.width * 0.11) + (gl.canvas.width * strings.github.info.x), (strings.github.info.y * gl.canvas.height) + (strings.github.h / 2), 0);
+        item_bg_matrix = m4.scale(item_bg_matrix, gl.canvas.width * 0.12, (strings.github.h / 2) * 1.25, 1);
+        
+
+        /*
+        var item_bg_matrix = IDENTITY_MATRIX;
+        item_bg_matrix = m4.translate(item_bg_matrix, 0, strings.github.info.y, 0);
+        item_bg_matrix = m4.scale(item_bg_matrix, 0.25, 0.05, 1);
+        */
+        
+
         // Draw TV noise background
         programs.tv_noise.use()
             .attrib('a_position', buffers.quad, 2)
+            .matrix('u_matrix', IDENTITY_MATRIX)
             .uniform('u_resolution', resolution)
             .uniform('u_time', noise_constant)
             .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);
 
         // Draw blue quad
-        programs.menu.use()
-            .attrib('a_position', buffers.menu, 2)
+        programs.color.use()
+            .attrib('a_position', buffers.quad, 2)
+            .matrix('u_matrix', menu_matrix)
             .uniform('u_resolution', resolution)
             .uniform('u_tint', [ .0, .0,  230/255 ])
+            .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);
+
+        // Draw marked menu item BG
+        programs.color.use()
+            .attrib('a_position', buffers.quad, 2)
+            .matrix('u_matrix', item_bg_matrix)
+            .uniform('u_resolution', resolution)
+            .uniform('u_tint', [ 1.0, 1.0, 1.0 ])
             .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);
 
         // Draw text
@@ -559,9 +636,10 @@ function main() {
         strings.twitter.draw(programs.text_program);
         strings.resume.draw(programs.text_program);
         strings.portfolio.draw(programs.text_program);
+        strings.date.draw(programs.text_program);
 
         if ((time % 2000) < 1000) {
-            strings.paused.draw(programs.text_program);
+            strings.menu.draw(programs.text_program);
         }
 
         // Draw post FX
@@ -571,6 +649,7 @@ function main() {
         textures.tmp.bind(0);
         programs.chromatic.use()
             .attrib('a_position', buffers.quad, 2)
+            .matrix('u_matrix', IDENTITY_MATRIX)
             .uniform('u_resolution', resolution)
             .uniform('u_random', Math.random())
             .uniform('u_time', time)
