@@ -165,11 +165,12 @@ a:link, a:visited, a:hover, a:active {
     }
 
     #menu-upper {
+        top: 30%;
         font-size: 6vw;
     }
     
     #menu-lower {
-        bottom: 12.5%;
+        bottom: 5%;
         font-size: 7vw;
     }
 }
