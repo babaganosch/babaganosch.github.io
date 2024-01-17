@@ -95,7 +95,7 @@ a:link, a:visited, a:hover, a:active {
 #menu {
     /* NOTE: These positions/dimensions are based upon the height of #header */
     position: absolute;
-    background-color: #3a8fdf80; /* DEBUG */
+    background-color: #3adf5680; /* DEBUG */
     width: var(--menu_width);
     height: calc(var(--header-height-desktop) * 0.6);
     left: calc(25% + calc((50% - var(--menu_width)) / 2));
