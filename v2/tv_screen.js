@@ -375,7 +375,7 @@ const months = ["jan", "feb", "mar", "apr", "may", "jun",
 ];
 
 function main() {
-    const canvas = document.querySelector("#webgl_canvas");
+    const canvas = document.querySelector("#webgl-canvas");
 
     var options = {
         antialias: false,
@@ -404,7 +404,7 @@ function main() {
 
     const textures = {
         tmp: texture(),
-        glyphTex: igloo.texture($("#test_image")[0], gl.RGBA, gl.CLAMP_TO_EDGE, gl.NEAREST)
+        glyphTex: igloo.texture(document.querySelector("#webgl-font"), gl.RGBA, gl.CLAMP_TO_EDGE, gl.NEAREST)
     };
 
     const framebuffers = {
@@ -506,6 +506,7 @@ function main() {
         var now = String(today.getHours()).padStart(2, "0") + ":" + String(today.getMinutes()).padStart(2, "0") + ":" + String(today.getSeconds()).padStart(2, "0");
         strings.date.vertices = makeVerticesForString(fontInfo, date + "  " + now);
 
+        /*
         var header_string = small_screen ? "> lars andersson <" : "----- lars andersson -----"
         strings.lars_andersson.vertices = makeVerticesForString(fontInfo, header_string);
 
@@ -517,6 +518,7 @@ function main() {
         strings.twitter.update(menu_item_x);
         strings.resume.update(menu_item_x);
         strings.portfolio.update(menu_item_x);
+        */
 
         strings.menu.update();
         strings.date.update();
@@ -531,13 +533,15 @@ function main() {
         var resolution = [gl.canvas.width, gl.canvas.height];
 
         var menu_matrix = IDENTITY_MATRIX;
-        menu_matrix = m4.translate(menu_matrix, 0, 0.15, 0);
-        menu_matrix = m4.scale(menu_matrix, small_screen ? 1.0 : 0.5, 0.6, 1);
+        menu_matrix = m4.scale(menu_matrix, small_screen ? 1.0 : ((Math.min(gl.canvas.width, 2560) / gl.canvas.width) * 0.5), 0.6, 1);
+        menu_matrix = m4.translate(menu_matrix, 0, 0.25, 0);
 
+        /*
         var item_bg_matrix = m4.projection(gl.canvas.width, gl.canvas.height, 400);
         var sc_const = small_screen ? 2.0 : 1.0;
         item_bg_matrix = m4.translate(item_bg_matrix, (gl.canvas.width * 0.11 * sc_const) + strings.github.x, (strings.github.info.y * gl.canvas.height) + (strings.github.h / 2), 0);
         item_bg_matrix = m4.scale(item_bg_matrix, gl.canvas.width * 0.12 * sc_const, (strings.github.h / 2) * 1.25, 1);
+        */
 
         // Draw TV noise background
         programs.tv_noise.use()
@@ -556,25 +560,28 @@ function main() {
             .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);
 
         // Draw marked menu item BG
+        /*
         programs.color.use()
             .attrib('a_position', buffers.quad, 2)
             .matrix('u_matrix', item_bg_matrix)
             .uniform('u_resolution', resolution)
             .uniform('u_tint', [ 1.0, 1.0, 1.0 ])
             .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);
+        */
 
         // Draw text
         gl.enable(gl.BLEND);
         gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
         textures.glyphTex.bind(1);
+        /*
         strings.lars_andersson.draw(programs.text_program);
         strings.linkedin.draw(programs.text_program);
         strings.github.draw(programs.text_program);
         strings.twitter.draw(programs.text_program);
         strings.resume.draw(programs.text_program);
         strings.portfolio.draw(programs.text_program);
+        */
         strings.date.draw(programs.text_program);
-
         if ((time % 2000) < 1000) {
             strings.menu.draw(programs.text_program);
         }
@@ -590,7 +597,7 @@ function main() {
             .uniform('u_resolution', resolution)
             .uniform('u_curv', small_screen ? 7.0 : 4.0)
             .uniform('u_time', time)
-            .uniform('u_strength', 100.0)
+            .uniform('u_strength', 200.0)
             .uniformi('u_image', 0)
             .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);
 

@@ -1,0 +1,186 @@
+@import url(/static/bariol/stylesheet.css);
+@font-face {
+    font-family: "VCR_OSD_MONO_1";
+    src: url('/static/fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+}
+
+/* Remove scrollbar (it's ugly on Windows) */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Global variables */
+:root {
+    --menu_width: min(50%, 1280px);
+    --menu_offset_x: calc(25% + calc((50% - var(--menu_width)) / 2));
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'bariol_regularregular', Helvetica, Arial, sans-serif;
+    background-color: #1b1b1b;
+    color:      #111;
+    margin:     0px;
+    padding:    0px;
+    font-size:  0.36cm;
+}
+
+strong {
+    font-weight:    normal;
+    font-family:    'bariol_boldbold';
+    letter-spacing: 1px;
+}
+
+b {
+    letter-spacing: 0.5px;
+}
+
+a.blue:link, a.blue:visited, a.blue:hover, a.blue:active {
+    text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/****  SPLASH  ****/
+
+/****  HEADER  ****/
+
+#webgl-canvas {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#webgl-font {
+    display: none;
+}
+
+#header {
+    font-family: 'VCR_OSD_MONO_1', Arial, sans-serif;
+    color: #fff;
+    overflow: hidden;
+    height: 90vh;
+    z-index: 1;
+}
+
+#menu {
+    /* NOTE: These positions/dimensions are based upon the height of #header */
+    position: absolute;
+    /* background-color: #3a8fdf80; /* DEBUG */
+    width: var(--menu_width);
+    height: 53%;
+    left: var(--menu_offset_x); 
+    top: 12%;
+}
+
+#menu-heading {
+    font-size: 3vw;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+}
+
+.menu-items {
+    position: absolute;
+    width: 50%;
+}
+
+.menu-items a {
+    margin-bottom: 1.5vh;
+    color: #fff;
+    display: block;
+    overflow: hidden;
+}
+
+.menu-items a:hover {
+    color: #0000e6;
+    background-color: #fff;
+}
+
+#menu-upper.menu-items a:hover:before {
+    content: '>';
+    position: absolute;
+    left: -20%;
+    color: #fff;
+}
+
+#menu-upper {
+    top: 25%;
+    left: 25%;
+    font-size: min(3vh, 2.5vw);
+}
+
+#menu-lower {
+    top: 75%;
+    left: 25%;
+    text-align: center;
+    font-size: min(4vh, 3.5vw);
+}
+
+@media (max-width: 768px) {
+
+    #header {
+        height: 85vh;
+    }
+
+    #menu {
+        /* NOTE: These positions/dimensions are based upon the height of #header */
+        top: 11%;
+        left: 1%;
+        width: 98%;
+        height: 50%
+    }
+
+    #menu-heading {
+        font-size: 8vw;
+        top: 3%;
+    }
+
+    #menu-upper {
+        font-size: 6vw;
+    }
+    
+    #menu-lower {
+        font-size: 7vw;
+    }
+}
+
+
+/**** PORTFOLIO ****/
+
+#portfolio {
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    font-size:  0.75rem;
+    -webkit-text-stroke: 0;
+    height: 90vh;
+}
+
+/*******************/
+/*     Desktop     */
+/*******************/
+@media (min-width: 768px) {
+
+    .hidden-on-desktop {
+        display: none;
+    }
+
+}
+
+/*******************/
+/*      Phone      */
+/*******************/
+@media (max-width: 768px) {
+    
+    .hidden-on-mobile {
+        display: none;
+    }
+}
