@@ -12,7 +12,6 @@
 /* Global variables */
 :root {
     --menu_width: min(50%, 1280px);
-    --menu_offset_x: calc(25% + calc((50% - var(--menu_width)) / 2));
 }
 
 html {
@@ -38,10 +37,6 @@ b {
     letter-spacing: 0.5px;
 }
 
-a.blue:link, a.blue:visited, a.blue:hover, a.blue:active {
-    text-decoration: none;
-}
-
 a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
@@ -50,9 +45,32 @@ a:link, a:visited, a:hover, a:active {
     display: none;
 }
 
-/****  SPLASH  ****/
+@media (min-width: 768px) {
 
-/****  HEADER  ****/
+    .hidden-on-desktop {
+        display: none;
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+    .hidden-on-mobile {
+        display: none;
+    }
+}
+
+
+/************************************************************************/
+/*******************************  SPLASH  *******************************/
+/************************************************************************/
+
+
+
+
+/************************************************************************/
+/*******************************  HEADER  *******************************/
+/************************************************************************/
 
 #webgl-canvas {
     width: 100%;
@@ -69,7 +87,6 @@ a:link, a:visited, a:hover, a:active {
     color: #fff;
     overflow: hidden;
     height: 90vh;
-    z-index: 1;
 }
 
 #menu {
@@ -78,8 +95,9 @@ a:link, a:visited, a:hover, a:active {
     /* background-color: #3a8fdf80; /* DEBUG */
     width: var(--menu_width);
     height: 53%;
-    left: var(--menu_offset_x); 
+    left: calc(25% + calc((50% - var(--menu_width)) / 2));
     top: 12%;
+    z-index: 1;
 }
 
 #menu-heading {
@@ -87,6 +105,7 @@ a:link, a:visited, a:hover, a:active {
     text-align: center;
     width: 100%;
     position: absolute;
+    top: 1%;
 }
 
 .menu-items {
@@ -120,7 +139,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #menu-lower {
-    top: 75%;
+    bottom: 15%;
     left: 25%;
     text-align: center;
     font-size: min(4vh, 3.5vw);
@@ -142,7 +161,7 @@ a:link, a:visited, a:hover, a:active {
 
     #menu-heading {
         font-size: 8vw;
-        top: 3%;
+        top: 5%;
     }
 
     #menu-upper {
@@ -150,37 +169,19 @@ a:link, a:visited, a:hover, a:active {
     }
     
     #menu-lower {
+        bottom: 12.5%;
         font-size: 7vw;
     }
 }
 
 
-/**** PORTFOLIO ****/
+/***************************************************************************/
+/*******************************  PORTFOLIO  *******************************/
+/***************************************************************************/
 
 #portfolio {
     font-family: 'Poppins', Helvetica, Arial, sans-serif;
     font-size:  0.75rem;
     -webkit-text-stroke: 0;
     height: 90vh;
-}
-
-/*******************/
-/*     Desktop     */
-/*******************/
-@media (min-width: 768px) {
-
-    .hidden-on-desktop {
-        display: none;
-    }
-
-}
-
-/*******************/
-/*      Phone      */
-/*******************/
-@media (max-width: 768px) {
-    
-    .hidden-on-mobile {
-        display: none;
-    }
 }
