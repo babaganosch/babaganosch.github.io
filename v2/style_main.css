@@ -156,6 +156,7 @@ a:link, a:visited, a:hover, a:active {
 
     #menu {
         /* NOTE: These positions/dimensions are based upon the height of #header */
+        background-color: #b94b2080;
         height: 60%;
         left: 1%;
         width: 98%;
