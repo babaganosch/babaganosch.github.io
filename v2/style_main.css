@@ -11,10 +11,13 @@
 
 /* Global variables */
 :root {
+    --header-height-desktop: 90vh;
+    --header-height-mobile: 85vh;
     --menu_width: min(50%, 1280px);
 }
 
 html {
+    background-color: #000;
     overflow-y: scroll;
 }
 
@@ -86,7 +89,7 @@ a:link, a:visited, a:hover, a:active {
     font-family: 'VCR_OSD_MONO_1', Arial, sans-serif;
     color: #fff;
     overflow: hidden;
-    height: 90vh;
+    height: var(--header-height-desktop);
 }
 
 #menu {
@@ -94,9 +97,9 @@ a:link, a:visited, a:hover, a:active {
     position: absolute;
     background-color: #3a8fdf80; /* DEBUG */
     width: var(--menu_width);
-    height: 53%;
+    height: calc(var(--header-height-desktop) * 0.6);
     left: calc(25% + calc((50% - var(--menu_width)) / 2));
-    top: 12%;
+    top: 11.5%;
     z-index: 1;
 }
 
@@ -148,12 +151,12 @@ a:link, a:visited, a:hover, a:active {
 @media (max-width: 768px) {
 
     #header {
-        height: 85vh;
+        height: var(--header-height-mobile);
     }
 
     #menu {
         /* NOTE: These positions/dimensions are based upon the height of #header */
-        top: 11%;
+        height: calc(var(--header-height-mobile) * 0.6);
         left: 1%;
         width: 98%;
         height: 50%
@@ -165,13 +168,13 @@ a:link, a:visited, a:hover, a:active {
     }
 
     #menu-upper {
-        top: 30%;
+        top: 28%;
         font-size: 6vw;
     }
     
     #menu-lower {
-        bottom: 5%;
         font-size: 7vw;
+        bottom: 10%;
     }
 }
 
