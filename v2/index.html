@@ -56,11 +56,29 @@
             </div>
 
             <!-- BUFFER? -->
-            <div id="header_porftolio_buffer" style="height: 5vh; background-image: linear-gradient(0deg, #1b1b1b 5%, #000 100%);">
-            </div>
+            <div id="header-porftolio-buffer"></div>
 
             <!-- PORTFOLIO -->
             <div id="portfolio">
+                <div class="card">
+                    <video muted="" loop="" playsinline="" class="card-video">
+                        <source src="/static/content/NesScape.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="card">Hello</div>
+
+                <div class="card">Hello</div>
+
+                <div class="card">Hello</div>
+
+                <div class="card">Hello</div>
+
+                <div class="card">Hello</div>
+
+                <div class="card">Hello</div>
+                
+                <div class="card">Hello</div>
             </div>
 
         </div>
@@ -72,6 +90,23 @@
         <!-- WebGL -->
         <script src="/v2/igloo.js"></script>
         <script src="/v2/tv_screen.js"></script>
+        <!-- Misc -->
+        <script>
+        // On desktop, apply grayscale to cards
+        // additionally, only color and play videos on hover
+        //if (platform.formfactor == "desktop") {
+        if (true) {
+            $('.card').each(function() {
+                $(this).addClass('grayscale');
+                let elem = $('video', this).get(0);
+                if (elem) {
+                    $(this).mouseenter(function() { elem.play();  });
+                    $(this).mouseleave(function() { elem.pause(); });
+                    elem.autoplay = false;
+                }
+            });
+        }
+        </script>
 
     </body>
 
