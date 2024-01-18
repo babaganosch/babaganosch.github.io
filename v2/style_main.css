@@ -95,7 +95,7 @@ a:link, a:visited, a:hover, a:active {
 #menu {
     /* NOTE: These positions/dimensions are based upon the height of #header */
     position: absolute;
-    background-color: #3adf5680; /* DEBUG */
+    background-color: #0bb99480; /* DEBUG */
     width: var(--menu_width);
     height: calc(var(--header-height-desktop) * 0.6);
     left: calc(25% + calc((50% - var(--menu_width)) / 2));
@@ -156,8 +156,9 @@ a:link, a:visited, a:hover, a:active {
 
     #menu {
         /* NOTE: These positions/dimensions are based upon the height of #header */
-        background-color: #af67c580;
-        height: 60%;
+        background-color: #2261b380;
+        /*height: 60%;*/
+        height: min(calc(var(--header-height-mobile) * 0.6), 60%);
         left: 1%;
         width: 98%;
     }
