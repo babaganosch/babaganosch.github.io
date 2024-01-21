@@ -186,7 +186,7 @@
         // On desktop, apply grayscale to cards
         // additionally, only color and play videos on hover
         //if (platform.formfactor == "desktop") {
-        if (true) {
+        if (window.innerWidth > 768) {
             $('.card').each(function() {
                 $(this).addClass('grayscale');
                 let elem = $('video', this).get(0);
