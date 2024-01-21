@@ -1,4 +1,5 @@
 @import url(/static/bariol/stylesheet.css);
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,700);
 @font-face {
     font-family: "VCR_OSD_MONO_1";
     src: url('/static/fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
@@ -16,7 +17,6 @@
     --menu-width: min(50%, 1280px);
     --card-header-height: 316px;
     --card-body-height: 220px;
-    --card-footer-height: 30px;
 }
 
 html {
@@ -213,14 +213,7 @@ a:link, a:visited, a:hover, a:active {
     transition: all .1s;
     top: 0px;
     position: relative;
-}
-
-.card-header {
-    height: var(--card-header-height);
-}
-
-.card-header video {
-    max-height: var(--card-header-height);
+    color: #212529;
 }
 
 .card-video {
@@ -235,6 +228,7 @@ a:link, a:visited, a:hover, a:active {
 .card-figure {
     width: 100%;
     height: 100%;
+    min-height: var(--card-header-height);
     z-index: 0;
     margin: 0;
     background-size: cover;
@@ -244,12 +238,21 @@ a:link, a:visited, a:hover, a:active {
 
 .card-body {
     height: var(--card-body-height);
+    padding: 1rem 1rem;
+}
+
+.card-body h1 {
+    font-size: 2vh;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 .card-footer {
     background-color: rgba(33, 37, 41, 0.03);
     border-top: 1px solid rgba(0, 0, 0, 0.175);
-    height: var(--card-footer-height);
+    padding: 0.25rem 1rem;
+    color: rgba(33, 37, 41, 0.75);
+    font-size: 0.7rem;
 }
 
 .grayscale {
@@ -286,12 +289,13 @@ a:link, a:visited, a:hover, a:active {
     #portfolio {
         grid-template-columns: auto;
     }
-}
 
-@media (max-width: 768px) {
-    /* Phone */
     .card {
         min-width: 160px;
         max-width: 516px;
     } 
+}
+
+@media (max-width: 768px) {
+    /* Phone */
 }
