@@ -13,7 +13,10 @@
 :root {
     --header-height-desktop: 90vh;
     --header-height-mobile: 85vh;
-    --menu_width: min(50%, 1280px);
+    --menu-width: min(50%, 1280px);
+    --card-header-height: 316px;
+    --card-body-height: 220px;
+    --card-footer-height: 30px;
 }
 
 html {
@@ -96,9 +99,9 @@ a:link, a:visited, a:hover, a:active {
     /* NOTE: These positions/dimensions are based upon the height of #header */
     position: absolute;
     /* background-color: #0bb99480; /* DEBUG */
-    width: var(--menu_width);
+    width: var(--menu-width);
     height: calc(var(--header-height-desktop) * 0.6);
-    left: calc(25% + calc((50% - var(--menu_width)) / 2));
+    left: calc(25% + calc((50% - var(--menu-width)) / 2));
     top: 11.5%;
     z-index: 1;
 }
@@ -213,7 +216,11 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .card-header {
-    height: 316px;
+    height: var(--card-header-height);
+}
+
+.card-header video {
+    max-height: var(--card-header-height);
 }
 
 .card-video {
@@ -236,11 +243,13 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .card-body {
-    height: 220px;
+    height: var(--card-body-height);
 }
 
 .card-footer {
-    height: 30px;
+    background-color: rgba(33, 37, 41, 0.03);
+    border-top: 1px solid rgba(0, 0, 0, 0.175);
+    height: var(--card-footer-height);
 }
 
 .grayscale {
@@ -282,6 +291,7 @@ a:link, a:visited, a:hover, a:active {
 @media (max-width: 768px) {
     /* Phone */
     .card {
+        min-width: 160px;
         max-width: 516px;
     } 
 }
