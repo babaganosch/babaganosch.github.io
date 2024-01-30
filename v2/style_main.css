@@ -332,7 +332,11 @@ a:link, a:visited, a:hover, a:active {
     .card {
         min-width: 160px;
         max-width: 516px;
-    } 
+    }
+
+    .card-body h1 {
+        font-weight: bold;
+    }
 }
 
 @media (max-width: 768px) {
