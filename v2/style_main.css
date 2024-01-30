@@ -14,9 +14,14 @@
 :root {
     --header-height-desktop: 90vh;
     --header-height-mobile: 85vh;
+
     --menu-width: min(50%, 1280px);
     --card-header-height: 316px;
-    --card-body-height: 220px;
+    --card-hover-distance: 20px;
+
+    --card-footer-padding-x: 1rem;
+    --card-footer-padding-y: 0.25rem;
+    --card-footer-fontsize: 0.7rem;
 }
 
 html {
@@ -198,7 +203,10 @@ a:link, a:visited, a:hover, a:active {
     min-height: 90vh;
     display: grid;
     grid-template-columns: auto auto auto auto;
+    grid-auto-rows: min-content;
     justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .card {
@@ -206,7 +214,6 @@ a:link, a:visited, a:hover, a:active {
     max-width: 416px;
     background-color: #FFF;
     margin: 2vh 1vw 2vh 1vw;
-    overflow: hidden;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0 10px 20px rgba(0,0,0,.4), 0 4px 8px rgba(0,0,0,.15);
     cursor: pointer;
@@ -214,6 +221,10 @@ a:link, a:visited, a:hover, a:active {
     top: 0px;
     position: relative;
     color: #212529;
+}
+
+.card-header {
+    overflow: hidden;
 }
 
 .card-video {
@@ -237,22 +248,36 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .card-body {
-    height: var(--card-body-height);
+    position: relative;
     padding: 1rem 1rem;
+    margin-bottom: calc(var(--card-footer-fontsize) + calc(var(--card-footer-padding-y) * 3));
 }
 
 .card-body h1 {
     font-size: 2vh;
     font-weight: 500;
     line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.card-body p {
+    margin-top: 0;
+}
+
+.card-body p:last-child {
+    margin-bottom: 0;
 }
 
 .card-footer {
     background-color: rgba(33, 37, 41, 0.03);
     border-top: 1px solid rgba(0, 0, 0, 0.175);
-    padding: 0.25rem 1rem;
+    padding: var(--card-footer-padding-y) var(--card-footer-padding-x);
     color: rgba(33, 37, 41, 0.75);
-    font-size: 0.7rem;
+    font-size: var(--card-footer-fontsize);
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - calc(var(--card-footer-padding-x) * 2));
 }
 
 .grayscale {
@@ -266,10 +291,24 @@ a:link, a:visited, a:hover, a:active {
     -webkit-filter: grayscale(0%);
 }
 
+.text-highlight {
+    color: #1d418c;
+    font-weight: bold;
+}
+
 @media (min-width: 768px) { 
     /* Desktop */
     .card:hover {
-        top: -20px;
+        top: calc(var(--card-hover-distance) * -1);
+    }
+
+    .card:hover:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 100%;
+        bottom: calc(var(--card-hover-distance) * -1);
+        height: var(--card-hover-distance);
     }
 }
 
