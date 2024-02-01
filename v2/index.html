@@ -24,7 +24,7 @@
     </head>
 
     <body>
-        <img src="/v2/images/vcr_font_v3.png" id="webgl-font"/>
+        <img id="webgl-font" src="/v2/images/vcr_font_v3.png"/>
 
         <!-- Hi ! -->
         <div id="splash" class="hidden">
@@ -35,18 +35,18 @@
         <div id="website">
 
             <!-- HEADER -->
-            <div id="header" style="overflow: hidden;">
+            <div id="header">
 
                 <div id="header-video-container">
-                    <figure id="tv-image" style="background-image: url('/static/content/sausage.jpg')" class="card-figure"></figure>
-                    <video id="tv-video" autoplay muted loop playsinline class="card-video" style="position: absolute; z-index: 0; width: 100%">
+                    <figure id="tv-image" style="background-image: url('')" class="card-figure"></figure>
+                    <video id="tv-video" autoplay muted loop playsinline class="card-video">
                         <source id="tv-source" type="video/mp4">
                     </video>
                 </div>
 
-                <canvas id="webgl-canvas" style="position: relative; z-index: 1;"></canvas>
+                <canvas id="webgl-canvas"></canvas>
 
-                <div id="menu" style="z-index: 2;">
+                <div id="menu">
                     <!--  MENU 1  -->
                     <div id="menu-1">
                         <div class="menu-heading">

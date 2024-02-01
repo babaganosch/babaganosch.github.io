@@ -2,11 +2,17 @@ const portfolio_item_types = {
     VIDEO: 0,
     IMAGE: 1
 }
+
+function tag( text, style = '' ) {
+    return { style: style, text: text };
+}
+
 const portfolio_items = [
     {
         type: portfolio_item_types.VIDEO,
         name: `NesScape`,
         menu: `NES.Emulator`,
+        tags: [ tag('C++'), tag('WIP', 'bg-blue') ],
         link: `.`,
         src: `/static/content/NesScape.mp4`,
         heading: `NES 8bit Hardware Emulator`,
@@ -17,6 +23,7 @@ const portfolio_items = [
         type: portfolio_item_types.VIDEO,
         name: `Abaddon`,
         menu: `Abaddon`,
+        tags: [ tag('GML'), tag('WIP', 'bg-blue') ],
         link: `.`,
         src: `/static/content/abaddon.mp4`,
         heading: `Infinite World Sandbox`,
@@ -27,6 +34,7 @@ const portfolio_items = [
         type: portfolio_item_types.VIDEO,
         name: `Illfated`,
         menu: `Illfated`,
+        tags: [ tag('GML') ],
         link: `.`,
         src: `/static/content/illfated.mp4`,
         heading: `Procedural Generated Dungeons`,
@@ -37,6 +45,7 @@ const portfolio_items = [
         type: portfolio_item_types.VIDEO,
         name: `Minecart Maniac`,
         menu: `Minecart.Maniac`,
+        tags: [ tag('Android'), tag('iOS'), tag('GML') ],
         link: `.`,
         src: `/static/content/minecart.mp4`,
         heading: `Infinite Tunnel Runner`,
@@ -47,6 +56,7 @@ const portfolio_items = [
         type: portfolio_item_types.VIDEO,
         name: `GameMaker Scaffolding`,
         menu: `GM.Scaffolding`,
+        tags: [ tag('Open Source'), tag('Tool'), tag('GML'), tag('WIP', 'bg-blue') ],
         link: `.`,
         src: `/static/content/scaffolding.mp4`,
         heading: `GMS Template`,
@@ -57,6 +67,7 @@ const portfolio_items = [
         type: portfolio_item_types.VIDEO,
         name: `Frogger Recreation`,
         menu: `Frogger`,
+        tags: [ tag('SDL'), tag('C++') ],
         link: `.`,
         src: `/static/content/frogger.mp4`,
         heading: `Classic Frogger With A Twist`,
@@ -68,6 +79,7 @@ const portfolio_items = [
         type: portfolio_item_types.VIDEO,
         name: `GPU-accelerated particles`,
         menu: `GPU.Particles`,
+        tags: [ tag('WebGL'), tag('GLSL'), tag('NodeJS') ],
         link: `.`,
         src: `/static/content/particles.mp4`,
         heading: `Master's Thesis @ Chalmers`,
@@ -78,6 +90,7 @@ const portfolio_items = [
         type: portfolio_item_types.VIDEO,
         name: `Pole Position`,
         menu: `Pole.Position`,
+        tags: [ tag('GML') ],
         link: `.`,
         src: `/static/content/poleposition.mp4`,
         heading: `Pseudo-3D`,
@@ -88,6 +101,7 @@ const portfolio_items = [
         type: portfolio_item_types.VIDEO,
         name: `Notification System`,
         menu: `Signals`,
+        tags: [ tag('Open Source'), tag('Tool'), tag('GML') ],
         link: `.`,
         src: `/static/content/notifications.mp4`,
         heading: `Signals within GMS 2.3+`,
@@ -98,6 +112,7 @@ const portfolio_items = [
         type: portfolio_item_types.VIDEO,
         name: `ACG Project`,
         menu: `Car.Game`,
+        tags: [ tag('OpenGL'), tag('GLSL'), tag('C++') ],
         link: `.`,
         src: `/static/content/cargame.mp4`,
         heading: `Advanced Computer Graphics`,
@@ -109,6 +124,7 @@ const portfolio_items = [
         type: portfolio_item_types.IMAGE,
         name: `Objective Tiny-Timber<span class="hidden-on-mobile"> : OTTO</span>`,
         menu: `OTTO`,
+        tags: [ tag('Flex'), tag('Bison'), tag('C') ],
         link: `.`,
         src: `/static/content/bthesis.jpg`,
         heading: `Bachelor's Thesis @ Chalmers`,
@@ -120,6 +136,7 @@ const portfolio_items = [
         type: portfolio_item_types.VIDEO,
         name: `Traffic Predictions With AI`,
         menu: `AI.Traffic`,
+        tags: [ tag('ML'), tag('MongoDB'), tag('Python') ],
         link: `.`,
         src: `/static/content/monitor.mp4`,
         heading: `Traffic Monitoring and Visualization`,
@@ -131,6 +148,7 @@ const portfolio_items = [
         type: portfolio_item_types.VIDEO,
         name: `Shape Arena`,
         menu: `Shape.Arena`,
+        tags: [ tag('Multiplayer'), tag('Java') ],
         link: `.`,
         src: `/static/content/shapearena.mp4`,
         heading: `Multiplayer Game`,
@@ -141,6 +159,7 @@ const portfolio_items = [
         type: portfolio_item_types.IMAGE,
         name: `Sausage Clothing`,
         menu: `Sausage`,
+        tags: [ tag('Illustrator'), tag('Photoshop') ],
         link: `.`,
         src: `/static/content/sausage.jpg`,
         heading: `Custom Prints`,
@@ -163,17 +182,18 @@ function string_template(strings, ...keys) {
 
 function play_video( self )
 {
-    self.firstElementChild.firstElementChild.play();
+    $("video", self).get(0).play();
 }
 
 function pause_video( self )
 {
-    self.firstElementChild.firstElementChild.pause();
+    $("video", self).get(0).pause();
 }
 
 const  video_card_template_desktop = string_template`
 <div class="card" onmouseenter="play_video(this)" onmouseleave="pause_video(this)"> 
     <div class="card-header">
+        <div class="card-tags-container"></div>
         <video muted loop playsinline class="card-video">
             <source src="${"src"}" type="video/mp4">
         </video>
@@ -191,6 +211,7 @@ const  video_card_template_desktop = string_template`
 const  video_card_template_mobile = string_template`
 <div class="card"> 
     <div class="card-header">
+        <div class="card-tags-container"></div>
         <video autoplay muted loop playsinline class="card-video">
             <source src="${"src"}" type="video/mp4">
         </video>
@@ -208,6 +229,7 @@ const  video_card_template_mobile = string_template`
 const  image_card_template = string_template`
 <div class="card"> 
     <div class="card-header">
+        <div class="card-tags-container"></div>
         <figure style="background-image: url('${"src"}');" class="card-figure"></figure>
     </div>
     <div class="card-body">
@@ -244,25 +266,31 @@ function hide_menu( id )
 
 const portfolio_menu = $('#menu-2-items');
 const portfolio = $('#portfolio');
-for ( const item of portfolio_items )
-{
+portfolio_items.forEach(function( item ) {
+    let card = undefined;
     switch (item.type)
     {
         case portfolio_item_types.VIDEO:
         {
             if (window.innerWidth > 768)
             {
-                portfolio.append(video_card_template_desktop( item ));
+                card = $(video_card_template_desktop( item ));
             }
             else
             {
-                portfolio.append(video_card_template_mobile( item ));
+                card = $(video_card_template_mobile( item ));
             }
         } break;
         case portfolio_item_types.IMAGE:
         {
-            portfolio.append(image_card_template( item ));
+            card = $(image_card_template( item ));
         } break;
     }
-    portfolio_menu.append( String.raw`<a onmouseenter="set_video('${item.src}', false);" onmouseleave="set_video('', true)">${item.menu}..................................</a>` );
-}
+
+    item.tags.forEach(function( tag ) {
+        $(".card-tags-container", card).append( String.raw`<span class="card-tag ${tag.style}">${tag.text}</span>` );
+    });
+
+    portfolio.append( card );
+    portfolio_menu.append( String.raw`<a onmouseenter="set_video('${item.src}', false);" onmouseleave="set_video('', true)">${item.menu.toUpperCase()}..................................</a>` );
+});
