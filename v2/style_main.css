@@ -151,7 +151,7 @@ a:link, a:visited, a:hover, a:active {
     left: 25%;
     font-size: min(3vh, 2.5vw);
     overflow-y: scroll;
-    max-height: 310px;
+    max-height: 25vh;
 }
 
 .menu-upper::-webkit-scrollbar { 
