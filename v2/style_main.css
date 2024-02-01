@@ -111,6 +111,18 @@ a:link, a:visited, a:hover, a:active {
     z-index: 1;
 }
 
+#header-video-container {
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
 .menu-heading {
     font-size: 3vw;
     text-align: center;
@@ -136,15 +148,6 @@ a:link, a:visited, a:hover, a:active {
     background-color: #fff;
     cursor: pointer;
 }
-
-/*
-#menu-upper.menu-items a:hover:before {
-    content: '>';
-    position: absolute;
-    left: -20%;
-    color: #fff;
-}
-*/
 
 .menu-upper {
     top: 25%;
@@ -182,6 +185,10 @@ a:link, a:visited, a:hover, a:active {
 
     #header {
         height: var(--header-height-mobile);
+    }
+
+    #header-video-container {
+        display: none;
     }
 
     #menu {
