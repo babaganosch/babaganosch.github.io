@@ -59,7 +59,7 @@ a:link, a:visited, a:hover, a:active {
 @media (min-width: 768px) {
 
     .hidden-on-desktop {
-        display: none;
+        display: none !important;
     }
 
 }
@@ -67,7 +67,7 @@ a:link, a:visited, a:hover, a:active {
 @media (max-width: 768px) {
     
     .hidden-on-mobile {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -111,7 +111,7 @@ a:link, a:visited, a:hover, a:active {
     z-index: 1;
 }
 
-#menu-heading {
+.menu-heading {
     font-size: 3vw;
     text-align: center;
     width: 100%;
@@ -121,7 +121,7 @@ a:link, a:visited, a:hover, a:active {
 
 .menu-items {
     position: absolute;
-    width: 50%;
+    width: 53%;
 }
 
 .menu-items a {
@@ -134,22 +134,39 @@ a:link, a:visited, a:hover, a:active {
 .menu-items a:hover {
     color: #0000e6;
     background-color: #fff;
+    cursor: pointer;
 }
 
+/*
 #menu-upper.menu-items a:hover:before {
     content: '>';
     position: absolute;
     left: -20%;
     color: #fff;
 }
+*/
 
-#menu-upper {
+.menu-upper {
     top: 25%;
     left: 25%;
     font-size: min(3vh, 2.5vw);
+    overflow-y: scroll;
+    max-height: 310px;
 }
 
-#menu-lower {
+.menu-upper::-webkit-scrollbar { 
+    width: 20px; 
+} 
+
+.menu-upper::-webkit-scrollbar-track { 
+    background: #0000e6;
+} 
+
+.menu-upper::-webkit-scrollbar-thumb { 
+    background: #fff; 
+}
+
+.menu-lower {
     bottom: 15%;
     left: 25%;
     text-align: center;
@@ -175,17 +192,17 @@ a:link, a:visited, a:hover, a:active {
         width: 98%;
     }
 
-    #menu-heading {
+    .menu-heading {
         font-size: 8vw;
         top: 5%;
     }
 
-    #menu-upper {
+    .menu-upper {
         top: 28%;
         font-size: 6vw;
     }
     
-    #menu-lower {
+    .menu-lower {
         font-size: 7vw;
         bottom: 10%;
     }
@@ -224,6 +241,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .card-header {
+    min-height: 338px;
     overflow: hidden;
 }
 
@@ -280,17 +298,6 @@ a:link, a:visited, a:hover, a:active {
     width: calc(100% - calc(var(--card-footer-padding-x) * 2));
 }
 
-.grayscale {
-    filter: url("filters.svg#grayscale");     /* Firefox 3.5+ */
-    filter: gray;                           /* IE6-9 */
-    -webkit-filter: grayscale(80%);           /* Chrome 19+ & Safari 6+ */
-}
-
-.grayscale:hover {
-    filter: none;
-    -webkit-filter: grayscale(0%);
-}
-
 .text-highlight {
     color: #1d418c;
     font-weight: bold;
@@ -298,8 +305,16 @@ a:link, a:visited, a:hover, a:active {
 
 @media (min-width: 768px) { 
     /* Desktop */
+    .card {
+        filter: url("filters.svg#grayscale");     /* Firefox 3.5+ */
+        filter: gray;                           /* IE6-9 */
+        -webkit-filter: grayscale(80%);           /* Chrome 19+ & Safari 6+ */
+    }
+
     .card:hover {
         top: calc(var(--card-hover-distance) * -1);
+        filter: none;
+        -webkit-filter: grayscale(0%);
     }
 
     .card:hover:after {

@@ -35,23 +35,46 @@
         <div id="website">
 
             <!-- HEADER -->
-            <div id="header">
-                <canvas id="webgl-canvas"></canvas>
-                <div id="menu">
-                    <div id="menu-heading">
-                        <span class="hidden-on-mobile">----- </span><span class="hidden-on-desktop">> </span>
-                            LARS ANDERSSON
-                        <span class="hidden-on-desktop"> <</span><span class="hidden-on-mobile"> -----</span>
+            <div id="header" style="overflow: hidden;">
+
+                <div id="header-video-container" style="position: absolute; height: 90vh; width: 100%; overflow: hidden; z-index: 0; align-items: center; justify-content: center; text-align: center; display: flex;">
+                    <figure id="tv-image" style="background-image: url('/static/content/sausage.jpg')" class="card-figure"></figure>
+                    <video id="tv-video" autoplay muted loop playsinline class="card-video" style="position: absolute; z-index: 0; width: 100%">
+                        <source id="tv-source" type="video/mp4">
+                    </video>
+                </div>
+
+                <canvas id="webgl-canvas" style="position: relative; z-index: 1;"></canvas>
+
+                <div id="menu" style="z-index: 2;">
+                    <!--  MENU 1  -->
+                    <div id="menu-1">
+                        <div class="menu-heading">
+                            <span class="hidden-on-mobile">----- </span><span class="hidden-on-desktop">> </span>
+                                LARS ANDERSSON
+                            <span class="hidden-on-desktop"> <</span><span class="hidden-on-mobile"> -----</span>
+                        </div>
+                        <div class="menu-upper menu-items">
+                            <a href="https://linkedin.com/in/lars-andersson-1589a180/" title="LinkedIn">LINKEDIN.........................</a>
+                            <a href="https://github.com/babaganosch" title="GitHub">GITHUB...........................</a>
+                            <a href="https://X.com/Babaganosch" title="X">TWITTER..........................</a>
+                            <a href="/resume.html" title="CV">RESUMÉ...........................</a>
+                        </div>
+                        <div class="menu-lower menu-items">
+                            <a class="hidden-on-mobile" onclick="hide_menu(1); show_menu(2);">PORTFOLIO</a>
+                            <a class="hidden-on-desktop" href=".">PORTFOLIO</a>
+                        </div>
                     </div>
-                    <div id="menu-upper" class="menu-items">
-                        <a href="https://linkedin.com/in/lars-andersson-1589a180/" title="LinkedIn">LINKEDIN.........................</a>
-                        <a href="https://github.com/babaganosch" title="GitHub">GITHUB...........................</a>
-                        <a href="https://X.com/Babaganosch" title="X">TWITTER..........................</a>
-                        <a href="/resume.html" title="CV">RESUMÉ...........................</a>
+
+                    <!--  MENU 2  -->
+                    <div id="menu-2" class="hidden">
+                        <div class="menu-heading"> > PORTFOLIO < </div>
+                        <div id="menu-2-items" class="menu-upper menu-items"></div>
+                        <div class="menu-lower menu-items">
+                            <a onclick="hide_menu(2); show_menu(1);"> < BACK</a>
+                        </div>
                     </div>
-                    <div id="menu-lower" class="menu-items">
-                        <a href=".">PORTFOLIO</a>
-                    </div>
+
                 </div>
             </div>
 
@@ -60,229 +83,6 @@
 
             <!-- PORTFOLIO -->
             <div id="portfolio">
-
-                <!-- NES-SCAPE -->
-                <div class="card">
-                    <div class="card-header">
-                        <video autoplay muted loop playsinline class="card-video">
-                            <source src="/static/content/NesScape.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="card-body">
-                        <h1>NesScape</h1>
-                        <p>NES 8bit Hardware Emulator</p>
-                        <p>NES emulator written in C++. Currently the CPU and PPU is implemented. APU is next to be implemented.</p>
-                    </div>
-                    <div class="card-footer">
-                        2023
-                    </div>
-                </div>
-
-                <!-- ABADDON -->
-                <div class="card">
-                    <div class="card-header">
-                        <video autoplay muted loop playsinline class="card-video">
-                            <source src="/static/content/abaddon.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="card-body">
-                        <h1>Abaddon</h1>
-                        <p>Infinite World Sandbox</p>
-                        <p>Early stages of development. Low-res RPG inspired by pixelart by MrmoTarius.</p>
-                    </div>
-                    <div class="card-footer">
-                        2023
-                    </div>
-                </div>
-
-                <!-- ILLFATED -->
-                <div class="card">
-                    <div class="card-header">
-                        <video autoplay muted loop playsinline class="card-video">
-                            <source src="/static/content/illfated.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="card-body">
-                        <h1>Illfated</h1>
-                        <p>Procedural Generated Dungeons</p>
-                        <p>Roguelike dungeon crawler that takes inspiration from classic retro games as well as more modern roguelikes.</p>
-                    </div>
-                    <div class="card-footer">
-                        2016
-                    </div>
-                </div>
-
-                <!-- MINECART MANIAC -->
-                <div class="card">
-                    <div class="card-header">
-                        <video autoplay muted loop playsinline class="card-video">
-                            <source src="/static/content/minecart.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="card-body">
-                        <h1>Minecart Maniac</h1>
-                        <p>Infinite Tunnel Runner</p>
-                        <p>Mobile game, inspired by games such as Flappy Bird and Temple Run, available at Google Play Store (Android) and App Store (iOS).</p>
-                    </div>
-                    <div class="card-footer">
-                        2017 - 2019
-                    </div>
-                </div>
-
-                <!-- GM SCAFFOLDING -->
-                <div class="card">
-                    <div class="card-header">
-                        <video autoplay muted loop playsinline class="card-video">
-                            <source src="/static/content/scaffolding.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="card-body">
-                        <h1>GameMaker Scaffolding</h1>
-                        <p>GMS Template</p>
-                        <p>GameMaker Scaffolding is a template for 2D low-res tile-based games in GameMaker Studio. It contains a great deal of modules to facilitate workflow, efficient design and rendering pipeline.</p>
-                    </div>
-                    <div class="card-footer">
-                        2023
-                    </div>
-                </div>
-
-                <!-- FROGGER -->
-                <div class="card">
-                    <div class="card-header">
-                        <video autoplay muted loop playsinline class="card-video">
-                            <source src="/static/content/frogger.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="card-body">
-                        <h1>Frogger Recreation</h1>
-                        <p>Classic Frogger With A Twist</p>
-                        <p>Project in course <span class="text-highlight">TDA572 - Game Engine Architecture</span> at Chalmers. Purpose was to create our own primitive game engine in C++, and recreate a classic arcade game with slight modifications
-                            within this engine. In this version of Frogger, a horror element is added and the graphical art style is imitated CPU-side.</p>
-                    </div>
-                    <div class="card-footer">
-                        2020
-                    </div>
-                </div>
-
-                <!-- GPU PARTICLES -->
-                <div class="card">
-                    <div class="card-header">
-                        <video autoplay muted loop playsinline class="card-video">
-                            <source src="/static/content/particles.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="card-body">
-                        <h1>GPU-accelerated particles</h1>
-                        <p>Master's Thesis @ Chalmers</p>
-                        <p>Exploring the advantages (and disadvantages) of WebGL extensions within the context of GPU-accelerated particle systems, as a part of my master thesis at Chalmers.</p>
-                    </div>
-                    <div class="card-footer">
-                        2021
-                    </div>
-                </div>
-
-                <!-- POLE POSITION -->
-                <div class="card">
-                    <div class="card-header">
-                        <video autoplay muted loop playsinline class="card-video">
-                            <source src="/static/content/poleposition.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="card-body">
-                        <h1>Pole Position</h1>
-                        <p>Pseudo-3D</p>
-                        <p>Retro racing game in pseudo-3D, heavily inspired by old arcade classics such as Pole Position.</p>
-                    </div>
-                    <div class="card-footer">
-                        2020
-                    </div>
-                </div>
-
-                <!-- NOTIFICATION SYSTEM -->
-                <div class="card">
-                    <div class="card-header">
-                        <video autoplay muted loop playsinline class="card-video">
-                            <source src="/static/content/notifications.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="card-body">
-                        <h1>Notification System</h1>
-                        <p>Signals within GMS</p>
-                        <p>Lightweight framework for signals in GameMaker Studio with features such as callbacks and channels.</p>
-                    </div>
-                    <div class="card-footer">
-                        2020
-                    </div>
-                </div>
-
-                <!-- GRAPHICS CAR GAME -->
-                <div class="card">
-                    <div class="card-header">
-                        <video autoplay muted loop playsinline class="card-video">
-                            <source src="/static/content/cargame.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="card-body">
-                        <h1>ACG Project</h1>
-                        <p>Advanced Computer Graphics</p>
-                        <p>Project to implement advanced graphical concepts from reasearch papers in the course <span class="text-highlight">DAT205 - Advanced Computer Graphics</span> at Chalmers.
-                           The final product consisted of a sandbox racing game, showcasing a couple of techniques from reasearch papers we studied during the course.</p>
-                    </div>
-                    <div class="card-footer">
-                        2020
-                    </div>
-                </div>
-
-                <!-- OTTO -->
-                <div class="card">
-                    <div class="card-header">
-                        <figure style="background-image: url('/static/content/bthesis.jpg');" class="card-figure"></figure>
-                    </div>
-                    <div class="card-body">
-                        <h1>Objective Tiny-Timber<span class="hidden-on-mobile"> : OTTO</span></h1>
-                        <p>Bachelor's Thesis @ Chalmers</p>
-                        <p>Creation of an object-oriented language and a precompiler for it, as an alternative to real-time C. The purpose was to improve and facilitate laboratory assignments
-                           within the course <span class="text-highlight">EDA223 - Real-Time Systems</span> at Chalmers and the University of Gothenburg.</p>
-                    </div>
-                    <div class="card-footer">
-                        2019
-                    </div>
-                </div>
-
-                <!-- TRAFFIC MONITOR -->
-                <div class="card">
-                    <div class="card-header">
-                        <video autoplay muted loop playsinline class="card-video">
-                            <source src="/static/content/monitor.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="card-body">
-                        <h1>Traffic Monitoring and Visualization</h1>
-                        <p>Traffic Predictions With AI</p>
-                        <p>Collection of real-time data over Gothenburg, visualized on a webapplication with AI-based predictions of future traffic situations. Project in course
-                           <span class="text-highlight">DAT066 - Project</span> at Chalmers, and in collaboration with Cybercom.</p>
-                    </div>
-                    <div class="card-footer">
-                        2018
-                    </div>
-                </div>
-
-                <!-- SHAPE ARENA -->
-                <div class="card">
-                    <div class="card-header">
-                        <video autoplay muted loop playsinline class="card-video">
-                            <source src="/static/content/shapearena.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="card-body">
-                        <h1>Shape Arena</h1>
-                        <p>Multiplayer Game</p>
-                        <p>Agar.io inspired Java multiplayer game developed in a team of five, as a project in the course <span class="text-highlight">DAT055 - Object Oriented Applications</span> at Chalmers.</p>
-                    </div>
-                    <div class="card-footer">
-                        2018
-                    </div>
-                </div>
 
             </div><!-- end of Portfolio -->
         </div>
@@ -294,22 +94,59 @@
         <!-- WebGL -->
         <script src="/v2/igloo.js"></script>
         <script src="/v2/tv_screen.js"></script>
+        <script src="/v2/portfolio_content.js"></script>
         <!-- Misc -->
         <script>
-        // On desktop, apply grayscale to cards
-        // additionally, only color and play videos on hover
-        //if (platform.formfactor == "desktop") {
-        if (window.innerWidth > 768) {
-            $('.card').each(function() {
-                $(this).addClass('grayscale');
-                let elem = $('video', this).get(0);
-                if (elem) {
-                    $(this).mouseenter(function() { elem.play();  });
-                    $(this).mouseleave(function() { elem.pause(); });
-                    elem.autoplay = false;
-                }
-            });
+
+        var tv_video = document.getElementById('tv-video');
+        var tv_image = document.getElementById('tv-image');
+        var tv_source = document.getElementById('tv-source');
+
+        function set_video( src, on_off )
+        {
+            NOISE_ON = on_off;
+            tv_image.style.backgroundImage = "url('" + src + "')";
+            tv_source.setAttribute('src', src);
+            tv_video.load();
         }
+
+        function show_menu( id )
+        {
+            $('#menu-' + String(id)).removeClass('hidden');
+        }
+
+        function hide_menu( id )
+        {
+            $('#menu-' + String(id)).addClass('hidden');
+        }
+
+        var portfolio_menu = $('#menu-2-items');
+        var portfolio = $('#portfolio');
+        for ( const item of portfolio_items )
+        {
+            switch (item.type)
+            {
+                case portfolio_item_types.VIDEO:
+                {
+                    if (window.innerWidth > 768)
+                    {
+                        portfolio.append(video_card_template_desktop( item ));
+                    }
+                    else
+                    {
+                        portfolio.append(video_card_template_mobile( item ));
+                    }
+                } break;
+                case portfolio_item_types.IMAGE:
+                {
+                    portfolio.append(image_card_template( item ));
+                } break;
+            }
+            portfolio_menu.append( String.raw`<a onmouseenter="set_video('${item.src}', false);" onmouseleave="set_video('', true)">${item.menu}.....................</a>` );
+        }
+
+        // TODO:
+        // In JS, loop through each portfolio item and add the contents/video from JSON data
         </script>
 
     </body>

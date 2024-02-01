@@ -52,12 +52,16 @@ void main() {
     }
     vec4 base_col = sqrt(color_sum / weight_sum);
 
+    
+
+    vec4 vignette = vignetteIntensity(uv, u_resolution * 22.0, 1.5);
+    base_col.a = max(1.0 - vignette.r, base_col.a);
+    base_col *= vignette;
+
     if (uv.x < 0.0 || uv.y < 0.0 || uv.x > 1.0 || uv.y > 1.0)
     {
         base_col = black;
     }
-
-    base_col *= vignetteIntensity(uv, u_resolution * 22.0, 1.5);
 
     gl_FragColor = base_col;
 }

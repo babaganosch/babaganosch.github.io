@@ -374,6 +374,8 @@ const months = ["jan", "feb", "mar", "apr", "may", "jun",
   "jul", "aug", "sep", "oct", "nov", "dec"
 ];
 
+var NOISE_ON = true;
+
 function main() {
     const canvas = document.querySelector("#webgl-canvas");
 
@@ -480,6 +482,7 @@ function main() {
             .matrix('u_matrix', IDENTITY_MATRIX)
             .uniform('u_resolution', resolution)
             .uniform('u_time', noise_constant)
+            .uniform('u_noise_on', NOISE_ON)
             .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);
 
         // Draw blue quad
@@ -502,7 +505,9 @@ function main() {
 
         // Draw post FX
         igloo.defaultFramebuffer.bind();
-        gl.clearColor(0, 0, 0, 1);
+        gl.enable(gl.BLEND);
+        gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+        gl.clearColor(0, 0, 0, 0);
         gl.clear(gl.COLOR_BUFFER_BIT);
         textures.tmp.bind(0);
         programs.chromatic.use()

@@ -1,0 +1,221 @@
+const portfolio_item_types = {
+    VIDEO: 0,
+    IMAGE: 1
+}
+const portfolio_items = [
+    {
+        type: portfolio_item_types.VIDEO,
+        name: `NesScape`,
+        menu: `NES.Emulator`,
+        link: `.`,
+        src: `/static/content/NesScape.mp4`,
+        heading: `NES 8bit Hardware Emulator`,
+        text: `NES emulator written in C++. Currently the CPU and PPU is implemented. APU is next to be implemented.`,
+        date: `2023`
+    },
+    {
+        type: portfolio_item_types.VIDEO,
+        name: `Abaddon`,
+        menu: `Abaddon`,
+        link: `.`,
+        src: `/static/content/abaddon.mp4`,
+        heading: `Infinite World Sandbox`,
+        text: `Early stages of development. Low-res RPG inspired by pixelart by MrmoTarius.`,
+        date: `2023`
+    },
+    {
+        type: portfolio_item_types.VIDEO,
+        name: `Illfated`,
+        menu: `Illfated`,
+        link: `.`,
+        src: `/static/content/illfated.mp4`,
+        heading: `Procedural Generated Dungeons`,
+        text: `Roguelike dungeon crawler that takes inspiration from classic retro games as well as more modern roguelikes.`,
+        date: `2016 - 2018`
+    },
+    {
+        type: portfolio_item_types.VIDEO,
+        name: `Minecart Maniac`,
+        menu: `Minecart.Maniac`,
+        link: `.`,
+        src: `/static/content/minecart.mp4`,
+        heading: `Infinite Tunnel Runner`,
+        text: `Mobile game inspired by classics such as Flappy Bird and Temple Run. Available at Google Play Store (Android) and App Store (iOS).`,
+        date: `2017 - 2019`
+    },
+    {
+        type: portfolio_item_types.VIDEO,
+        name: `GameMaker Scaffolding`,
+        menu: `GM.Scaffolding`,
+        link: `.`,
+        src: `/static/content/scaffolding.mp4`,
+        heading: `GMS Template`,
+        text: `GameMaker Scaffolding is a template project for 2D low-res tile-based games in GameMaker Studio. It contains a great deal of modules to facilitate workflow, efficient design and rendering pipeline.`,
+        date: `2023`
+    },
+    {
+        type: portfolio_item_types.VIDEO,
+        name: `Frogger Recreation`,
+        menu: `Frogger`,
+        link: `.`,
+        src: `/static/content/frogger.mp4`,
+        heading: `Classic Frogger With A Twist`,
+        text: `Project in course <span class="text-highlight">TDA572 - Game Engine Architecture</span> at Chalmers. Purpose was to create our own primitive game engine in C++, and recreate a classic arcade game with slight modifications
+                    within this engine. In this version of Frogger a horror element is added, and the graphical art style mimicing a CRT-monitor is implemented CPU-side.`,
+        date: `2020`
+    },
+    {
+        type: portfolio_item_types.VIDEO,
+        name: `GPU-accelerated particles`,
+        menu: `GPU.Particles`,
+        link: `.`,
+        src: `/static/content/particles.mp4`,
+        heading: `Master's Thesis @ Chalmers`,
+        text: `Exploring the advantages (and disadvantages) of WebGL extensions within the context of GPU-accelerated particle systems, as a part of my master thesis at Chalmers.`,
+        date: `2021`
+    },
+    {
+        type: portfolio_item_types.VIDEO,
+        name: `Pole Position`,
+        menu: `Pole.Position`,
+        link: `.`,
+        src: `/static/content/poleposition.mp4`,
+        heading: `Pseudo-3D`,
+        text: `Retro racing game in pseudo-3D, heavily inspired by old arcade classics such as Pole Position.`,
+        date: `2020`
+    },
+    {
+        type: portfolio_item_types.VIDEO,
+        name: `Notification System`,
+        menu: `Signals`,
+        link: `.`,
+        src: `/static/content/notifications.mp4`,
+        heading: `Signals within GMS 2.3+`,
+        text: `Lightweight framework for signals in GameMaker Studio with features such as callbacks and channels.`,
+        date: `2020`
+    },
+    {
+        type: portfolio_item_types.VIDEO,
+        name: `ACG Project`,
+        menu: `Car.Game`,
+        link: `.`,
+        src: `/static/content/cargame.mp4`,
+        heading: `Advanced Computer Graphics`,
+        text: `Project to implement advanced graphical concepts from reasearch papers in the course <span class="text-highlight">DAT205 - Advanced Computer Graphics</span> at Chalmers.
+                    The final product consisted of a sandbox racing game, showcasing a couple of techniques from reasearch papers we studied during the course.`,
+        date: `2020`
+    },
+    {
+        type: portfolio_item_types.IMAGE,
+        name: `Objective Tiny-Timber<span class="hidden-on-mobile"> : OTTO</span>`,
+        menu: `OTTO`,
+        link: `.`,
+        src: `/static/content/bthesis.jpg`,
+        heading: `Bachelor's Thesis @ Chalmers`,
+        text: `Creation of an object-oriented language and a precompiler for it, as an alternative to real-time C. The purpose was to improve and facilitate laboratory assignments
+                   within the course <span class="text-highlight">EDA223 - Real-Time Systems</span> at Chalmers, and the University of Gothenburg.`,
+        date: `2019`
+    },
+    {
+        type: portfolio_item_types.VIDEO,
+        name: `Traffic Predictions With AI`,
+        menu: `AI.Traffic`,
+        link: `.`,
+        src: `/static/content/monitor.mp4`,
+        heading: `Traffic Monitoring and Visualization`,
+        text: `Collection of real-time data over Gothenburg, visualized on a webapplication with AI-based predictions of future traffic situations. Project in course
+                   <span class="text-highlight">DAT066 - Project</span> at Chalmers, and in collaboration with Cybercom.`,
+        date: `2018`
+    },
+    {
+        type: portfolio_item_types.VIDEO,
+        name: `Shape Arena`,
+        menu: `Shape.Arena`,
+        link: `.`,
+        src: `/static/content/shapearena.mp4`,
+        heading: `Multiplayer Game`,
+        text: `Agar.io inspired Java multiplayer game developed in a team of five, as a project in the course <span class="text-highlight">DAT055 - Object Oriented Applications</span> at Chalmers.`,
+        date: `2018`
+    },
+    {
+        type: portfolio_item_types.IMAGE,
+        name: `Sausage Clothing`,
+        menu: `Sausage`,
+        link: `.`,
+        src: `/static/content/sausage.jpg`,
+        heading: `Custom Prints`,
+        text: `Clothing with custom prints by me. Some designs is heavily inspired by stuff I saw online at the time, and some is just replications of famous logos, often with a twist.`,
+        date: `2014`
+    }
+];
+
+function string_template(strings, ...keys) {
+    return (...values) => {
+        const dict = values[values.length - 1] || {};
+        const result = [strings[0]];
+        keys.forEach((key, i) => {
+        const value = Number.isInteger(key) ? values[key] : dict[key];
+        result.push(value, strings[i + 1]);
+        });
+        return result.join("");
+    };
+}
+
+function play_video( self )
+{
+    self.firstElementChild.firstElementChild.play();
+}
+
+function pause_video( self )
+{
+    self.firstElementChild.firstElementChild.pause();
+}
+
+const  video_card_template_desktop = string_template`
+<div class="card" onmouseenter="play_video(this)" onmouseleave="pause_video(this)"> 
+    <div class="card-header">
+        <video muted loop playsinline class="card-video">
+            <source src="${"src"}" type="video/mp4">
+        </video>
+    </div>
+    <div class="card-body">
+        <h1>${"name"}</h1>
+        <p>${"heading"}</p>
+        <p>${"text"}</p>
+    </div>
+    <div class="card-footer">
+        ${"date"}
+    </div>
+</div>`;
+
+const  video_card_template_mobile = string_template`
+<div class="card"> 
+    <div class="card-header">
+        <video autoplay muted loop playsinline class="card-video">
+            <source src="${"src"}" type="video/mp4">
+        </video>
+    </div>
+    <div class="card-body">
+        <h1>${"name"}</h1>
+        <p>${"heading"}</p>
+        <p>${"text"}</p>
+    </div>
+    <div class="card-footer">
+        ${"date"}
+    </div>
+</div>`;
+
+const  image_card_template = string_template`
+<div class="card"> 
+    <div class="card-header">
+        <figure style="background-image: url('${"src"}');" class="card-figure"></figure>
+    </div>
+    <div class="card-body">
+        <h1>${"name"}</h1>
+        <p>${"heading"}</p>
+        <p>${"text"}</p>
+    </div>
+    <div class="card-footer">
+        ${"date"}
+    </div>
+</div>`;
