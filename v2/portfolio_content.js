@@ -219,3 +219,50 @@ const  image_card_template = string_template`
         ${"date"}
     </div>
 </div>`;
+
+const tv_video = document.getElementById('tv-video');
+const tv_image = document.getElementById('tv-image');
+const tv_source = document.getElementById('tv-source');
+
+function set_video( src, on_off )
+{
+    NOISE_ON = on_off;
+    tv_image.style.backgroundImage = "url('" + src + "')";
+    tv_source.setAttribute('src', src);
+    tv_video.load();
+}
+
+function show_menu( id )
+{
+    $('#menu-' + String(id)).removeClass('hidden');
+}
+
+function hide_menu( id )
+{
+    $('#menu-' + String(id)).addClass('hidden');
+}
+
+const portfolio_menu = $('#menu-2-items');
+const portfolio = $('#portfolio');
+for ( const item of portfolio_items )
+{
+    switch (item.type)
+    {
+        case portfolio_item_types.VIDEO:
+        {
+            if (window.innerWidth > 768)
+            {
+                portfolio.append(video_card_template_desktop( item ));
+            }
+            else
+            {
+                portfolio.append(video_card_template_mobile( item ));
+            }
+        } break;
+        case portfolio_item_types.IMAGE:
+        {
+            portfolio.append(image_card_template( item ));
+        } break;
+    }
+    portfolio_menu.append( String.raw`<a onmouseenter="set_video('${item.src}', false);" onmouseleave="set_video('', true)">${item.menu}..................................</a>` );
+}
