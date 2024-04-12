@@ -154,7 +154,7 @@ const portfolio_items = [
         heading: `Multiplayer Game`,
         text: `Agar.io inspired Java multiplayer game developed in a team of five, as a project in the course <span class="text-highlight">DAT055 - Object Oriented Applications</span> at Chalmers.`,
         date: `2018`
-    },
+    }/*,
     {
         type: portfolio_item_types.IMAGE,
         name: `Sausage Clothing`,
@@ -165,7 +165,7 @@ const portfolio_items = [
         heading: `Custom Prints`,
         text: `Clothing with custom prints by me. Some designs is heavily inspired by stuff I saw online at the time, and some is just replications of famous logos, often with a twist.`,
         date: `2014`
-    }
+    }*/
 ];
 
 function string_template(strings, ...keys) {
