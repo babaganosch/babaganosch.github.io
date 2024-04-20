@@ -10,6 +10,17 @@ function tag( text, style = '' ) {
 const portfolio_items = [
     {
         type: portfolio_item_types.VIDEO,
+        name: `Mareld`,
+        menu: `Mareld`,
+        tags: [ tag('Game'), tag('GML'), tag('WIP', 'bg-blue') ],
+        link: `/mareld.html`,
+        src: `/static/content/mareld.mp4`,
+        heading: `Turn-Based RPG`,
+        text: `RPG based on nordic mythology with grid like movement and turn based combat.`,
+        date: `2024`
+    },
+    {
+        type: portfolio_item_types.VIDEO,
         name: `NesScape`,
         menu: `NES.Emulator`,
         tags: [ tag('Software'), tag('C++'), tag('WIP', 'bg-blue') ],
