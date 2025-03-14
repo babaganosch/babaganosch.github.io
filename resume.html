@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lars Andersson</title>
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/static/favicon/site.webmanifest">
+        <!-- Style -->
+        <script defer src="/static/fontawesome/js/brands.js"></script>
+        <script defer src="/static/fontawesome/js/solid.js"></script>
+        <script defer src="/static/fontawesome/js/fontawesome.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <!-- GOOGLE ANALYTICS -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46921147-5"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-46921147-5');
+        </script>
+
+    </head>
+    <body>
+
+        <div id="Website">
+
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-dark navbar-expand-md bg-dark justify-content-center py-1">
+                <ul class="navbar-nav w-50 justify-content-start">
+                    <li class="nav-item">
+                        <span class="navbar-brand mr-0">Lars Andersson</span>
+                    </li>
+                    <li class="nav-item d-none d-md-flex">
+                        <span class="nav-link h6 my-auto disabled">- resumé</span>
+                    </li>
+                </ul>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#Menu">
+                    <span><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="navbar-collapse collapse w-100" id="Menu">
+                    <ul class="navbar-nav w-100 justify-content-center">
+                        <!-- HOME -->
+                        <li class="nav-item text-center">
+                            <a class="nav-link" href=".">
+                                <i class="fa-solid fa-house fa-lg"></i>
+                                <span class="d-md-none"> Home</span>
+                            </a>
+                        </li>
+                        <!-- GITHUB -->
+                        <li class="nav-item text-center">
+                            <a class="nav-link" href="https://github.com/babaganosch">
+                                <i class="fa-brands fa-github fa-lg"></i>
+                                <span class="d-md-none"> GitHub</span>
+                            </a>
+                        </li>
+                        <!-- X -->
+                        <li class="nav-item text-center">
+                            <a class="nav-link" href="https://twitter.com/babaganosch">
+                                <i class="fa-brands fa-x-twitter fa-lg"></i>
+                                <span class="d-md-none"> Twitter</span>
+                            </a>
+                        </li>
+                        <!-- LINKEDIN -->
+                        <li class="nav-item text-center">
+                            <a class="nav-link" href="https://www.linkedin.com/in/lars-andersson-1589a180/">
+                                <i class="fa-brands fa-linkedin-in fa-lg"></i>
+                                <span class="d-md-none"> LinkedIn</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="dropdown-divider border-secondary"></div>
+
+                    <ul class="nav navbar-nav ml-auto w-100 justify-content-end pb-2 pt-1 pt-md-0 pb-md-0">
+                        <!-- PDF -->
+                        <li class="nav-item text-center">
+                            <a class="nav-link py-0" href="/static/content/LarsAndersson.pdf">
+                                <i class="d-none d-md-inline-flex fas fa-file-pdf fa-2x"></i>
+                                <i class="d-md-none fas fa-file-pdf fa-lg"></i>
+                                <span class="d-flex-inline d-md-none"> View as PDF</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- CONTENT -->
+            <div id="pageholder" class="px-lg-4">
+
+                <div id="toptext"><b>Lars Andersson</b></div>
+
+                <!-- BIO -->
+                <div id="content" class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="theme col-12 col-md-2"><b>bio</b></div>
+                        <div class="col-12 col-md-10">
+                            I have an interest in technology, software development and graphics design. I spend a lot of my spare time on one of my biggest passions - game development.
+                        </div>
+                    </div>
+
+                    <!-- PHONE & EMAIL-->
+                    <div class="row">
+
+                        <div class="theme col-md-2"></div>
+                        <div class="col-2 col-md-1">tel:</div>
+                        <div class="col-10 col-md-9">+46 (0)76 804 19 65</div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-2 col-md-1">email:</div>
+                        <div class="col-10 col-md-9">lars.andersson.swe(at)gmail.com</div>
+
+                    </div>
+                </div>
+
+                <!-- EXPERIENCE -->
+                <div id="content" class="container-fluid mt-4">
+
+                    <div class="row">
+
+                        <!-- Toyota -->
+                        <div class="theme col-12 col-md-2"><b>experience</b></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlock">2023 - present</span> <b>Software Developer</b> at <i>Toyota Material Handling (HiQ)</i>
+                            <ul>
+                                <li>Working towards the next generation of Toyota AGVs</li>
+                            </ul>
+                        </div>
+
+                        <!-- Qualcomm -->
+                        <div class="col-12 col-md-2"></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlock">2022 - 2023</span> <b>Software Developer</b> at <i>Qualcomm/Arriver (HiQ)</i>
+                            <ul>
+                                <li>Customizing Qualcomm's camera perception software according to BMW's needs</li>
+                                <li>Developing testing tools within SIL and HIL</li>
+                            </ul>
+                        </div>
+
+                        <!-- VOLVO CARS -->
+                        <div class="col-12 col-md-2"></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlock">2021 - 2022</span> <b>Software Developer</b> at <i>Volvo Cars (HiQ)</i>
+                            <ul>
+                                <li>Integration of NVidia DriveOS 6 for the next generation of autonomous Volvo cars</li>
+                            </ul>
+                        </div>
+
+                        <!-- LEDARGRUPPEN -->
+                        <div class="col-12 col-md-2"></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlock">2018 - 2021</span> <b>Software Developer</b> at <i>Svenska Ledargruppen</i>
+                            <ul>
+                                <li>Redesigning and simplifying old complex user interfaces</li>
+                                <li>Developing web-based applications targeted for both mobile and non-mobile devices</li>
+                            </ul>
+                        </div>
+
+                        <!-- TEACHING ASSISTANT -->
+                        <div class="col-12 col-md-2"></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlock">2017 - 2021</span> <b>Teaching Assistant</b> at <i>Chalmers University of Technology</i>
+                            <ul>
+                                <li><span class="levelBlock"><i>(master's level)</i></span> EDA223 - Real-Time Systems</li>
+                                <li><span class="levelBlock"><i>(bachelor's level)</i></span> DAT455 - Introduction to Python</li>
+                                <li><span class="levelBlock"><i>(bachelor's level)</i></span> LET626 - Introduction to Real-Time Systems</li>
+                                <li><span class="levelBlock"><i>(bachelor's level)</i></span> LEU432 - Introduction to Computer Engineering</li>
+                            </ul>
+                        </div>
+
+                        <!-- ARLA -->
+                        <div class="col-12 col-md-2"></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlockSmall">2016</span> <b>Machine Operator</b> at <i>Arla Foods Falkenberg</i>
+                            <ul>
+                            </ul>
+                        </div>
+
+                        <!-- ELDERLY CARE -->
+                        <div class="col-12 col-md-2"></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlockSmall">2015</span> <b>Elderly Care</b> at <i>Rolfstorps Hemtjänst</i>
+                            <ul>
+                                <li>Assisting elderly people in their everyday life</li>
+                                <li>Delegated medicine dispensation</li>
+                            </ul>
+                        </div>
+
+                    </div><!-- end row -->
+
+                </div><!-- end EXPERIENCE -->
+
+                <!-- EDUCATION -->
+                <div id="content" class="container-fluid mt-4">
+
+                    <div class="row">
+
+                        <!-- CHALMERS MASTER -->
+                        <div class="theme col-12 col-md-2"><b>education</b></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlock">2019 - 2021</span> <b>Chalmers University of Technology</b>, <i>Master level</i>
+                            <ul>
+                                <li>Master's degree in Computer Systems and Networks</li>
+                                <li><a href="/static/content/MastersThesis.pdf" >Thesis</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- CHALMERS BACHELOR -->
+                        <div class="col-12 col-md-2"></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlock">2016 - 2019</span> <b>Chalmers University of Technology</b>, <i>Bachelor level</i>
+                            <ul>
+                                <li>Bachelor’s degree in Computer Engineering</li>
+                                <li><a href="/static/content/BachelorsThesis.pdf" >Thesis</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- JU -->
+                        <div class="col-12 col-md-2"></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlock">2013 - 2014</span> <b>Jönköping University</b>, <i>Introductory year</i>
+                            <ul>
+                                <li>Mathematics</li>
+                                <li>Physics</li>
+                                <li>Chemistry</li>
+                            </ul>
+                        </div>
+
+                    </div><!-- end row -->
+
+                </div><!-- end EDUCATION -->
+
+                <!-- PROJECTS -->
+                <div id="content" class="container-fluid mt-4">
+
+                    <div class="row">
+
+                        <!-- OTTO -->
+                        <div class="theme col-12 col-md-2"><b>projects</b></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlockSmall">2019</span> <b>Bachelor's Thesis - <i>Objective Tiny-Timber : OTTO</i></b>
+                            <ul>
+                                <li class="no-point">
+                                    Creation of an object-oriented language and a precompiler, as an alternative to real-time C, with the purpose to improve and facilitate laboratory assignments within the course <i>EDA223 - Real-Time Systems</i> at Chalmers and the University of Gothenburg.<br>
+                                    <a class="d-print-none" href="/static/content/BachelorsThesis.pdf" >Thesis</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- TRAFFIC MONITOR -->
+                        <div class="theme col-12 col-md-2"></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlockSmall">2018</span> <b>Traffic Monitoring and Visualization</b>
+                            <ul>
+                                <li class="no-point">
+                                    Collection of real-time data over Gothenburg, visualized on a webapplication with AI-based predictions of future traffic situations, as a project in the course <i>DAT066 - Project</i> at Chalmers, in collaboration with <a href="https://www.cybercom.com/" >Cybercom</a><span class="d-print-none"> - </span>
+                                    <a class="d-print-none" href="/static/content/Projektkurs_Rapport.pdf" >Project report (swedish)</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- ROUTE RECORDER -->
+                        <div class="col-12 col-md-2"></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlockSmall">2018</span> <b>Route Recorder</b>
+                            <ul>
+                                <li class="no-point">
+                                    Android application made to be run on a Volvo car with the purpose to record driven routes and to visualize them as a heatmap on the in-car screen. Project in course <i>DAT256 - Software Engineering Project</i> at Chalmers<br>
+                                    <a class="d-print-none" href="/static/content/RouteRecorderApp.pdf" >Preview</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SHAPE ARENA -->
+                        <div class="col-12 col-md-2"></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlockSmall">2018</span> <b>Shape Arena</b>
+                            <ul>
+                                <li class="no-point">
+                                    Agar.io inspired Java multiplayer game developed in a team of five, as
+                                    a project in the course <i>DAT055 - Object oriented applications</i> at Chalmers<br>
+                                    <a class="d-print-none" href="https://github.com/babaganosch/ShapeArena" >GitHub Repository</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- ILLFATED -->
+                        <div class="col-12 col-md-2"></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlock">2016 - ongoing</span> <b>Illfated</b>
+                            <ul>
+                                <li class="no-point">
+                                    Roguelike dungeon crawler game that takes inspiration from classic retro games as well as more modern roguelikes<br>
+                                    <a class="d-print-none" href="https://www.youtube.com/watch?v=r2gwL7vMXAw" >Trailer</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- MINECART MANIAC -->
+                        <div class="col-12 col-md-2"></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlockSmall">2017 - ongoing</span> <b>Minecart Maniac</b>
+                            <ul>
+                                <li class="no-point">
+                                    Mobile game, inspired by games such as Flappy Bird or Temple Run<br>
+                                    Minecart Maniac at <a href="https://play.google.com/store/apps/details?id=info.larsandersson.minecartmaniac" >Google Play Store (Android)</a> and <a href="https://apps.apple.com/us/app/minecart-maniac/id1489146698" >App Store (iOS)</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SAUSAGE CLOTHING -->
+                        <div class="col-12 col-md-2"></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlockSmall">2014</span> <b>Sausage Clothing</b>
+                            <ul>
+                                <li class="no-point">
+                                    Self-designed clothing and various other projects<br>
+                                    <a href="https://sausageclothing.se" >www.sausageclothing.se</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div><!-- end row -->
+
+                </div><!-- end PROJECTS -->
+
+                <!-- TECHNICAL & ENVIROMENTS -->
+                <div id="content" class="container-fluid mt-4">
+                    <div class="row">
+                        <div class="theme col-12 col-md-2"><b>technical</b></div>
+
+                        <!-- LANGUAGES -->
+                        <div class="col-3 col-md-2"><b>Languages</b></div>
+                        <div class="col-9 col-md-8">
+                            GML, HTML + CSS, JavaScript, Java, Python, C, C++
+                        </div>
+
+                        <!-- ENVIRONMENTS -->
+                        <div class="col-md-2"></div>
+                        <div class="col-3 col-md-2"><b>Environments</b></div>
+                        <div class="col-9 col-md-8">
+                            Windows, Linux, OS X, MongoDB, Eclipse, Node.js, Agile workflow (Scrum, SAFe)
+                        </div>
+
+                        <!-- TOOLS -->
+                        <div class="col-md-2"></div>
+                        <div class="col-3 col-md-2"><b>Tools</b></div>
+                        <div class="col-9 col-md-8">
+                            Illustrator, Photoshop, Git, Gerrit Code Review, Jira, Bootstrap, JQuery, Google Maps
+                        </div>
+
+                        <!-- I ENJOY -->
+                        <div class="col-md-2 mt-md-2"></div>
+                        <div class="col-12 col-md-10 mt-2">I enjoy, and have ease of, learning new technologies.</div>
+                    </div>
+                </div>
+
+                <!-- REFERENCES -->
+                <div id="content" class="container-fluid mt-4">
+                    <div class="row">
+                        <div class="theme col-12 col-md-2"><b>references</b></div>
+                        <div class="col-12 col-md-10"><b>References available upon request.</b></div>
+                    </div>
+                </div>
+
+                <!-- SOCIAL -->
+                <div id="content" class="container-fluid mt-4">
+                    <div class="row">
+
+                        <div class="theme col-12 col-md-2"><b>social</b></div>
+
+                        <!-- GITHUB -->
+                        <div class="col-md-3">
+                            <a href="https://github.com/babaganosch" class="text-dark" title="GitHub"><i class="fa-brands fa-github-square fa-lg"></i> github.com/babaganosch</a>
+                        </div>
+
+                        <!-- TWITTER -->
+                        <div class="col-md-3">
+                            <a href="https://twitter.com/babaganosch" class="text-dark" title="Twitter"><i class="fa-brands fa-square-x-twitter fa-lg"></i> twitter.com/babaganosch</a>
+                        </div>
+
+                        <!-- LINKEDIN -->
+                        <div class="col-md-4">
+                            <a href="https://www.linkedin.com/in/lars-andersson-1589a180/" class="text-dark" title="LinkedIn"><i class="fa-brands fa-linkedin fa-lg"></i> lars-andersson-1589a180</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <!-- Popper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <!-- Bootstrap -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- Cookies -->
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+    </body>
+
+</html>

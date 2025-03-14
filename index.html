@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lars Andersson</title>
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/static/favicon/site.webmanifest">
+        <!-- Custom -->
+        <link rel="stylesheet" href="/static/css/style_main.css">
+        <!-- GOOGLE ANALYTICS -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46921147-5"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46921147-5');
+        </script>
+    </head>
+
+    <body class="scroll-disable">
+        <img id="webgl-font" src="/static/content/vcr_font.png"/>
+
+        <!-- Hi ! -->
+        <div id="splash" class="">
+            <div id="splash-square" class="">Hi !</div>
+        </div>
+
+        <!-- Content -->
+        <div id="website">
+
+            <!-- HEADER -->
+            <div id="header">
+
+                <div id="header-video-container">
+                    <figure id="tv-image" style="background-image: url('')" class="card-figure"></figure>
+                    <video id="tv-video" autoplay muted loop playsinline class="card-video">
+                        <source id="tv-source" type="video/mp4">
+                    </video>
+                </div>
+
+                <canvas id="webgl-canvas"></canvas>
+
+                <div id="menu">
+                    <!--  MENU 1  -->
+                    <div id="menu-1">
+                        <div class="menu-heading">
+                            <span class="hidden-on-mobile">----- </span><span class="hidden-on-desktop">> </span>
+                                LARS ANDERSSON
+                            <span class="hidden-on-desktop"> <</span><span class="hidden-on-mobile"> -----</span>
+                        </div>
+                        <div class="menu-upper menu-items">
+                            <a href="https://linkedin.com/in/lars-andersson-1589a180/" title="LinkedIn">LINKEDIN.........................</a>
+                            <a href="https://github.com/babaganosch" title="GitHub">GITHUB...........................</a>
+                            <a href="https://X.com/Babaganosch" title="X">TWITTER..........................</a>
+                            <a href="/resume.html" title="CV">RESUMÉ...........................</a>
+                        </div>
+                        <div class="menu-lower menu-items">
+                            <a class="hidden-on-mobile" onclick="hide_menu(1); show_menu(2);">PORTFOLIO</a>
+                            <a class="hidden-on-desktop" onclick="scroll_to_portfolio();" >PORTFOLIO</a>
+                        </div>
+                    </div>
+
+                    <!--  MENU 2  -->
+                    <div id="menu-2" class="hidden">
+                        <div class="menu-heading"> > PORTFOLIO < </div>
+                        <div id="menu-2-items" class="menu-upper menu-items"></div>
+                        <div class="menu-lower menu-items">
+                            <a onclick="hide_menu(2); show_menu(1);"> < BACK</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BUFFER -->
+            <div id="header-porftolio-buffer"></div>
+
+            <!-- PORTFOLIO -->
+            <div id="portfolio"></div>
+
+        </div>
+
+        <!-- SmoothScroll -->
+        <script type="text/javascript" src="/static/js/smoothscroll.js"></script>
+        <!-- JQuery -->
+        <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+        <!-- Cookies -->
+        <script type="text/javascript" src="/node_modules/js-cookie/src/js.cookie.js"></script>
+        <!-- WebGL -->
+        <script src="/static/js/igloo.js"></script>
+        <script src="/static/js/tv_screen.js"></script>
+        <script src="/static/js/portfolio_content.js"></script>
+
+        <script>
+
+            const show_splash = !Cookies.get('Hi');
+            if (show_splash)
+            { // Show HI!
+                setTimeout(function()
+                {
+                    $('#splash').fadeOut(2000);
+                }, 1500);
+
+                setTimeout(function()
+                {
+                    $('body').removeClass('scroll-disable');
+                    Cookies.set('Hi', true, { expires: 1 });
+                }, 3500);
+            }
+            else
+            { // Don't show HI!
+                $('#splash').addClass('hidden');
+                $('body').removeClass('scroll-disable');
+            }
+
+            function scroll_to_portfolio()
+            {
+                smoothScroll(document.querySelector('#portfolio'));
+            }
+
+        </script>
+
+    </body>
+
+</html>
