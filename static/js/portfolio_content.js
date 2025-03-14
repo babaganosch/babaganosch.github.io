@@ -27,7 +27,7 @@ const portfolio_items = [
         link: `https://github.com/babaganosch/nes_emulator`,
         src: `/static/content/NesScape.mp4`,
         heading: `NES 8bit Hardware Emulator`,
-        text: `NES emulator written in C++. Currently the CPU and PPU is implemented. APU is next to be implemented.`,
+        text: `A Nintendo Entertainment System 8bit (NES) emulator implemented in C++ that aims to provide cycle accurate emulation of the original NTSC NES hardware.`,
         date: `2023`
     },
     {
