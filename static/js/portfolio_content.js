@@ -10,31 +10,31 @@ function tag( text, style = '' ) {
 const portfolio_items = [
     {
         type: portfolio_item_types.VIDEO,
-        name: `Mareld`,
-        menu: `Mareld`,
+        name: `Nibelung`,
+        menu: `Nibelung`,
         tags: [ tag('Game'), tag('GML'), tag('WIP', 'bg-blue') ],
         link: `/mareld.html`,
         src: `/static/content/mareld.mp4`,
         heading: `Turn-Based RPG`,
         text: `RPG based on nordic mythology with grid like movement and turn based combat.`,
-        date: `2024`
+        date: `2025`
     },
     {
         type: portfolio_item_types.VIDEO,
         name: `NesScape`,
         menu: `NES.Emulator`,
-        tags: [ tag('Software'), tag('C++'), tag('WIP', 'bg-blue') ],
+        tags: [ tag('Software'), tag('C++') ],
         link: `https://github.com/babaganosch/nes_emulator`,
         src: `/static/content/NesScape.mp4`,
         heading: `NES 8bit Hardware Emulator`,
         text: `A Nintendo Entertainment System (NES) emulator implemented in C++ that aims to provide cycle accurate emulation of the original NTSC NES hardware.`,
-        date: `2023`
+        date: `2024`
     },
     {
         type: portfolio_item_types.VIDEO,
         name: `GameMaker Scaffolding`,
         menu: `GM.Scaffolding`,
-        tags: [ tag('Open Source'), tag('Tool'), tag('GML'), tag('WIP', 'bg-blue') ],
+        tags: [ tag('Open Source'), tag('Tool'), tag('GML') ],
         link: `https://github.com/babaganosch/GameMakerScaffolding`,
         src: `/static/content/scaffolding.mp4`,
         heading: `GMS Template`,
@@ -67,11 +67,11 @@ const portfolio_items = [
         type: portfolio_item_types.VIDEO,
         name: `Abaddon`,
         menu: `Abaddon`,
-        tags: [ tag('Game'), tag('GML'), tag('WIP', 'bg-blue') ],
+        tags: [ tag('Game'), tag('GML') ],
         link: `/abaddon.html`,
         src: `/static/content/abaddon.mp4`,
         heading: `Infinite World Sandbox`,
-        text: `Early stages of development. Low-res RPG inspired by pixelart by MrmoTarius.`,
+        text: `Low-res RPG inspired by pixelart by MrmoTarius.`,
         date: `2023`
     },
     {

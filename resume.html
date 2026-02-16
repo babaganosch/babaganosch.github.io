@@ -82,6 +82,7 @@
 
                     <ul class="nav navbar-nav ml-auto w-100 justify-content-end pb-2 pt-1 pt-md-0 pb-md-0">
                         <!-- PDF -->
+                        <!--
                         <li class="nav-item text-center">
                             <a class="nav-link py-0" href="/static/content/LarsAndersson.pdf">
                                 <i class="d-none d-md-inline-flex fas fa-file-pdf fa-2x"></i>
@@ -89,6 +90,7 @@
                                 <span class="d-flex-inline d-md-none"> View as PDF</span>
                             </a>
                         </li>
+                        -->
                     </ul>
                 </div>
             </nav>
@@ -103,7 +105,7 @@
                     <div class="row mb-2">
                         <div class="theme col-12 col-md-2"><b>bio</b></div>
                         <div class="col-12 col-md-10">
-                            I have an interest in technology, software development and graphics design. I spend a lot of my spare time on one of my biggest passions - game development.
+                            I have a strong interest in technology, software development and graphic design. I dedicate most of my spare time on one of my biggest passions - game development.
                         </div>
                     </div>
 
@@ -118,6 +120,10 @@
                         <div class="col-2 col-md-1">email:</div>
                         <div class="col-10 col-md-9">lars.andersson.swe(at)gmail.com</div>
 
+                        <div class="col-md-2"></div>
+                        <div class="col-2 col-md-1">portfolio:</div>
+                        <div class="col-10 col-md-9"><a href="." >larsandersson.info</a></div>
+
                     </div>
                 </div>
 
@@ -131,7 +137,13 @@
                         <div class="col-12 col-md-10">
                             <span class="dateBlock">2023 - present</span> <b>Software Developer</b> at <i>Toyota Material Handling (HiQ)</i>
                             <ul>
-                                <li>Working towards the next generation of Toyota AGVs</li>
+                                <i><b>C, C++, Structured Text (PLC), Python, Asyncio, PyTest, Bazel, CANopen, CANalyzer, Azure DevOps</b></i>
+                                <li>Developing the next generation of Toyota AGVs</li>
+                                <li>Firmware development on the Truck Controller System (TCS)</li>
+                                <li>Firmware development on the Unit for Automation Control (UAC)</li>
+                                <li>Designing and constructing HIL rigs for TCS</li>
+                                <li>Building tools for analyzing CAN debug data</li>
+                                <li>Maintaining Azure pipelines</li>
                             </ul>
                         </div>
 
@@ -140,6 +152,7 @@
                         <div class="col-12 col-md-10">
                             <span class="dateBlock">2022 - 2023</span> <b>Software Developer</b> at <i>Qualcomm/Arriver (HiQ)</i>
                             <ul>
+                                <i><b>C, C++, SOME/IP, Bazel, Jenkins, Jira, Gerrit</b></i>
                                 <li>Customizing Qualcomm's camera perception software according to BMW's needs</li>
                                 <li>Developing testing tools within SIL and HIL</li>
                             </ul>
@@ -150,7 +163,9 @@
                         <div class="col-12 col-md-10">
                             <span class="dateBlock">2021 - 2022</span> <b>Software Developer</b> at <i>Volvo Cars (HiQ)</i>
                             <ul>
+                                <i><b>C, QNX, Python, Robot Framework, Bash Scripts, Jenkins, Jira, Gerrit, Atlassian Confluence</b></i>
                                 <li>Integration of NVidia DriveOS 6 for the next generation of autonomous Volvo cars</li>
+                                <li>Port DriveOS platform to new ECU hardware</li>
                             </ul>
                         </div>
 
@@ -159,6 +174,7 @@
                         <div class="col-12 col-md-10">
                             <span class="dateBlock">2018 - 2021</span> <b>Software Developer</b> at <i>Svenska Ledargruppen</i>
                             <ul>
+                                <i><b>JavaScript, HTML, CSS, JQuery, Bootstrap, Google Maps API</b></i>
                                 <li>Redesigning and simplifying old complex user interfaces</li>
                                 <li>Developing web-based applications targeted for both mobile and non-mobile devices</li>
                             </ul>
@@ -209,7 +225,7 @@
                             <span class="dateBlock">2019 - 2021</span> <b>Chalmers University of Technology</b>, <i>Master level</i>
                             <ul>
                                 <li>Master's degree in Computer Systems and Networks</li>
-                                <li><a href="/static/content/MastersThesis.pdf" >Thesis</a></li>
+                                <li class="d-print-none"><a href="/static/content/MastersThesis.pdf" >Thesis</a></li>
                             </ul>
                         </div>
 
@@ -218,8 +234,8 @@
                         <div class="col-12 col-md-10">
                             <span class="dateBlock">2016 - 2019</span> <b>Chalmers University of Technology</b>, <i>Bachelor level</i>
                             <ul>
-                                <li>Bachelor’s degree in Computer Engineering</li>
-                                <li><a href="/static/content/BachelorsThesis.pdf" >Thesis</a></li>
+                                <li>Bachelor's degree in Computer Engineering</li>
+                                <li class="d-print-none"><a href="/static/content/BachelorsThesis.pdf" >Thesis</a></li>
                             </ul>
                         </div>
 
@@ -243,8 +259,38 @@
 
                     <div class="row">
 
-                        <!-- OTTO -->
+                        <!-- NESSCAPE -->
                         <div class="theme col-12 col-md-2"><b>projects</b></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlockSmall">2024</span> <b>NES Emulator - <i>NesScape</i></b>
+                            <ul>
+                                <li class="no-point">
+                                    A Nintendo Entertainment System (NES 8bit) emulator implemented in C++ that aims to provide cycle accurate emulation of the original NTSC NES hardware.
+                                    CPU implemented with all 256 opcodes cycle accurate. PPU implemented with accurate pixel rendering and sprite0 hit detection, and scrolling via loopy-registers.
+                                    APU contains fully working pulse, triangle and noise channels while DMC channel is mostly implemented.
+                                    The most common iNES mappers implemented (NROM, MMC1B, UxROM, AxROM and UN1ROM).<br>
+                                    <a class="d-print-none" href="https://github.com/babaganosch/nes_emulator" >GitHub Repository</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- BIG PHYSICS SIMULATION -->
+                        <div class="theme col-12 col-md-2"></div>
+                        <div class="col-12 col-md-10">
+                            <span class="dateBlockSmall">2025</span> <b>CPU-based physics particle simulation <i>(weekend project)</i></b>
+                            <ul>
+                                <li class="no-point">
+                                    Developed a CPU-based particle simulation, in C++, as a focused weekend project to explore performance limits.
+                                    Successfully simulated ~30000 physics-based particles (3-6 px) in a 1800x1200 world, at a stable 60 FPS.
+                                    Implemented full particle to particle collision handling, and rendered all particles in a single draw call using quads via a vertex array.
+                                    Optimized update performance through basic spatial partitioning and multithreaded processing.<br>
+                                    <a class="d-print-none" href="https://github.com/babaganosch/big_physics_sim" >GitHub Repository</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- OTTO -->
+                        <div class="theme col-12 col-md-2"></div>
                         <div class="col-12 col-md-10">
                             <span class="dateBlockSmall">2019</span> <b>Bachelor's Thesis - <i>Objective Tiny-Timber : OTTO</i></b>
                             <ul>
@@ -295,7 +341,7 @@
                         <!-- ILLFATED -->
                         <div class="col-12 col-md-2"></div>
                         <div class="col-12 col-md-10">
-                            <span class="dateBlock">2016 - ongoing</span> <b>Illfated</b>
+                            <span class="dateBlockSmall">2016</span> <b>Illfated</b>
                             <ul>
                                 <li class="no-point">
                                     Roguelike dungeon crawler game that takes inspiration from classic retro games as well as more modern roguelikes<br>
@@ -307,7 +353,7 @@
                         <!-- MINECART MANIAC -->
                         <div class="col-12 col-md-2"></div>
                         <div class="col-12 col-md-10">
-                            <span class="dateBlockSmall">2017 - ongoing</span> <b>Minecart Maniac</b>
+                            <span class="dateBlockSmall">2017</span> <b>Minecart Maniac</b>
                             <ul>
                                 <li class="no-point">
                                     Mobile game, inspired by games such as Flappy Bird or Temple Run<br>
@@ -340,21 +386,21 @@
                         <!-- LANGUAGES -->
                         <div class="col-3 col-md-2"><b>Languages</b></div>
                         <div class="col-9 col-md-8">
-                            GML, HTML + CSS, JavaScript, Java, Python, C, C++
+                            C, C++, Python, Java, JavaScript, Structed Text, GML, HTML + CSS
                         </div>
 
                         <!-- ENVIRONMENTS -->
                         <div class="col-md-2"></div>
                         <div class="col-3 col-md-2"><b>Environments</b></div>
                         <div class="col-9 col-md-8">
-                            Windows, Linux, OS X, MongoDB, Eclipse, Node.js, Agile workflow (Scrum, SAFe)
+                            Windows, Linux, OS X, QNX, CANopen, SOME/IP, Agile workflow (Scrum, SAFe)
                         </div>
 
                         <!-- TOOLS -->
                         <div class="col-md-2"></div>
                         <div class="col-3 col-md-2"><b>Tools</b></div>
                         <div class="col-9 col-md-8">
-                            Illustrator, Photoshop, Git, Gerrit Code Review, Jira, Bootstrap, JQuery, Google Maps
+                            VSCode, Git, Azure DevOps, Jenkins, CANalyzer, Gerrit Code Review, Jira, Adobe Create Cloud, PyTest, Robot Framework
                         </div>
 
                         <!-- I ENJOY -->
