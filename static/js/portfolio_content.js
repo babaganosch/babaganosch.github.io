@@ -31,6 +31,18 @@ const portfolio_items = [
         date: `2024`
     },
     {
+        type: portfolio_item_types.IMAGE,
+        name: `CPU Particle Simulation`,
+        menu: `Particle.Simulation`,
+        tags: [ tag('Weekend Project'), tag('Software'), tag('C++') ],
+        link: `https://github.com/babaganosch/big_physics_sim`,
+        src: `/static/content/big_physics_sim.png`,
+        heading: `Short weekend project`,
+        text: `Developed a CPU-based particle simulation, in C++, as a focused weekend project to explore performance limits. Successfully simulated ~30000 physics-based particles (3-6 px) in a 1800x1200 world, at a stable 60 FPS.
+                    Particle-to-particle collisions, basic spatial partitioning and multithreaded updates.`,
+        date: `2025`
+    },
+    {
         type: portfolio_item_types.VIDEO,
         name: `GameMaker Scaffolding`,
         menu: `GM.Scaffolding`,
@@ -88,7 +100,7 @@ const portfolio_items = [
     },
     {
         type: portfolio_item_types.VIDEO,
-        name: `GPU-accelerated particles`,
+        name: `GPU-Accelerated Particles`,
         menu: `GPU.Particles`,
         tags: [ tag('WebGL'), tag('GLSL'), tag('Software'), tag('NodeJS') ],
         link: `https://larsandersson.info/DATX05/`,
