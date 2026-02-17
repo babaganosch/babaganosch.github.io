@@ -14,7 +14,7 @@ const portfolio_items = [
         menu: `Nibelung`,
         tags: [ tag('Game'), tag('GML'), tag('WIP', 'bg-blue') ],
         link: `/mareld.html`,
-        src: `/static/content/mareld.mp4`,
+        src: `/static/content/mareld02.mp4`,
         heading: `Turn-Based RPG`,
         text: `RPG based on nordic mythology with grid like movement and turn based combat.`,
         date: `2025`
