@@ -38,7 +38,7 @@ const portfolio_items = [
         link: `https://github.com/babaganosch/big_physics_sim`,
         src: `/static/content/big_physics_sim.png`,
         heading: `Short weekend project`,
-        text: `Developed a CPU-based particle simulation, in C++, as a focused weekend project to explore performance limits. Successfully simulated ~30000 physics-based particles (3-6 px) in a 1800x1200 world, at a stable 60 FPS.
+        text: `Developed a CPU-based particle simulation, in C++, as a focused weekend project to explore performance limits. Successfully simulated ~30000 physics-based particles (2-6 px) in a 1800x1200 world, at a stable 60 FPS.
                     Particle-to-particle collisions, basic spatial partitioning and multithreaded updates.`,
         date: `2025`
     },
