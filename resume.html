@@ -82,347 +82,434 @@
 
                     <ul class="nav navbar-nav ml-auto w-100 justify-content-end pb-2 pt-1 pt-md-0 pb-md-0">
                         <!-- PDF -->
-                        <!--
                         <li class="nav-item text-center">
-                            <a class="nav-link py-0" href="/static/content/LarsAndersson.pdf">
+                            <a class="nav-link py-0" href="/static/content/cv_lars_andersson.pdf">
                                 <i class="d-none d-md-inline-flex fas fa-file-pdf fa-2x"></i>
                                 <i class="d-md-none fas fa-file-pdf fa-lg"></i>
                                 <span class="d-flex-inline d-md-none"> View as PDF</span>
                             </a>
                         </li>
-                        -->
                     </ul>
                 </div>
             </nav>
 
             <!-- CONTENT -->
-            <div id="pageholder" class="px-lg-4">
+            <div id="pageholder" class="px-lg-5">
 
                 <div id="toptext"><b>Lars Andersson</b></div>
 
                 <!-- BIO -->
                 <div id="content" class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="theme col-12 col-md-2"><b>bio</b></div>
-                        <div class="col-12 col-md-10">
-                            I have a strong interest in technology, software development and graphic design. I dedicate most of my spare time on one of my biggest passions - game development.
+                    <div class="row mb-4">
+                        <div class="col-12 bio">
+                            Passionate about software development and visual design.
+                            I dedicate most of my spare time to game development, combining technical- and creative problem-solving.
+                            I enjoy turning ideas into interactive experiences, and continuously improving my skills through 
+                            hands-on projects.
                         </div>
                     </div>
 
-                    <!-- PHONE & EMAIL-->
-                    <div class="row">
-
-                        <div class="theme col-md-2"></div>
-                        <div class="col-2 col-md-1">tel:</div>
-                        <div class="col-10 col-md-9">+46 (0)76 804 19 65</div>
-
-                        <div class="col-md-2"></div>
-                        <div class="col-2 col-md-1">email:</div>
-                        <div class="col-10 col-md-9">lars.andersson.swe(at)gmail.com</div>
-
-                        <div class="col-md-2"></div>
-                        <div class="col-2 col-md-1">portfolio:</div>
-                        <div class="col-10 col-md-9"><a href="." >larsandersson.info</a></div>
-
+                    <div class="row mb-2">
+                        <div class="col-2">
+                            Tel:<br>
+                            Email:<br>
+                            Portfolio:<br>
+                        </div>
+                        <div class="col-10">
+                            <b>+46 (0)76 804 19 65</b><br>
+                            <b>lars.andersson.swe(at)gmail.com</b><br>
+                            <b><a href=".">larsandersson.info</a></b><br>
+                        </div>
                     </div>
-                </div>
+
+                </div><!-- end of bio -->
 
                 <!-- EXPERIENCE -->
-                <div id="content" class="container-fluid mt-4">
+                <div id="content" class="container-fluid">
 
                     <div class="row">
+                        <div class="theme col-12"><b>experience</b></div>
+                    </div>
 
-                        <!-- Toyota -->
-                        <div class="theme col-12 col-md-2"><b>experience</b></div>
-                        <div class="col-12 col-md-10">
-                            <span class="dateBlock">2023 - present</span> <b>Software Developer</b> at <i>Toyota Material Handling (HiQ)</i>
-                            <ul>
-                                <i><b>C, C++, Structured Text (PLC), Python, Asyncio, PyTest, Bazel, CANopen, CANalyzer, Azure DevOps</b></i>
-                                <li>Developing the next generation of Toyota AGVs</li>
-                                <li>Firmware development on the Truck Controller System (TCS)</li>
-                                <li>Firmware development on the Unit for Automation Control (UAC)</li>
-                                <li>Designing and constructing HIL rigs for TCS</li>
-                                <li>Building tools for analyzing CAN debug data</li>
-                                <li>Maintaining Azure pipelines</li>
-                            </ul>
+                    <!-- TOYOTA -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2023 - present
                         </div>
-
-                        <!-- Qualcomm -->
-                        <div class="col-12 col-md-2"></div>
                         <div class="col-12 col-md-10">
-                            <span class="dateBlock">2022 - 2023</span> <b>Software Developer</b> at <i>Qualcomm/Arriver (HiQ)</i>
+                            Software Developer at <b><a href="https://toyota-forklifts.eu/">Toyota Material Handling Europe</a></b> (via HiQ)<br>
+                            Developing the next generation of Toyota's autonomous forklifts.<br>
                             <ul>
-                                <i><b>C, C++, SOME/IP, Bazel, Jenkins, Jira, Gerrit</b></i>
-                                <li>Customizing Qualcomm's camera perception software according to BMW's needs</li>
-                                <li>Developing testing tools within SIL and HIL</li>
+                                <li>Firmware development on the Truck Controller System (TCS) <span class="d-none d-md-inline">(<b>C</b>, <b>C++</b>, <b>Bazel</b>, <b>GoogleTest</b>)</span></li>
+                                <li>Firmware development on the Unit for Automation Control (UAC) <span class="d-none d-md-inline">(<b>Structured Text</b>, <b>PLC</b>)</span></li>
+                                <li>Designing and constructing HIL rigs for TCS <span class="d-none d-md-inline">(<b></b>Hardware</b>, <b>Arduino</b>, <b>Linux</b>, <b>PyTest</b>)</span></li>
+                                <li>Reverse engineering UAC vehicle export mechanism, and re-implemented via scripting as a proof-of-concept to speed up development times <span class="d-none d-md-inline">(<b>Python</b>)</span></li>
+                                <li>Building tools for analysing CAN debug data <span class="d-none d-md-inline">(<b>C</b>, <b>Code Generation</b>, <b>Python</b>, <b>Bazel</b>)</span></li>
+                                <li>Maintaining and improving Azure pipelines</li>
+                                <li>Validating functionality and implementations on actual forklifts</li>
                             </ul>
+                            <i><b>C, C++, Structured Text (PLC), Python, Asyncio, PyTest, Bazel, GoogleTest, CANopen, Vector CANalyzer, Azure DevOps, Hardware, Linux, HIL, Code Generation</b></i>
                         </div>
+                    </div>
 
-                        <!-- VOLVO CARS -->
-                        <div class="col-12 col-md-2"></div>
+                    <!-- QUALCOMM -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2022 - 2023
+                        </div>
                         <div class="col-12 col-md-10">
-                            <span class="dateBlock">2021 - 2022</span> <b>Software Developer</b> at <i>Volvo Cars (HiQ)</i>
+                            Software Developer at <b><a href="https://www.qualcomm.com/">Qualcomm/Arriver</a></b> (via HiQ)<br>
+                            Tailoring Qualcomm's camera perception software to meet BMW's requirements.<br>
                             <ul>
-                                <i><b>C, QNX, Python, Robot Framework, Bash Scripts, Jenkins, Jira, Gerrit, Atlassian Confluence</b></i>
-                                <li>Integration of NVidia DriveOS 6 for the next generation of autonomous Volvo cars</li>
-                                <li>Port DriveOS platform to new ECU hardware</li>
+                                <li>Embedded software development <span class="d-none d-md-inline">(<b>C</b>, <b>Bazel</b>)</span></li>
+                                <li>Developing tools to validate data integrity in SIL <span class="d-none d-md-inline">(<b>C++</b>)</span></li>
+                                <li>Developing tools to preprocess and refine data for HIL <span class="d-none d-md-inline">(<b>C++</b>)</span></li>
                             </ul>
+                            <i><b>C, C++, SOME/IP, Bazel, Jenkins, Jira, Gerrit</b></i>
                         </div>
+                    </div>
 
-                        <!-- LEDARGRUPPEN -->
-                        <div class="col-12 col-md-2"></div>
+                    <!-- VOLVO CARS -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2021 - 2022
+                        </div>
                         <div class="col-12 col-md-10">
-                            <span class="dateBlock">2018 - 2021</span> <b>Software Developer</b> at <i>Svenska Ledargruppen</i>
+                            Software Developer at <b><a href="https://www.volvocars.com/">Volvo Cars</a></b> (via HiQ)<br>
+                            Bring-up of the Autonomous Drive Primary Module (ADPM) in Volvo Cars' next-generation autonomous vehicles (<b>Volvo EX90</b>).<br>
                             <ul>
-                                <i><b>JavaScript, HTML, CSS, JQuery, Bootstrap, Google Maps API</b></i>
-                                <li>Redesigning and simplifying old complex user interfaces</li>
+                                <li>Porting Volvo Cars' Core System Platform (CSP) to new hardware <span class="d-none d-md-inline">(<b>C</b>, <b>Docker</b>, <b>BitBake</b>)</span></li>
+                                <li>Integrating Nvidia's DriveOS 6 into the CSP, in close collaboration with Nvidia <span class="d-none d-md-inline">(<b>C</b>, <b>QNX</b>, <b>NVIDIA ORIN DevKit</b>)</span></li>
+                                <li>Successfully adapted Volvo's CSP software download mechanism to work on the new platform as a proof-of-concept <span class="d-none d-md-inline">(<b>C</b>)</span></li>
+                                <li>Designing and constructing development rigs <span class="d-none d-md-inline">(<b>Hardware</b>, <b>Linux</b>, <b>Bash</b>, <b>Python</b>)</span></li>
+                            </ul>
+                            <i><b>C, QNX, Nvidia Drive OS, Docker, Python, Robot Framework, Bash, BitBake, Jenkins, Gerrit, Atlassian Jira & Confluence, Linux, HIL</b></i>
+                        </div>
+                    </div>
+
+                    <!-- SVENSKA LEDARGRUPPEN -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2018 - 2021
+                        </div>
+                        <div class="col-12 col-md-10">
+                            Software Developer at <b><a href="https://www.ledargruppen.se/">Svenska Ledargruppen</a></b><br>
+                            Developing front end for different services provided by Svenska Ledargruppen such as HELP24, Qoll, BASkontroll and SlåLarm.<br>
+                            <ul>
+                                <li>Redesigning and simplifying complex websites and user interfaces <span class="d-none d-md-inline">(<b>HTML</b>, <b>JavaScript</b>, <b>CSS</b>)</span></li>
                                 <li>Developing web-based applications targeted for both mobile and non-mobile devices</li>
                             </ul>
+                            <i><b>Front-End, JavaScript, HTML, CSS, jQuery, Bootstrap, DataTables, Google Maps API</b></i>
                         </div>
+                    </div>
 
-                        <!-- TEACHING ASSISTANT -->
-                        <div class="col-12 col-md-2"></div>
+                    <!-- CHALMERS -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2017 - 2021
+                        </div>
                         <div class="col-12 col-md-10">
-                            <span class="dateBlock">2017 - 2021</span> <b>Teaching Assistant</b> at <i>Chalmers University of Technology</i>
+                            Teaching Assistant at <b><a href="https://www.chalmers.se/">Chalmers University of Technology</a></b><br>
                             <ul>
-                                <li><span class="levelBlock"><i>(master's level)</i></span> EDA223 - Real-Time Systems</li>
-                                <li><span class="levelBlock"><i>(bachelor's level)</i></span> DAT455 - Introduction to Python</li>
-                                <li><span class="levelBlock"><i>(bachelor's level)</i></span> LET626 - Introduction to Real-Time Systems</li>
-                                <li><span class="levelBlock"><i>(bachelor's level)</i></span> LEU432 - Introduction to Computer Engineering</li>
+                                <li>EDA223 - Real-Time Systems (<b>master's level</b>)</li>
+                                <li>DAT455 - Introduction to Python (<b>bachelor's level</b>)</li>
+                                <li>LET626 - Introduction to Real-Time Systems (<b>bachelor's level</b>)</li>
+                                <li>LEU432 - Introduction to Computer Engineering (<b>bachelor's level</b>)</li>
                             </ul>
                         </div>
+                    </div>
 
-                        <!-- ARLA -->
-                        <div class="col-12 col-md-2"></div>
-                        <div class="col-12 col-md-10">
-                            <span class="dateBlockSmall">2016</span> <b>Machine Operator</b> at <i>Arla Foods Falkenberg</i>
-                            <ul>
-                            </ul>
+                    <!-- ARLA -->
+                     <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2016
                         </div>
-
-                        <!-- ELDERLY CARE -->
-                        <div class="col-12 col-md-2"></div>
                         <div class="col-12 col-md-10">
-                            <span class="dateBlockSmall">2015</span> <b>Elderly Care</b> at <i>Rolfstorps Hemtjänst</i>
-                            <ul>
-                                <li>Assisting elderly people in their everyday life</li>
-                                <li>Delegated medicine dispensation</li>
-                            </ul>
+                            Machine Operator at <b><a href="https://www.arla.se/om-arla/mejerier/falkenberg-mejeri/">Arla Foods Falkenberg</a></b><br>
                         </div>
+                    </div>
 
-                    </div><!-- end row -->
+                    <!-- ELDERLY CARE -->
+                     <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2015
+                        </div>
+                        <div class="col-12 col-md-10">
+                            Elderly Care at <b><a href="https://varberg.se/">Rolfstorps Hemtjänst</a></b><br>
+                        </div>
+                    </div>
 
-                </div><!-- end EXPERIENCE -->
+                </div><!-- end of experience -->
 
-                <!-- EDUCATION -->
-                <div id="content" class="container-fluid mt-4">
+                <!-- PROJECTS -->
+                <div id="content" class="container-fluid">
 
                     <div class="row">
+                        <div class="theme col-12"><b>projects</b></div>
+                    </div>
 
-                        <!-- CHALMERS MASTER -->
-                        <div class="theme col-12 col-md-2"><b>education</b></div>
+                    <!-- NES EMULATOR -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2023 - 2024
+                        </div>
                         <div class="col-12 col-md-10">
-                            <span class="dateBlock">2019 - 2021</span> <b>Chalmers University of Technology</b>, <i>Master level</i>
+                            NES emulator - <b><a href="https://github.com/babaganosch/nes_emulator">NesScape</a></b><br>
+                            A Nintendo Entertainment System (NES 8bit) emulator implemented in <b>C++</b> that aims to provide cycle accurate emulation of the original NTSC NES hardware.
+                            CPU implemented with all 256 opcodes cycle accurate. PPU implemented with accurate pixel rendering and sprite0 hit detection, and scrolling via loopy-registers.
+                            APU contains fully working pulse, triangle and noise channels while DMC channel is mostly implemented.
+                            The most common iNES mappers implemented (NROM, MMC1B, UxROM, AxROM and UN1ROM).<br>
+                            <a class="black" href="https://github.com/babaganosch/nes_emulator" >GitHub Repository - github.com/babaganosch/nes_emulator</a>
+                        </div>
+                    </div>
+
+                    <!-- PARTICLE SIMULATION -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2025
+                        </div>
+                        <div class="col-12 col-md-10">
+                            Weekend project - <b><a href="https://github.com/babaganosch/big_physics_sim">CPU-based physics particle simulation</a></b><br>
+                            Developed a CPU-based particle simulation, in <b>C++</b>, as a focused weekend project to explore performance limits.
+                            Successfully simulated ~30000 physics-based particles (2-6 px) in a 1800x1200 world, at a stable 60 FPS.
+                            Implemented full particle to particle collision handling, and rendered all particles in a single draw call using quads via a vertex array.
+                            Optimised update performance through basic spatial partitioning and multithreaded processing.<br>
+                            <a class="black" href="https://github.com/babaganosch/big_physics_sim" >GitHub Repository - github.com/babaganosch/big_physics_sim</a>
+                        </div>
+                    </div>
+
+                    <!-- LARS ANDERSSON'S PORTFOLIO -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2016 - present
+                        </div>
+                        <div class="col-12 col-md-10">
+                            Various games and portfolio - <b><a href="https://larsandersson.info/">larsandersson.info</a></b><br>
                             <ul>
-                                <li>Master's degree in Computer Systems and Networks</li>
-                                <li class="d-print-none"><a href="/static/content/MastersThesis.pdf" >Thesis</a></li>
+                                <li><b>Nibelung</b> - Currently WIP</li>
+                                <li><b>Abaddon</b> - Infinite world-gen prototype</li>
+                                <li><b>Illfated</b> - Dungeon crawler with randomly generated worlds</li>
+                                <li><b>Minecart Maniac</b> - Endless cave runner released on both iOS and Android</li>
+                                <li><b>Pole Position Clone</b> - Retro racing game prototype in pseudo-3D</li>
+                                <li><b>Frogger Recreation</b> - Project in Chalmers, recreation of Frogger but with a twist!</li>
                             </ul>
                         </div>
+                    </div>
 
-                        <!-- CHALMERS BACHELOR -->
-                        <div class="col-12 col-md-2"></div>
+                    <!-- MASTERS THESIS -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2021
+                        </div>
                         <div class="col-12 col-md-10">
-                            <span class="dateBlock">2016 - 2019</span> <b>Chalmers University of Technology</b>, <i>Bachelor level</i>
+                            Master's thesis - <b><a href="https://larsandersson.info/static/content/MastersThesis.pdf">Optimising a GPU-accelerated particle system for WebGL 1.0 using Extensions</a></b><br>
+                            Exploring the advantages (and disadvantages) of <b>WebGL</b> extensions within the context of GPU-accelerated particle systems, as a part of my master thesis at Chalmers.<br>
+                            <a class="black" href="https://larsandersson.info/static/content/MastersThesis.pdf" >Thesis available @ larsandersson.info</a>
+                        </div>
+                    </div>
+
+                    <!-- NOTIFICATION SYSTEM -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2020
+                        </div>
+                        <div class="col-12 col-md-10">
+                            Open source GameMaker extension - <b><a href="https://github.com/babaganosch/NotificationSystem">Notification System</a></b><br>
+                            Lightweight framework for signals in GameMaker Studio with features such as callbacks and channels.<br>
+                            <a class="black" href="https://github.com/babaganosch/NotificationSystem" >GitHub Repository - github.com/babaganosch/NotificationSystem</a>
+                        </div>
+                    </div>
+
+                    <!-- BACHELOR THESIS -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2019
+                        </div>
+                        <div class="col-12 col-md-10">
+                            Bachelor's thesis - <b><a href="https://larsandersson.info/static/content/BachelorsThesis.pdf">Objective Tiny-Timber : OTTO</a></b><br>
+                            Creation of an object-oriented language and a <b>precompiler</b> for it, as an alternative to real-time <b>C</b>.
+                            The purpose was to improve and facilitate laboratory assignments within the course EDA223 - Real-Time Systems at Chalmers, and the University of Gothenburg.<br>
+                            <a class="black" href="https://larsandersson.info/static/content/BachelorsThesis.pdf" >Thesis available @ larsandersson.info</a>
+                        </div>
+                    </div>
+
+                    <!-- CYBERCOM PROJECT -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2018
+                        </div>
+                        <div class="col-12 col-md-10">
+                            Project at Cybercom - <b><a href="https://larsandersson.info/static/content/Projektkurs_Rapport.pdf">Traffic Monitoring and Visualisation</a></b><br>
+                            Collection of real-time data over Gothenburg, visualised on a <b>web application</b> with <b>AI-based predictions</b> of future traffic situations, as a project in the course DAT066 - Project at Chalmers, in collaboration with Cybercom.<br>
+                            <a class="black" href="https://larsandersson.info/static/content/Projektkurs_Rapport.pdf" >Project report (swedish) available @ larsandersson.info</a>
+                        </div>
+                    </div>
+
+                    <!-- ROUTE RECORDER -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2018
+                        </div>
+                        <div class="col-12 col-md-10">
+                            Project at Volvo Cars - <b><a href="https://larsandersson.info/static/content/RouteRecorderApp.pdf">Route Recorder</a></b><br>
+                            <b>Android</b> application made to be run on a Volvo car infotainment computer, with the purpose to record driven routes and to visualise them as a heatmap on the in-car screen. Project in course DAT256 - Software Engineering Project at Chalmers.<br>
+                            <a class="black" href="https://larsandersson.info/static/content/RouteRecorderApp.pdf" >Small preview available @ larsandersson.info</a>
+                        </div>
+                    </div>
+
+                    <!-- SHAPE ARENA -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2018
+                        </div>
+                        <div class="col-12 col-md-10">
+                            Project at Chalmers - <b><a href="https://github.com/babaganosch/ShapeArena">Shape Arena</a></b><br>
+                            Agar.io inspired <b>multiplayer</b> game developed in <b>Java</b>, in a team of five, as a project in the course DAT055 - Object oriented applications at Chalmers.<br>
+                            <a class="black" href="https://github.com/babaganosch/ShapeArena" >GitHub Repository - github.com/babaganosch/ShapeArena</a>
+                        </div>
+                    </div>
+
+                    <!-- SAUSAGE CLOTHING -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2014
+                        </div>
+                        <div class="col-12 col-md-10">
+                            Clothing designs - <b><a href="https://sausageclothing.se/">Sausage Clothing</a></b><br>
+                            Clothing with custom prints by me. Some designs are heavily inspired by stuff I saw online at the time, and some are just replications of famous logos, often with a twist.<br>
+                            <a class="black" href="https://sausageclothing.se/" >Website - sausageclothing.se</a>
+                        </div>
+                    </div>
+
+                </div><!-- end of projects -->
+
+                <!-- EDUCATION -->
+                <div id="content" class="container-fluid">
+
+                    <div class="row">
+                        <div class="theme col-12"><b>education</b></div>
+                    </div>
+
+                    <!-- CHALMERS (MASTER) -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2019 - 2021
+                        </div>
+                        <div class="col-12 col-md-10">
+                            Computer Systems and Networks - <b><a href="https://www.chalmers.se/">Chalmers University of Technology</a></b><br>
                             <ul>
-                                <li>Bachelor's degree in Computer Engineering</li>
-                                <li class="d-print-none"><a href="/static/content/BachelorsThesis.pdf" >Thesis</a></li>
+                                <li>Master's Degree - Thesis: <a class="black" href="https://larsandersson.info/static/content/MastersThesis.pdf" >Optimising a GPU-accelerated particle system for WebGL 1.0 using Extensions</a></li>
                             </ul>
                         </div>
+                    </div>
 
-                        <!-- JU -->
-                        <div class="col-12 col-md-2"></div>
+                    <!-- CHALMERS (BACHELOR) -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2016 - 2019
+                        </div>
                         <div class="col-12 col-md-10">
-                            <span class="dateBlock">2013 - 2014</span> <b>Jönköping University</b>, <i>Introductory year</i>
+                            Computer Engineering - <b><a href="https://www.chalmers.se/">Chalmers University of Technology</a></b><br>
+                            <ul>
+                                <li>Bachelor's Degree - Thesis: <a class="black" href="https://larsandersson.info/static/content/BachelorsThesis.pdf" >Objective Tiny-Timber : OTTO</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- JU -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2013 - 2014
+                        </div>
+                        <div class="col-12 col-md-10">
+                            Foundation Year in Science and Engineering - <b><a href="https://ju.se/">Jönköping University</a></b><br>
                             <ul>
                                 <li>Mathematics</li>
                                 <li>Physics</li>
                                 <li>Chemistry</li>
                             </ul>
                         </div>
+                    </div>
 
-                    </div><!-- end row -->
+                    <!-- FALKENBERGS GYMNASIUM -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-2 date">
+                            2008 - 2011
+                        </div>
+                        <div class="col-12 col-md-10">
+                            Electrician (Upper Secondary School) - <b><a href="https://falkenbergsgymnasieskola.se/">Falkenbergs Gymnasieskola</a></b><br>
+                            <ul>
+                                <li>Specialisation in Electronics</li>
+                            </ul>
+                        </div>
+                    </div>
 
-                </div><!-- end EDUCATION -->
+                </div><!-- end of education -->
 
-                <!-- PROJECTS -->
-                <div id="content" class="container-fluid mt-4">
+                <!-- TECHNICAL SKILLS -->
+                <div id="content" class="container-fluid">
 
                     <div class="row">
+                        <div class="theme col-12"><b>technical</b></div>
+                    </div>
 
-                        <!-- NESSCAPE -->
-                        <div class="theme col-12 col-md-2"><b>projects</b></div>
-                        <div class="col-12 col-md-10">
-                            <span class="dateBlockSmall">2024</span> <b>NES Emulator - <i>NesScape</i></b>
-                            <ul>
-                                <li class="no-point">
-                                    A Nintendo Entertainment System (NES 8bit) emulator implemented in C++ that aims to provide cycle accurate emulation of the original NTSC NES hardware.
-                                    CPU implemented with all 256 opcodes cycle accurate. PPU implemented with accurate pixel rendering and sprite0 hit detection, and scrolling via loopy-registers.
-                                    APU contains fully working pulse, triangle and noise channels while DMC channel is mostly implemented.
-                                    The most common iNES mappers implemented (NROM, MMC1B, UxROM, AxROM and UN1ROM).<br>
-                                    <a class="d-print-none" href="https://github.com/babaganosch/nes_emulator" >GitHub Repository</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- BIG PHYSICS SIMULATION -->
-                        <div class="theme col-12 col-md-2"></div>
-                        <div class="col-12 col-md-10">
-                            <span class="dateBlockSmall">2025</span> <b>CPU-based physics particle simulation <i>(weekend project)</i></b>
-                            <ul>
-                                <li class="no-point">
-                                    Developed a CPU-based particle simulation, in C++, as a focused weekend project to explore performance limits.
-                                    Successfully simulated ~30000 physics-based particles (2-6 px) in a 1800x1200 world, at a stable 60 FPS.
-                                    Implemented full particle to particle collision handling, and rendered all particles in a single draw call using quads via a vertex array.
-                                    Optimized update performance through basic spatial partitioning and multithreaded processing.<br>
-                                    <a class="d-print-none" href="https://github.com/babaganosch/big_physics_sim" >GitHub Repository</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- OTTO -->
-                        <div class="theme col-12 col-md-2"></div>
-                        <div class="col-12 col-md-10">
-                            <span class="dateBlockSmall">2019</span> <b>Bachelor's Thesis - <i>Objective Tiny-Timber : OTTO</i></b>
-                            <ul>
-                                <li class="no-point">
-                                    Creation of an object-oriented language and a precompiler, as an alternative to real-time C, with the purpose to improve and facilitate laboratory assignments within the course <i>EDA223 - Real-Time Systems</i> at Chalmers and the University of Gothenburg.<br>
-                                    <a class="d-print-none" href="/static/content/BachelorsThesis.pdf" >Thesis</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- TRAFFIC MONITOR -->
-                        <div class="theme col-12 col-md-2"></div>
-                        <div class="col-12 col-md-10">
-                            <span class="dateBlockSmall">2018</span> <b>Traffic Monitoring and Visualization</b>
-                            <ul>
-                                <li class="no-point">
-                                    Collection of real-time data over Gothenburg, visualized on a webapplication with AI-based predictions of future traffic situations, as a project in the course <i>DAT066 - Project</i> at Chalmers, in collaboration with <a href="https://www.cybercom.com/" >Cybercom</a><span class="d-print-none"> - </span>
-                                    <a class="d-print-none" href="/static/content/Projektkurs_Rapport.pdf" >Project report (swedish)</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- ROUTE RECORDER -->
-                        <div class="col-12 col-md-2"></div>
-                        <div class="col-12 col-md-10">
-                            <span class="dateBlockSmall">2018</span> <b>Route Recorder</b>
-                            <ul>
-                                <li class="no-point">
-                                    Android application made to be run on a Volvo car with the purpose to record driven routes and to visualize them as a heatmap on the in-car screen. Project in course <i>DAT256 - Software Engineering Project</i> at Chalmers<br>
-                                    <a class="d-print-none" href="/static/content/RouteRecorderApp.pdf" >Preview</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- SHAPE ARENA -->
-                        <div class="col-12 col-md-2"></div>
-                        <div class="col-12 col-md-10">
-                            <span class="dateBlockSmall">2018</span> <b>Shape Arena</b>
-                            <ul>
-                                <li class="no-point">
-                                    Agar.io inspired Java multiplayer game developed in a team of five, as
-                                    a project in the course <i>DAT055 - Object oriented applications</i> at Chalmers<br>
-                                    <a class="d-print-none" href="https://github.com/babaganosch/ShapeArena" >GitHub Repository</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- ILLFATED -->
-                        <div class="col-12 col-md-2"></div>
-                        <div class="col-12 col-md-10">
-                            <span class="dateBlockSmall">2016</span> <b>Illfated</b>
-                            <ul>
-                                <li class="no-point">
-                                    Roguelike dungeon crawler game that takes inspiration from classic retro games as well as more modern roguelikes<br>
-                                    <a class="d-print-none" href="https://www.youtube.com/watch?v=r2gwL7vMXAw" >Trailer</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- MINECART MANIAC -->
-                        <div class="col-12 col-md-2"></div>
-                        <div class="col-12 col-md-10">
-                            <span class="dateBlockSmall">2017</span> <b>Minecart Maniac</b>
-                            <ul>
-                                <li class="no-point">
-                                    Mobile game, inspired by games such as Flappy Bird or Temple Run<br>
-                                    Minecart Maniac at <a href="https://play.google.com/store/apps/details?id=info.larsandersson.minecartmaniac" >Google Play Store (Android)</a> and <a href="https://apps.apple.com/us/app/minecart-maniac/id1489146698" >App Store (iOS)</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- SAUSAGE CLOTHING -->
-                        <div class="col-12 col-md-2"></div>
-                        <div class="col-12 col-md-10">
-                            <span class="dateBlockSmall">2014</span> <b>Sausage Clothing</b>
-                            <ul>
-                                <li class="no-point">
-                                    Self-designed clothing and various other projects<br>
-                                    <a href="https://sausageclothing.se" >www.sausageclothing.se</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div><!-- end row -->
-
-                </div><!-- end PROJECTS -->
-
-                <!-- TECHNICAL & ENVIROMENTS -->
-                <div id="content" class="container-fluid mt-4">
                     <div class="row">
-                        <div class="theme col-12 col-md-2"><b>technical</b></div>
-
-                        <!-- LANGUAGES -->
-                        <div class="col-3 col-md-2"><b>Languages</b></div>
-                        <div class="col-9 col-md-8">
+                        <div class="col-12 col-md-2 date">
+                            Languages
+                        </div>
+                        <div class="col-12 col-md-10">
                             C, C++, GLSL, Python, Java, JavaScript, Structed Text, GML, HTML + CSS
                         </div>
-
-                        <!-- ENVIRONMENTS -->
-                        <div class="col-md-2"></div>
-                        <div class="col-3 col-md-2"><b>Environments</b></div>
-                        <div class="col-9 col-md-8">
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-2 date">
+                            Environments
+                        </div>
+                        <div class="col-12 col-md-10">
                             Windows, Linux, OS X, QNX, CANopen, SOME/IP, Agile workflow (Scrum, SAFe)
                         </div>
-
-                        <!-- TOOLS -->
-                        <div class="col-md-2"></div>
-                        <div class="col-3 col-md-2"><b>Tools</b></div>
-                        <div class="col-9 col-md-8">
-                            VSCode, Git, Azure DevOps, Jenkins, CANalyzer, Gerrit Code Review, Jira, Adobe Create Cloud, PyTest, Robot Framework
-                        </div>
-
-                        <!-- I ENJOY -->
-                        <div class="col-md-2 mt-md-2"></div>
-                        <div class="col-12 col-md-10 mt-2">I enjoy, and have ease of, learning new technologies.</div>
                     </div>
-                </div>
+                    <div class="row">
+                        <div class="col-12 col-md-2 date">
+                            Tools
+                        </div>
+                        <div class="col-12 col-md-10">
+                            VSCode, Git, Azure DevOps, Jenkins, Vector CANalyzer, Gerrit Code Review, Jira, Adobe Create Cloud, PyTest, Robot Framework, GoogleTest
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-2 date"></div> <!-- EMPTY -->
+                        <div class="col-12 col-md-10">
+                            <b>I enjoy, and have ease of, learning new technologies.</b>
+                        </div>
+                    </div>
+
+                </div><!-- end of technical skills -->
 
                 <!-- REFERENCES -->
-                <div id="content" class="container-fluid mt-4">
+                <div id="content" class="container-fluid">
+                    
                     <div class="row">
-                        <div class="theme col-12 col-md-2"><b>references</b></div>
-                        <div class="col-12 col-md-10"><b>References available upon request.</b></div>
+                        <div class="theme col-12"><b>references</b></div>
                     </div>
-                </div>
 
-                <!-- SOCIAL -->
-                <div id="content" class="container-fluid mt-4">
                     <div class="row">
+                        <div class="col-12 col-md-2 date"></div> <!-- EMPTY -->
+                        <div class="col-12 col-md-10">
+                            <b>References available upon request.</b>
+                        </div>
+                    </div>
+                </div><!-- end of references -->
 
-                        <div class="theme col-12 col-md-2"><b>social</b></div>
+                <!-- SOCIALS -->
+                <div id="content" class="container-fluid">
+                    <div class="row">
+                        <div class="theme col-12"><b>socials</b></div>
+                    </div>
 
+                    <div class="row">
+                        <div class="col-12 col-md-2 date"></div> <!-- EMPTY -->
+                        
                         <!-- GITHUB -->
                         <div class="col-md-3">
                             <a href="https://github.com/babaganosch" class="text-dark" title="GitHub"><i class="fa-brands fa-github-square fa-lg"></i> github.com/babaganosch</a>
@@ -439,11 +526,10 @@
                         </div>
 
                     </div>
-                </div>
+                </div><!-- end of socials -->
 
-            </div>
-
-        </div>
+            </div> <!-- end of pageholder -->
+        </div> <!-- end of website -->
 
         <!-- JQuery -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
