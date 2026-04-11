@@ -11,3 +11,7 @@ vendor/
 
 .DS_Store
 **/.DS_Store
+
+# Claude
+CLAUDE.md
+.claude/
