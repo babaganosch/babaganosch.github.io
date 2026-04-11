@@ -376,7 +376,7 @@ const months = ["jan", "feb", "mar", "apr", "may", "jun",
 
 var NOISE_ON = true;
 
-function main() {
+async function main() {
     const canvas = document.querySelector("#webgl-canvas");
 
     var options = {
@@ -397,12 +397,13 @@ function main() {
         return igloo.texture(null, gl.RGBA, gl.CLAMP_TO_EDGE, gl.LINEAR);
     }
 
-    const programs = {
-        tv_noise:  igloo.program('/static/shaders/quad.vert', '/static/shaders/noise.frag'),
-        color:     igloo.program('/static/shaders/quad.vert', '/static/shaders/color.frag'),
-        chromatic: igloo.program('/static/shaders/quad.vert', '/static/shaders/chromatic.frag'),
-        text_program:    igloo.program('/static/shaders/sprite.vert', '/static/shaders/sprite.frag')
-    };
+    const [tv_noise, color, chromatic, text_program] = await Promise.all([
+        igloo.program('/static/shaders/quad.vert', '/static/shaders/noise.frag'),
+        igloo.program('/static/shaders/quad.vert', '/static/shaders/color.frag'),
+        igloo.program('/static/shaders/quad.vert', '/static/shaders/chromatic.frag'),
+        igloo.program('/static/shaders/sprite.vert', '/static/shaders/sprite.frag')
+    ]);
+    const programs = { tv_noise, color, chromatic, text_program };
 
     const textures = {
         tmp: texture(),

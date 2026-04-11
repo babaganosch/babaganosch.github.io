@@ -30,21 +30,12 @@ function Igloo(gl, options) {
 Igloo.QUAD2 = new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]);
 
 /**
- * Asynchronously or synchronously fetch data from the server.
+ * Fetch text data from the server.
  * @param {string} url
- * @param {Function} [callback] if provided, call is asynchronous
- * @returns {string}
+ * @returns {Promise<string>}
  */
-Igloo.fetch = function(url, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, Boolean(callback));
-    if (callback != null) {
-        xhr.onload = function() {
-            callback(xhr.responseText);
-        };
-    }
-    xhr.send();
-    return xhr.responseText;
+Igloo.fetch = function(url) {
+    return fetch(url).then(function(r) { return r.text(); });
 };
 
 /**
@@ -56,8 +47,7 @@ Igloo.fetch = function(url, callback) {
 Igloo.getContext = function(canvas, options, noerror) {
     var gl;
     try {
-        gl = canvas.getContext('webgl', options || {}) ||
-            canvas.getContext('experimental-webgl', options || {});
+        gl = canvas.getContext('webgl', options || {});
     } catch (e) {
         gl = null;
     }
@@ -94,9 +84,9 @@ Igloo.isArray = function(object) {
  * @param {Function} [transform] Transforms the shaders before compilation
  * @returns {Igloo.Program}
  */
-Igloo.prototype.program = function(vertex, fragment, transform) {
-    if (Igloo.looksLikeURL(vertex)) vertex = Igloo.fetch(vertex);
-    if (Igloo.looksLikeURL(fragment)) fragment = Igloo.fetch(fragment);
+Igloo.prototype.program = async function(vertex, fragment, transform) {
+    if (Igloo.looksLikeURL(vertex)) vertex = await Igloo.fetch(vertex);
+    if (Igloo.looksLikeURL(fragment)) fragment = await Igloo.fetch(fragment);
     if (transform != null) {
         vertex = transform(vertex);
         fragment = transform(fragment);
