@@ -1,6 +1,5 @@
 attribute vec4 a_position;
 
-uniform vec2 u_resolution;
 uniform mat4 u_matrix;
 
 varying vec2 v_texcoords;

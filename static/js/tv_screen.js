@@ -450,7 +450,6 @@ async function main() {
             .matrix('u_matrix', IDENTITY_MATRIX)
             .uniform('u_resolution', resolution)
             .uniform('u_curv', small_screen ? 7.0 : 4.0)
-            .uniform('u_time', time)
             .uniform('u_strength', 200.0)
             .uniformi('u_image', 0)
             .draw(gl.TRIANGLE_STRIP, Igloo.QUAD2.length / 2);

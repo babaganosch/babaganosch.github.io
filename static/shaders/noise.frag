@@ -1,6 +1,6 @@
 precision mediump float;
 
-varying mediump vec2 v_texcoords;
+varying vec2 v_texcoords;
 uniform mediump float u_time;
 uniform bool u_noise_on;
 
@@ -15,7 +15,7 @@ void main() {
         gl_FragColor = vec4(0);
         return;
     }
-    vec2 uv = (vec2(v_texcoords.x, v_texcoords.y) + 1.0) / 2.0;
+    vec2 uv = (v_texcoords + 1.0) / 2.0;
     float noise = (getRandomValue(uv) + 0.2);
     gl_FragColor = vec4(noise, noise, noise, 1.0);
 }
