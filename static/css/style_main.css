@@ -1,5 +1,20 @@
 @import url(/static/bariol/stylesheet.css);
-@import url(https://fonts.googleapis.com/css?family=Poppins:400,700);
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/static/fonts/Poppins-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/static/fonts/Poppins-Bold.woff2') format('woff2');
+}
 @font-face {
     font-family: "VCR_OSD_MONO_1";
     src: url('/static/fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
@@ -207,7 +222,7 @@ a:link, a:visited, a:hover, a:active {
     font-size: min(4vh, 3.5vw);
 }
 
-#header-porftolio-buffer {
+#header-portfolio-buffer {
     height: 5vh;
     background-image: linear-gradient(0deg, #1b1b1b 5%, #000 100%);
 }
@@ -360,15 +375,12 @@ a:link, a:visited, a:hover, a:active {
 @media (min-width: 768px) { 
     /* Desktop */
     .card {
-        filter: url("filters.svg#grayscale");     /* Firefox 3.5+ */
-        filter: gray;                           /* IE6-9 */
-        -webkit-filter: grayscale(80%);           /* Chrome 19+ & Safari 6+ */
+        filter: grayscale(80%);
     }
 
     .card:hover {
         top: calc(var(--card-hover-distance) * -1);
         filter: none;
-        -webkit-filter: grayscale(0%);
     }
 
     .card:hover:after {

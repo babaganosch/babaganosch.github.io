@@ -376,6 +376,13 @@ const months = ["jan", "feb", "mar", "apr", "may", "jun",
 
 var NOISE_ON = true;
 
+function waitForImage(img) {
+    if (img.complete && img.naturalHeight !== 0) return Promise.resolve(img);
+    return new Promise((resolve) => {
+        img.addEventListener('load', () => resolve(img), { once: true });
+    });
+}
+
 async function main() {
     const canvas = document.querySelector("#webgl-canvas");
 
@@ -397,17 +404,18 @@ async function main() {
         return igloo.texture(null, gl.RGBA, gl.CLAMP_TO_EDGE, gl.LINEAR);
     }
 
-    const [tv_noise, color, chromatic, text_program] = await Promise.all([
+    const [tv_noise, color, chromatic, text_program, fontImg] = await Promise.all([
         igloo.program('/static/shaders/quad.vert', '/static/shaders/noise.frag'),
         igloo.program('/static/shaders/quad.vert', '/static/shaders/color.frag'),
         igloo.program('/static/shaders/quad.vert', '/static/shaders/chromatic.frag'),
-        igloo.program('/static/shaders/sprite.vert', '/static/shaders/sprite.frag')
+        igloo.program('/static/shaders/sprite.vert', '/static/shaders/sprite.frag'),
+        waitForImage(document.querySelector('#webgl-font'))
     ]);
     const programs = { tv_noise, color, chromatic, text_program };
 
     const textures = {
         tmp: texture(),
-        glyphTex: igloo.texture(document.querySelector("#webgl-font"), gl.RGBA, gl.CLAMP_TO_EDGE, gl.NEAREST)
+        glyphTex: igloo.texture(fontImg, gl.RGBA, gl.CLAMP_TO_EDGE, gl.NEAREST)
     };
 
     const framebuffers = {
