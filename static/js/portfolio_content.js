@@ -14,7 +14,7 @@ const portfolio_items = [
         menu: `Nibelung`,
         tags: [ tag('Game'), tag('GML'), tag('WIP', 'bg-blue') ],
         link: `https://store.steampowered.com/app/3002750/Nibelung/`,
-        src: `/static/content/mareld04.mp4`,
+        src: `/static/content/mareld01.mp4`,
         heading: `Turn-Based RPG`,
         text: `Nibelung is a turn-based roguelike RPG set in the ashes of Ragnarök. Delve the ever-shifting realms of Yggdrasil, fight with steel and seidr against goblins, cultists, the risen dead and outthink a world that only moves when you do.`,
         date: `2025`
